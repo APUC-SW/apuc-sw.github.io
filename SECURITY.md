@@ -8,6 +8,8 @@ If caught, it may result in legal sanctions.
 This repository is by no means open source. The downloadable open source is provided separately on the [our official site](https://apuc-sw.github.io
 ), so please do not use this repository without permission.
 
+These rules apply internationally.
+
 ## Supported Versions
 
 This is just website repository. Version information is unknown.
