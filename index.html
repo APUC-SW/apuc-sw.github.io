@@ -1,17 +1,125 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Orbitron">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+        <link rel="stylesheet" type="text/css" href="menu_style.css">
         <title>APUC Software</title>
         <style>
-            html{background-color: #161A1D; font-family: 'Orbitron', serif; color:white}
+            html {background-color: #161A1D; font-family: 'Orbitron', sans-serif; color: white}
+
+            .logo {
+                position: fixed;
+                width: 100%;
+                height: 70px;
+            }
+            .logo a {
+                padding: 5%;
+                color: ghostwhite;
+            }
+            .logo-text {
+                text-align: center;
+            }
         </style>
     </head>
     <body>
-        <h1>APUC Software</h1>
-        <hr>
+        <div class="logo">
+            <a href="#home">
+                <h1 class="logo-text">APUC Software</h1>
+            </a>
+        </div>
+        <div class="wrapper">
+            <nav>
+                <div class="content">
+                    <ul class="links">
+                        <li><a href="#">Home</a></li>
+                        <li>
+                            <a href="#">News</a>
+                            <ul>
+                                <li><a href="#">Community</a></li>
+                                <li><a href="#">Posts</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="desktop-link">About</a>
+                            <ul>
+                                <li><a href="#">Company</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li>
+                                    <a href="#">Projects</a>
+                                    <ul>
+                                        <li><a href="#">SW Projects</a></li>
+                                        <li><a href="#">HW Projects</a></li>
+                                        <li><a href="#">Misc.</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Teams</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Products</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Software</a>
+                                    <ul>
+                                        <li><a href="#">Games</a></li>
+                                        <li><a href="#">Tools</a></li>
+                                        <li><a href="#">AI Services</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Hardwares</a>
+                                    <ul>
+                                        <li><a href="#">Equipments</a></li>
+                                        <li><a href="#">Modules</a></li>
+                                        <li><a href="#">Components</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Misc.</a>
+                                    <ul>
+                                        <li><a href="#">Soon™</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Help Desk</a>
+                            <ul>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Supports</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--
+        <div class="topnav">
+            <a href="#home" class="active" id="topnavlogo">Home</a>
+            <a href="#news">News</a>
+            <div class="subnav">
+                <button class="subnavbtn-primary ">About <i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="#company">Company</a>
+                    <a href="#business">Business</a>
+                    <a href="#team">Team</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn-primary " onclick="window.location.href='#products'">Products</button>
+                <div class="subnav-content">
+                    <button class="subnavbtn-secondary">Softwares</button>
+                    <div class="subnavlist">
+                        <a href="#games">Games</a>
+                        <a href="#tools">Tools</a>
+                        <a href="#ai">AI Services</a>
+                    </div>
+                    <a href="#test">Test Button</a>
+                </div>
+            </div>
+        </div>
+        -->
         <article></article>
     </body>
 </html>
