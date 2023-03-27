@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="./resources/icons/favicon.ico">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+        <style>
+            html {
+                overflow: hidden;
+                font-family: 'Orbitron', sans-serif;
+                background-color: #330000;
+                color: ghostwhite
+            }
+
+            h1 {
+            	font-size: 36px;
+            	margin-bottom: 20px;
+            }
+            p {
+	            font-size: 18px;
+	            margin-bottom: 20px;
+                width: 100%;
+            }
+            a {
+	            font-size: 16px;
+	            color: ghostwhite;
+	            background-color: red;
+	            padding: 10px 20px;
+	            text-decoration: none;
+            }
+
+            .container {
+	            position: absolute;
+	            top: 50%;
+	            left: 13%;
+	            transform: translate(-50%, -50%);
+            }
+            .box {
+            	width: 100%;
+                height: 340px;
+                /*border: 2px solid red;*/
+                padding-left: 150%;
+                padding-right: 150%;
+                padding-top: 10%;
+                text-align: center;
+            }
+            .stripe_top {
+                width: 400%;
+                height: 50px;
+                background-image: linear-gradient(
+                    135deg,
+                    red 25%,
+                    #330000 25%,
+                    #330000 50%,
+                    red 50%, red 75%,
+                    #330000 75%,
+                    #330000 100%
+                );
+                background-size: 56.57px 56.57px;
+                animation: move-left 30s linear infinite;
+            }
+            .stripe_bottom {
+                width: 400%;
+                height: 50px;
+                background-image: linear-gradient(
+                    135deg,
+                    red 25%,
+                    #330000 25%,
+                    #330000 50%,
+                    red 50%, red 75%,
+                    #330000 75%,
+                    #330000 100%
+                );
+                background-size: 56.57px 56.57px;
+                animation: move-right 30s linear infinite;
+            }
+            .element-hidden {
+                opacity: 0;
+            }
+            
+            @keyframes move-left {
+                0% {
+                    background-position: 0 0;
+                }
+                100% {
+                    background-position: -200% 0;
+                }
+            }
+
+            @keyframes move-right {
+                0% {
+                    background-position: 0 0;
+                }
+                100% {
+                    background-position: 200% 0;
+                }
+            }
+        </style>
+        <script src="./404_func.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="stripe_top"></div>
+            <div class="box">
+                <h1>ERROR - 404</h1>
+                <p>Page not found.</p>
+                <p>
+                    The page you're looking for doesn't exist.<br>
+                    Please check the URL link.
+                </p>
+                <p class="element-hidden">Lorem ipsum</p>
+                <a href="./index.html">Return back</a>
+            </div>
+            <div class="stripe_bottom"></div>
+          </div>
+    </body>
+</html>
