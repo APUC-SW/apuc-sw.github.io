@@ -1,3 +1,6 @@
-// Test only files
+# Test only files
 test
+
+# Dymmy data files
 dummydata*
+dummy*
