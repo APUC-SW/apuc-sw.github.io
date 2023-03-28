@@ -1,0 +1,34 @@
+.selectlocale {
+    position: relative;
+    display: inline-block;
+}
+
+.selectlocalebtn {
+    border: none;
+    padding: 18px 14px;
+    float: right;
+    background-color: #2D333A;
+    color: ghostwhite;
+    font-size: 16px;
+}
+
+.selectlocale-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    min-width: 160px;
+    background-color: #22262B;
+}
+
+.selectlocale-content a {
+    padding: 14px 12px;
+    display: block;
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+.selectlocale-content a:hover { background-color: #384048; }
+
+.selectlocale:hover .selectlocale-content { display: block; }
+
+.selectlocale:hover .selectlocalebtn { background-color: #384048; }
