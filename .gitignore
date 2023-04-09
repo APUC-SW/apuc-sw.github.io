@@ -1,6 +1,9 @@
 # Test only files
 test
 
+# Developer only files
+.vs
+
 # Dymmy data files
 dummydata*
 dummy*
