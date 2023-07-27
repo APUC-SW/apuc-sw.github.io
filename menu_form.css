@@ -303,3 +303,8 @@ nav .content .links {
     font-size: 45px;
     margin: 5px 0;
 }
+
+.locale-selector {
+    position: absolute;
+    right: 0;
+}
