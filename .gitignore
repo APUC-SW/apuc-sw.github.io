@@ -3,7 +3,6 @@ test
 
 # Developer only files
 .vs
-devsec
 
 # Dymmy data files
 dummydata*
