@@ -304,6 +304,11 @@ nav .content .links {
     margin: 5px 0;
 }
 
+/* Right Align */
+.content .links li.locale-selector {
+    margin-left: auto;
+}
+
 .locale-selector {
     position: absolute;
     right: 0;
