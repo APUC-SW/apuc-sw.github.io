@@ -39,17 +39,16 @@
                     <h1 class="logo-text">APUC Software</h1>
                 </a>
             </div>
-            <div id="headernav"></div>
+            <div class="wrapper">
+                <div id="headernav"></div>
+            </div>
         </header>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            // jQuery를 사용하여 #wrapper를 가져와서 nav 태그 앞에 삽입합니다.
-        $(document).ready(function() {
-            $.get("/en-US/navbar.html", function(data) {
-                var menuContent = $(data).find("nav");
-                $(".wrapper").prepend(menuContent);
+            // jQuery를 사용하여 메뉴 내용을 가져와서 header 요소에 삽입합니다.
+            $(document).ready(function() {
+                $("#headernav").load("/en-US/navbar.html nav");
             });
-        });
         </script>
     </body>
 </html>
