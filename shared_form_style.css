@@ -14,13 +14,9 @@ footer {
     padding: 5px;
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
-    font-size: 8px;
+    font-size: 10px;
     background-color: #22262B;
     color: white
-}
-
-footer p {
-    font-size: 8px;
 }
 
 .logo {
