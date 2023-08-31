@@ -25,7 +25,8 @@ footer {
     height: 70px;
 }
 .logo a {
-    padding: 5%;
+    padding-top: 10%;
+    padding-bottom: 3%;
     color: ghostwhite;
 }
 .logo-text {
