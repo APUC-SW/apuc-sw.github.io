@@ -11,7 +11,8 @@ body {
 }
 
 footer {
-    padding: 5px;
+    padding-top: 10%;
+    padding-bottom: 3%;
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     font-size: 10px;
@@ -25,8 +26,7 @@ footer {
     height: 70px;
 }
 .logo a {
-    padding-top: 10%;
-    padding-bottom: 3%;
+    padding: 5%;
     color: ghostwhite;
 }
 .logo-text {
