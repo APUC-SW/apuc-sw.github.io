@@ -5,6 +5,11 @@ html {
     color: white
 }
 
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .logo {
     position: fixed;
     width: 100%;
