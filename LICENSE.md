@@ -43,7 +43,7 @@
 Primary creations refer to those created directly by APUC SW (or APUcard himself). All licenses to these creations or projects are owned by APUC SW. If the creative work, source, and/or project you wish to use is not designated as open source by APUC SW, you must not use it without permission.
 
 #### **2nd creation**
-Derivative creations refer to anything (creations or projects) created based on other people's creations or resources that APUC SW (or APUcard itself) has obtained permission to use from an external source. APUC SW We never reproduce or redistribute these secondary creations without permission. For example, in the case of Unity-based games, this may include assets imported from the Asset Store or external sites. If the above primary creation includes any of these secondary creations, there is a high probability that the creation is not open source. Therefore, if you use such content without permission, you are violating copyright law and we will not be held liable.
+Derivative creations refer to anything (creations or projects) created based on other people's creations or resources that APUC SW (or APUcard himself) has obtained permission to use from an external source. APUC SW We never reproduce or redistribute these secondary creations without permission. For example, in the case of Unity-based games, this may include assets imported from the Asset Store or external sites. If the above primary creation includes any of these secondary creations, there is a high probability that the creation is not open source. Therefore, if you use such content without permission, you are violating copyright law and we will not be held liable.
 
 ### Permission to use conditions
 
