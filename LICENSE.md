@@ -1,5 +1,5 @@
 ***
-© 2023 APUC SW All rights reserved.
+© 2023. APUC SW All rights reserved.
 ***
 <br>
 <br>
