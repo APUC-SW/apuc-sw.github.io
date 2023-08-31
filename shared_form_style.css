@@ -19,6 +19,10 @@ footer {
     color: white
 }
 
+footer p {
+    font-size: 8px;
+}
+
 .logo {
     position: fixed;
     width: 100%;
