@@ -22,7 +22,7 @@ footer {
 }
 
 h1:after {
-    content: "\a";
+    content: "\n";
     display: block;
     height: 2px;
     width: 100%;
@@ -70,6 +70,7 @@ h1:after {
     background-color: #22262B;
 }
 
+/*
 .article-box hr {
     height: 5px;
     color: ghostwhite;
@@ -85,6 +86,6 @@ h1:after {
       currentColor 75%);
     background-size: 10px 10px;
     width: 100%;
-}
+}*/
 
 /*Why the Github.io is always so slow?*/
