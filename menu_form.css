@@ -10,11 +10,15 @@
     text-decoration: none;
 }
 
+nav {
+    top: 10%;
+}
+
 .wrapper {
     background: #2D333A;
     position: fixed;
     width: 100%;
-    top: 10%;
+    top: 0%;
 }
 
 .wrapper nav {
