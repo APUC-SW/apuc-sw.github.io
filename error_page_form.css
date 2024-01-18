@@ -4,6 +4,16 @@ html {
     color: ghostwhite
 }
 
+footer {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    background-color: transparent;
+}
+
 h1 {
     font-size: 36px;
     margin-bottom: 20px;

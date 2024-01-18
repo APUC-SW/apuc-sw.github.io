@@ -1,8 +1,8 @@
 /*All pages standard form*/
 html {
     font-family: 'Orbitron', sans-serif;
+    color: white;
     background-color: #161A1D;
-    color: white
 }
 
 body {
@@ -16,8 +16,8 @@ footer {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     font-size: 10px;
+    color: white;
     background-color: #22262B;
-    color: white
 }
 
 .logo {
@@ -39,8 +39,6 @@ footer {
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
     font-size: 10px;
-    width: 100%;
-    height: 2%;
     border: none;
     color: white;
     background-color : transparent;
