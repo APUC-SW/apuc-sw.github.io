@@ -1,3 +1,4 @@
+// CSS Automatic Applier
 fetch("/shared_form_style.css").then(response => {
     if (response.ok) {
         response.text().then(text => {
