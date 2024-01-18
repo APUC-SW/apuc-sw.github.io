@@ -93,7 +93,7 @@ a {
     left: 50%;
     transform: translate(-50%, 0);
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     font-size: 10px;
