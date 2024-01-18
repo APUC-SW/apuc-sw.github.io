@@ -70,6 +70,7 @@ h1:after {
     background-color: #22262B;
 }
 
+/*
 .article-box hr {
     font-size: 20px;
 	position: relative;
@@ -88,14 +89,14 @@ h1:after {
 		content: attr(data-content);
 		position: relative;
 		display: inline-block;
-		color: #161A1D;
+		color: transparent;
         right: 100px;
 		padding: 0 .5em;
 		line-height: 1.5em;
 		color: deepskyblue;
 		background-color: black;	
 	}
-}
+}*/
 
 /*
 .article-box hr {
