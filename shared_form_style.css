@@ -27,6 +27,7 @@ h1:after {
     height: 2px;
     width: 100%;
     background-color: ghostwhite;
+    background-image: linear-gradient(90deg, ghostwhite, transparent);
   }
 
 .logo {
