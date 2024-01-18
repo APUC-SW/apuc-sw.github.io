@@ -65,7 +65,7 @@ footer {
 .article-box hr {
     height: 10px;
     color: deepskyblue;
-    border-left: 10% solid deepskyblue;
+    border-left: 200px solid deepskyblue;
     background-image: linear-gradient(-45deg,
       transparent,
       transparent 25%,
