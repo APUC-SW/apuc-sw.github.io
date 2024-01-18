@@ -35,10 +35,14 @@ footer {
 }
 
 .copyright {
-    background-color : transparent;
     position: fixed;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 10px;
     width: 100%;
     border: none;
+    color: ghostwhite;
+    background-color : transparent;
 }
 
 .iframe-transparent {
