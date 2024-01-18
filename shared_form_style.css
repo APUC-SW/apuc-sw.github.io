@@ -22,7 +22,7 @@ footer {
 }
 
 h1:after {
-    content: "";
+    content: "\a";
     display: block;
     height: 2px;
     width: 100%;
