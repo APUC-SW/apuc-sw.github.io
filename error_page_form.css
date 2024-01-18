@@ -4,18 +4,6 @@ html {
     color: ghostwhite
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: 'Noto Sans', sans-serif;
-    text-align: center;
-    font-size: 10px;
-    color: white;
-    background-color: transparent;
-}
-
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -97,4 +85,18 @@ a {
     100% {
         background-position: 200% 0;
     }
+}
+
+.copyright-string {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    background-color: transparent;
 }
