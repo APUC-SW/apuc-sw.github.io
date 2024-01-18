@@ -48,4 +48,10 @@ footer {
     background-color : transparent;
 }
 
+.article-box {
+    background-color: #22262B;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
 /*Why the Github.io is always so slow?*/
