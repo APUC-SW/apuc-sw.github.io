@@ -48,17 +48,9 @@ footer {
     background-color : transparent;
 }
 
-.wrapper-article {
-    background: #22262B;
-    position: fixed;
-    width: 100%;
-    top: 20%;
-}
-
 .article-box {
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /*Why the Github.io is always so slow?*/
