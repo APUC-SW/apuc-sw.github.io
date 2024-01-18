@@ -34,4 +34,8 @@ footer {
     text-align: center;
 }
 
+.iframe-transparent {
+    background-color : transparent;
+}
+
 /*Why the Github.io is always so slow?*/
