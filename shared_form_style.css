@@ -22,7 +22,8 @@ footer {
 }
 
 h1:after {
-    content: \n;
+    margin-top: 5px;
+    margin-bottom: 10px;
     display: block;
     height: 2px;
     width: 100%;
