@@ -70,6 +70,33 @@ h1:after {
     background-color: #22262B;
 }
 
+.article-box hr {
+    font-size: 20px;
+	position: relative;
+	border: 0;
+	height: 1.5em;
+	&:before {
+		content: '';
+		background: linear-gradient(to right, transparent, #22262B, transparent);
+		position: absolute;
+		left: -5%;
+		top: 50%;
+		width: 150%;
+		height: 1px;
+	}
+	&:after {
+		content: attr(data-content);
+		position: relative;
+		display: inline-block;
+		color: #161A1D;
+        right: 100px;
+		padding: 0 .5em;
+		line-height: 1.5em;
+		color: deepskyblue;
+		background-color: black;	
+	}
+}
+
 /*
 .article-box hr {
     height: 5px;
