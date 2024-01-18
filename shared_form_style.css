@@ -20,10 +20,6 @@ footer {
     background-color: #22262B;
 }
 
-article {
-    margin-top: 20%;
-}
-
 .logo {
     background-color: #161A1D;
     position: fixed;
@@ -55,6 +51,7 @@ article {
 .article-box {
     width: 80%;
     margin: 0 auto;
+    margin-top: 20%;
 }
 
 /*Why the Github.io is always so slow?*/
