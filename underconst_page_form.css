@@ -96,6 +96,13 @@ p {
     }
 }
 
+.stripe-string {
+    position: absolute;
+    z-index: 2;
+    top: 46px;
+    right: -355px;
+}
+
 .iframe501 {
     position: absolute;
     left: 50%;

@@ -87,6 +87,13 @@ a {
     }
 }
 
+.stripe-string {
+    position: absolute;
+    z-index: 2;
+    top: 87px;
+    right: -660px;
+}
+
 .copyright-string {
     position: absolute;
     bottom: 0;
