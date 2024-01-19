@@ -71,6 +71,14 @@ h1:after {
     background-color: #22262B;
 }
 
+.rainbow {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+/*.glitch {
+    // Dummy data
+}*/
+
 /*
 .article-box hr {
     font-size: 20px;
