@@ -11,3 +11,6 @@ dummydata*
 dummy*
 TERMS.md
 tos.html
+
+# Backup files
+*.bak
