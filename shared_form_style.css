@@ -21,6 +21,18 @@ footer {
     background-color: #22262B;
 }
 
+.v-layout-positioner {
+    z-index: 1;
+    margin-top: 10%;
+}
+
+.v-flow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .logo {
     position: fixed;
     top: 0;
@@ -54,7 +66,6 @@ footer {
 .article-box {
     width: 80%;
     margin: 0 auto;
-    margin-top: 15%;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
@@ -69,6 +80,13 @@ footer {
     width: 100%;
     background-color: ghostwhite;
     background-image: linear-gradient(90deg, ghostwhite, transparent);
+}
+
+.blank-box {
+    width: 100%;
+    height: 600px;
+    z-index: 1;
+    background-color: transparent;
 }
 
 .rainbow {

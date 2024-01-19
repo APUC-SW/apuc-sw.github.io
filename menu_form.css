@@ -23,6 +23,7 @@ nav {
 }
 
 .wrapper nav {
+    z-index: 2;
     position: relative;
     display: flex;
     max-width: calc(100% - 200px);
