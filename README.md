@@ -2,6 +2,8 @@
 
 # !!!!ATTENTION!!!!
 
+This repository is not a open source.
+
 Do not download, copy, share or redistribution any source code on this repository.   
 If caught, it may result in legal sanctions.
 
