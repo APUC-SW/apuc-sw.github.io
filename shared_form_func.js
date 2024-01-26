@@ -7,6 +7,7 @@ fetch("/shared_form_style.css").then(response => {
     }
 });
 
+// HTML Properties Applier
 document.body.style.overflowX = "hidden";
 document.body.style.overflowY = "auto";
 
@@ -15,10 +16,12 @@ const footer = document.querySelector("footer");
 footer.style.fontSize = "10px";
 
 // Copyright function
-const copyrights = document.querySelectorAll("p.copyright");
+const copyrights = document.querySelectorAll("p.copyright-string");
 
 for (let copyright of copyrights) {
-  copyright.innerHTML = "&copy; 2018-2024. APUC Software All rights reserved.";
+  copyright.innerHTML = "© 2018-"
+  +new Date().getFullYear()
+  +". APUC Software All rights reserved.";
 }
 
 /*

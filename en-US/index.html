@@ -69,10 +69,10 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/en-US/help_desk.html">Help Desk</a>
+                                <a href="/en-US/help.html">Help</a>
                                 <ul>
-                                    <li><a href="/en-US/help_desk/contact.html">Contact</a></li>
-                                    <li><a href="/en-US/help_desk/supports.html">Supports</a></li>
+                                    <li><a href="/en-US/help/contact.html">Contact</a></li>
+                                    <li><a href="/en-US/help/supports.html">Supports</a></li>
                                 </ul>
                             </li>
                             <li class="locale-selector">
@@ -82,8 +82,13 @@
                                     <li><a href="/ja-JP/index.html">Japanese</a></li>
                                 </ul>
                             </li>
-                            <li class="user-profile-avatar-ddm">
-                                <a class="user-profile-avatar-btn" href="#"><image class="user-profile-avatar"></image></a>
+                            <li class="user-profile-menu">
+                                <a class="upm-btn" href="javascript:void(0)"><image class="upm-avatar"></image></a>
+                                <ul class="upm-menu">
+                                    <li>This function is</li>
+                                    <li>not supported</li>
+                                    <!-- <li><a href="#"><image class="upm-avatar"></image><p class="upm-username">Guest</p></a></li> -->
+                                </ul>
                                 <!-- <a href="user-profile-avatar-btn">
                                     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48; transform: translate(0%, 25%);">account_circle</span>
                                 </a> -->
@@ -107,6 +112,7 @@
         </article>
         <footer>
             <p>&copy; 2018-2024. APUC Software All rights reserved.</p>
+            <p id="copyright-string" class="copyright-string"></p>
         </footer>
     </body>
 </html>
