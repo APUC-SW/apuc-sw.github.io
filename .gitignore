@@ -1,14 +1,16 @@
 # Test only files
 test
+*/dev*
 
 # Developer only files
 .vs
 devsec
 apuc-sw.github.io.code-workspace
 
-# Dymmy data files
+# Dummy data files
 dummydata*
 dummy*
+*.dummy
 TERMS.md
 tos.html
 

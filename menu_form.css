@@ -10,6 +10,11 @@
     text-decoration: none;
 }
 
+body {
+    height : auto;
+    min-height: 100%;
+}
+
 nav {
     transform: translateY(150%);
     background: #2D333A;

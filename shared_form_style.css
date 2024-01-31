@@ -12,6 +12,10 @@ body {
 }
 
 footer {
+    position : relative;
+    transform : translateY(0%);
+    width: 100%;
+    margin-top: 100px;
     padding-top: 50px;
     padding-bottom: 5px;
     font-family: 'Noto Sans', sans-serif;
@@ -89,8 +93,43 @@ footer {
     background-color: transparent;
 }
 
-.rainbow {
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+/*#### R.A.I.N.B.O.W. ####*/
+/* .rainbow {} */
+.rainbow :nth-child(10n + 1) {color: red;}
+.rainbow :nth-child(10n + 2) {color: orange;}
+.rainbow :nth-child(10n + 3) {color: yellow;}
+.rainbow :nth-child(10n + 5) {color: lime;}
+.rainbow :nth-child(10n + 4) {color: cyan;}
+.rainbow :nth-child(10n + 6) {color: blue;}
+.rainbow :nth-child(10n + 7) {color: magenta;}
+.rainbow :nth-child(10n + 8) {color: purple;}
+
+.rainbow-gradient {
+    background: linear-gradient(to right, red, orange, yellow, lime, cyan, blue,magenta,purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rainbow-transition {
+    display: inline-block;
+    animation: rainbow 5s infinite;
+}
+
+.rainbow-overtransition {
+    display: inline-block;
+    animation: rainbow 0.5ms infinite;
+}
+
+@keyframes rainbow{
+    0%{color: red;}
+    12.5%{color: orange;}
+    25%{color: yellow;}
+    37.5%{color: lime;}
+    62.5%{color: cyan;}
+    75%{color: blue;}
+    87.5%{color: magenta;}
+    100%{color: purple;}
 }
 
 /*.glitch {
