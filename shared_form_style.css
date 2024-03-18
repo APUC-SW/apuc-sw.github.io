@@ -12,8 +12,9 @@ body {
 }
 
 footer {
-    position : relative;
+    position : fixed;
     transform : translateY(0%);
+    bottom: 0;
     width: 100%;
     margin-top: 100px;
     padding-top: 50px;
