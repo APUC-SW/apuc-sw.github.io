@@ -13,5 +13,5 @@ These rules apply internationally.
 
 ---
 
-Copyright 2018-2024. APUC Software All Rights Reserved.
+Copyright 2018-2024. APUC Software All Rights Reserved.   
 REDISTRIBUTION PROHIBITED
