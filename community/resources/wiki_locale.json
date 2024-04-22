@@ -1,0 +1,46 @@
+[
+    {
+        "title": "Index"
+    },
+    {
+        "title": "Introduction",
+        "children": [
+            {
+                "title": "Overview",
+                "children": [
+                    {"title": "Background"},
+                    {"title": "Purpose"}
+                ]
+            },
+            {"title": "Features"}
+        ]
+    },
+    {
+        "title": "Getting Started",
+        "children": [
+            {"title": "Installation"},
+            {
+                "title": "First Steps",
+                "children": [
+                    {"title": "Basic Configuration"},
+                    {"title": "Initial Tests"}
+                ]
+            },
+            {"title": "Troubleshooting"},
+            {
+                "title": "FAQ",
+                "children": [
+                    {"title": "How to Use"},
+                    {"title": "Why it's not working"}
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Advanced Topics",
+        "children": [
+            {"title": "Performance Tuning"},
+            {"title": "Customization"}
+        ]
+    }
+]

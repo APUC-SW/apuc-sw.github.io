@@ -1,0 +1,94 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+aside {
+    grid-area: nav;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    height: calc(100vh - 2rem);
+    overflow-y: auto; /* 세로 스크롤 가능 */
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.tree-menu {
+    list-style-type: none;
+    padding: 0;
+    height: 92%;
+    width: 100%;
+    overflow-x: auto; /* 가로 스크롤 가능 */
+}
+
+.tree-menu li {
+    display: block; /* 블록 레벨 요소로 설정 */
+    padding: 5px 10px; /* 패딩 추가 */
+    margin-bottom: 5px; /* 아래쪽 여백 */
+    white-space: nowrap; /* 텍스트를 한 줄로 제한 */
+}
+
+.tree-menu .caret {
+    cursor: pointer;
+    user-select: none; /* 텍스트 선택 방지 */
+    vertical-align: middle; /* 아이콘과 텍스트 정렬 */
+    margin-right: 10px; /* 아이콘과 텍스트 사이 여백 */
+}
+
+.tree-menu .nested {
+    list-style-type: none;
+    display: none;
+    margin-left: 20px;
+}
+
+.tree-menu .nested.active {
+    padding-left: 0px;
+}
+
+.tree-menu .active {
+    display: block;
+}
+
+.material-symbols-outlined {
+    font-size: 24px; /* Adjust icon size if needed */
+}
