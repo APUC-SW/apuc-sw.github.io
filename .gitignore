@@ -13,6 +13,7 @@ dummy*
 *.dummy
 TERMS.md
 tos.html
+global/static_database*
 
 # Backup files
 *.bak

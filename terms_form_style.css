@@ -1,0 +1,17 @@
+.terms-wrapper p {
+    white-space: normal;
+}
+
+.terms-wrapper h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.terms-wrapper ul {
+    padding-left: 20px;
+}
+
+.terms-wrapper .manual-linebreak {
+    display: block;
+    margin: 20px 0;
+}
