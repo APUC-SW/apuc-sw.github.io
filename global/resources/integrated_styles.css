@@ -44,15 +44,13 @@ footer {
 .smalltext {
     padding-left: 5px;
     font-size: 12px;
-    color: #808080;
+    color: #808080 !important;
 }
 
 span .mainicon {
     position: absolute;
     top: 45px;
 }
-
-
 
 nav {
     background: #000000 !important;
@@ -82,11 +80,27 @@ nav {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
+header .wrapper {
+    top: 0%;
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+footer .wrapper {
+    bottom: 0%;
+    padding-top: 2px;
+    padding-bottom: 0px;
+}
+
+footer .wrapper .copyright {
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
 .wrapper {
-    background: transparent;
+    background: #000000 !important;
     position: fixed;
     width: 100%;
-    top: 2%;
 }
 
 .wrapper nav {
@@ -117,7 +131,7 @@ nav .content .links {
 
 .content .links li a,
 .content .links li label {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 18px;
     font-weight: 500;
     padding: 9px 17px;
@@ -129,12 +143,12 @@ nav .content .links {
 
 .content .links li a:hover,
 .content .links li label:hover {
-    background: #ffffff1f;
+    background: #FFFFFF20 !important;
 }
 
 .wrapper .search-icon,
 .wrapper .menu-icon {
-    color: ghostwhite;
+    color: #FFFFFF !important;
     font-size: 18px;
     cursor: pointer;
     line-height: 45px;
@@ -171,13 +185,13 @@ nav .content .links {
     border: none;
     outline: none;
     font-size: 17px;
-    color: ghostwhite;
+    color: #FFFFFF !important;
     background: #22262B;
     padding: 0 100px 0 15px;
 }
 
 .search-box input::placeholder {
-    color: ghostwhite;
+    color: #FFFFFF !important;
 }
 
 .search-box .go-icon {
@@ -187,10 +201,10 @@ nav .content .links {
     transform: translateY(-50%);
     line-height: 40px;
     width: 70px;
-    background: #22262B;
+    background: #242424 !important;
     border: none;
     outline: none;
-    color: ghostwhite;
+    color: #FFFFFF !important;
     font-size: 20px;
     cursor: pointer;
 }
@@ -202,7 +216,7 @@ nav .content .links {
 /* Dropdown Menu code start */
 .content .links ul {
     position: absolute;
-    background: #000000;
+    background: #000000 !important;
     top: 45px;
     z-index: -1;
     opacity: 0;
@@ -234,6 +248,20 @@ nav .content .links {
 
 .content .links ul li:hover ul {
     top: 0;
+}
+
+.main-content {
+    margin-top: 60px;
+}
+
+.main-content .filled-content {
+    padding: auto;
+}
+
+.main-content .content {
+    padding-top: 10px;
+    width: 80%;
+    margin: auto;
 }
 
 /* Responsive code start */
@@ -354,3 +382,45 @@ nav .content .links {
         padding-right: 30px;
     }
 }
+/* Dropdown Menu code end */
+
+/* Tab style start */
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	border: 1px solid #FFFFFF !important;
+	background-color: #242424 !important;
+}
+  
+/* Style the buttons inside the tab */
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+	color: #FFFFFF !important;
+	font-family: 'Orbitron';
+}
+  
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #FFFFFF40 !important;
+}
+  
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #FFFFFF80 !important;
+}
+  
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #FFFFFF !important;
+	border-top: none;
+}
+/* Tab style end */
