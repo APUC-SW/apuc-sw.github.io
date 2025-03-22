@@ -1,6 +1,7 @@
 # Test only files
-test
+test*
 */dev*
+dev*
 
 # Developer only files
 .vs
