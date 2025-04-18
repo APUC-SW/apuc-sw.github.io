@@ -17,6 +17,10 @@ body {
     overflow-y: auto;
 }
 
+header {
+    z-index: 10;
+}
+
 footer {
     position : fixed;
     transform : translateY(0%);
@@ -437,4 +441,14 @@ nav .content .links {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.soontm-picture {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('/global/resources/images/soon_tm_2026.png');
+    background-size: cover;
+    z-index: -10;
 }
