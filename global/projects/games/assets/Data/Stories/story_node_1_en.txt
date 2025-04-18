@@ -1,0 +1,2 @@
+TITLE=Chapter Zero
+BODY=Lorem ipsum dolar sit amet.\n<b>This file is test only file for Unity WebGL project.</b>
