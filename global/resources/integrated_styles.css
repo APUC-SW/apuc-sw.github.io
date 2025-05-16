@@ -18,11 +18,13 @@ body {
 }
 
 header {
+    position: relative;
     z-index: 10;
 }
 
 footer {
     position : fixed;
+    z-index: 10;
     transform : translateY(0%);
     bottom: 0;
     width: 100%;
@@ -34,6 +36,19 @@ footer {
     font-size: 10px;
     color: #FFFFFF !important;
     background-color: #000000 !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.margin-realigin_3 {
+    margin-left: 3vw;
+}
+
+.margin-realigin_5 {
+    margin-left: 5vw;
 }
 
 .mainicon {
@@ -99,6 +114,18 @@ footer .wrapper {
 footer .wrapper .copyright {
     padding-top: 10px;
     padding-bottom: 2px;
+}
+
+article {
+    z-index: -10;
+}
+
+.centered {
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 960px;
+    min-width: 320px;
 }
 
 .wrapper {
@@ -450,5 +477,65 @@ nav .content .links {
     height: 100%;
     background-image: url('/global/resources/images/soon_tm_2026.png');
     background-size: cover;
-    z-index: -10;
+}
+
+/*Layouts*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #242424 !important;
+    text-align: center;
+    clip-path: polygon(
+        10px 0%,                /* top-left style */
+        100% 0%,
+        100% calc(100% - 10px), /* bottom-right style */
+        calc(100% - 10px) 100%,
+        0% 100%,
+        0% 10px
+    );
+    transition: all 0.1s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card h3 {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.card:hover {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 2.5em;
+    white-space: nowrap;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateX(0);
+    will-change: transform;
+    font-size: 12px;
+}
+
+/* Title styles */
+.title-style1 {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
 }
