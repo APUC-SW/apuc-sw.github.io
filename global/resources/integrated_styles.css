@@ -43,14 +43,6 @@ a {
     color: inherit;
 }
 
-.margin-realigin_3 {
-    margin-left: 3vw;
-}
-
-.margin-realigin_5 {
-    margin-left: 5vw;
-}
-
 .mainicon {
     display: inline-block;
     width: 40px;
@@ -118,14 +110,6 @@ footer .wrapper .copyright {
 
 article {
     z-index: -10;
-}
-
-.centered {
-    margin: 5% auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 960px;
-    min-width: 320px;
 }
 
 .wrapper {
@@ -482,7 +466,7 @@ nav .content .links {
 /*Layouts*/
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 200px);
     gap: 20px;
 }
 
@@ -518,6 +502,63 @@ nav .content .links {
     color: #000000 !important;
 }
 
+.enlarged-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 20px;
+}
+
+.card-large {
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #242424 !important;
+    text-align: center;
+    clip-path: polygon(
+        10px 0%,
+        100% 0%,
+        100% calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        0% 100%,
+        0% 10px
+    );
+    transition: all 0.1s ease;
+}
+
+.card-large img {
+    width: 100%;
+    height: auto;
+}
+
+.card-large h3 {
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+.card-large:hover {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+/* Alignments */
+.centered {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.margin-realigin_3 {
+    margin-left: 3vw;
+}
+
+.margin-realigin_5 {
+    margin-left: 5vw;
+}
+
+/* Text effects */
 .marquee-wrapper {
     width: 100%;
     overflow: hidden;
@@ -538,4 +579,15 @@ nav .content .links {
 .title-style1 {
     margin-top: 10vh;
     margin-bottom: 5vh;
+}
+
+.title-style2 {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    font-size: 24px;
+}
+
+.title-style3 {
+    font-size: 32px;
+    font-family: "Orbitron Black";
 }
