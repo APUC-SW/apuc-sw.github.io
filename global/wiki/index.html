@@ -2,10 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <meta http-equiv='refresh' content='0; URL=https://apuc-sw.github.io/global/wiki/index.html?doc=default'> -->
         <link rel="icon" type="image/x-icon" href="/resources/icons/favicon.ico">
         <link rel="stylesheet" type="text/css" href="/global/resources/integrated_styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-        <title>APUC Software - A one man the indie software developer's personal business website</title>
+        <title>APUC Software - Official Wiki</title>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -29,13 +30,21 @@
                 <script src="/global/resources/templates/navbars_loader.js"></script>
             </div>
         </header>
-        <article>
-            <div><h1 class="soontm-text">Will be soon™</h1></div>
+        <aside>
+            <div id="wikinavbox-container">
+                <script src="/global/resources/templates/wikinavbox_loader.js"></script>
+            </div>
+        </aside>
+        <article class="wiki-content">
+            <div class="wikidoc-container markdown-body" id="wikicontent-container">
+                <script src="/global/resources/templates/wikicontent_loader.js"></script>
+            </div>
         </article>
+        <footer>
+            <div id="footerbase-container">
+                <script src="/global/resources/templates/footerbars_loader.js"></script>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     </body>
-    <footer>
-        <div id="footerbase-container">
-            <script src="/global/resources/templates/footerbars_loader.js"></script>
-        </div>
-    </footer>
 </html>
