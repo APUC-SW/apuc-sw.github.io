@@ -14,6 +14,23 @@
     .markdown-body li {
         margin-left: 20px !important;
     }
+
+    .markdown-body p {
+        white-space: pre-wrap !important;
+    }
+
+    .markdown-body th, td {
+        padding: 5px !important;
+    }
+
+    .markdown-body del {
+        color: #757575 !important;
+        text-decoration: line-through !important;
+    }
+
+    .markdown-body del:hover {
+        text-decoration: none !important;
+    }
 }
 /* Github Markdown style end */
 
@@ -299,7 +316,7 @@ article {
     margin: auto;
 }
 
-/* Side navbox */
+/* Wiki elements start */
 .sidewrapper {
     z-index: 1;
     background: #242424 !important;
@@ -348,6 +365,7 @@ article {
     padding-left: 10px;
     padding-right: 10px;
     line-height: 40px;
+    user-select: none;
 }
 
 .wikinav ul {
@@ -380,31 +398,34 @@ article {
     height: 10px;
 }
 .wikitoc-scrollview::-webkit-scrollbar-track {
-    background: #323232;
+    background: #323232 !important;
     border-radius: 5px;
 }
 .wikitoc-scrollview::-webkit-scrollbar-thumb {
-    background: #808080;
+    background: #808080 !important;
     border-radius: 5px;
     border: 2px solid transparent;
 }
 .wikitoc-scrollview::-webkit-scrollbar-thumb:hover {
-    background: #E1E1E1;
+    background: #E1E1E1 !important;
 }
 
 .wikitoc {
     margin-top: -10%;
-    margin-left: 5%
+    margin-left: 5%;
 }
 
-.wikitoc a, p {
+.wikitoc a, .wikitoc p, .wikitoc h4 {
     width: 100%;
     display: block;
     user-select: none;
+    white-space: nowrap;
 }
 
 .wikitoc-sub1 li,
-.wikitoc-sub2 li {
+.wikitoc-sub2 li,
+.wikitoc-sub3 li,
+.wikitoc-sub4 li {
     margin-left: 20px;
 }
 
@@ -427,16 +448,16 @@ article {
     height: 10px;
 }
 .wikitoc-container::-webkit-scrollbar-track {
-    background: #323232;
+    background: #323232 !important;
     border-radius: 5px;
 }
 .wikitoc-container::-webkit-scrollbar-thumb {
-    background: #808080;
+    background: #808080 !important;
     border-radius: 5px;
     border: 2px solid transparent;
 }
 .wikitoc-container::-webkit-scrollbar-thumb:hover {
-    background: #E1E1E1;
+    background: #E1E1E1 !important;
 }
 
 .wikidoc-localebar {
@@ -450,50 +471,33 @@ article {
     color: #FFFFFF !important;
 }
 
-.wikidoc-localebar-dropdown {
-    position: absolute;
-    display: inline-block;
-    right: -5%;
-    top: 0;
-    width: 200px;
+.wikidoc-localebar-nav {
+    position: relative;
+    display: flex;
+    width: 100%;
     height: 100%;
-    background-color: #242424 !important;
+    align-items: right;
+    justify-content: space-between;
+    padding-left: 92vw;
 }
 
-.wikidoc-localebar-dropdown .dropbtn {
-    background-color: #424242 !important;
+.wikidoc-localebar-nav .language-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.language-switcher select {
+    background-color: #242424 !important;
     color: #FFFFFF !important;
-    padding: 10px;
-    font-size: 16px;
     border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
     cursor: pointer;
-    user-select: none;
 }
-
-.wikidoc-localebar-dropdown .dropbtn:hover {
-    background-color: #FFFFFF !important;
-    color: #000000 !important;
-}
-
-.wikidoc-localebar-dropdown .dropdown-content {
-    z-index: 1;
-    display: block;
-    position: absolute;
-    background-color: #242424 !important;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.dropdown-content ul {
-    list-style: none;
-}
-
-.wikidoc-localebar-dropdown a {
-    color: #FFFFFF !important;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
+/* Wiki elements end */
 
 /* Responsive code */
 @media screen and (max-width: 1250px) {
@@ -807,3 +811,83 @@ article {
     font-size: 32px;
     font-family: "Orbitron Black";
 }
+
+/* Markdown Text Color Attributes */
+.md-red {
+    color: #FF0000 !important;
+}
+
+.md-green {
+    color: #00FF00 !important;
+}
+
+.md-blue {
+    color: #0000FF !important;
+}
+
+.md-gray {
+    color: #9E9E9E !important;
+}
+
+
+
+/* Embed styles start */
+.embedded-hyperlink {
+    display: block;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    background-color: transparent;
+    color: inherit;
+}
+
+.embedded-link-box a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.embedded-link-box {
+    display: flex;
+    align-items: flex-start; /* 아이콘과 텍스트 상단 정렬 */
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #242424 !important;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.embedded-link-icon {
+    flex-shrink: 0; /* 아이콘이 줄어들지 않도록 고정 */
+    margin-right: 15px;
+    font-size: 36px; /* Material Symbol 크기 */
+    color: #FFFFFF !important; /* 구글 파란색 계열 */
+}
+
+.embedded-link-content {
+    flex-grow: 1; /* 남은 공간을 채우도록 확장 */
+    overflow: hidden; /* 긴 URL이 넘치지 않도록 */
+}
+
+.embedded-link-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #FFFFFF !important;
+    white-space: nowrap; /* 제목이 한 줄로 표시되도록 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 넘치는 제목은 ... 처리 */
+}
+
+.embedded-link-url {
+    display: block;
+    font-size: 0.9em;
+    color: #82B1FF !important;
+    white-space: nowrap; /* 주소가 한 줄로 표시되도록 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 넘치는 주소는 ... 처리 */
+    text-decoration: none;
+}
+/* Embed styles end */
