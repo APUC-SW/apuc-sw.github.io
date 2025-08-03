@@ -1,47 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.initializeLanguageSwitcher = function() {
     const langSelect = document.getElementById('lang-select');
     
-    // 1. **URL 쿼리 매개변수에서 문서 ID 파싱**
-    const urlParams = new URLSearchParams(window.location.search);
-    let currentDocId = urlParams.get('doc') || 'default'; // 'doc' 매개변수 값, 없으면 'default' 사용
+    if (!langSelect) {
+        console.error("Error: Could not find element with id 'lang-select'. Language switching will not work.");
+        return;
+    }
 
-    // 2. localStorage에서 저장된 언어 설정 불러오기
-    let currentSelectedLang = localStorage.getItem('wikiLang') || 'en';
+    // 현재 URL 경로에서 언어 코드를 파악하여 드롭다운 값 설정
+    const pathSegments = window.location.pathname.split('/').filter(s => s);
+    const wikiIndex = pathSegments.indexOf('wiki');
+    let currentLang = 'en';
+    if (wikiIndex !== -1 && pathSegments.length > wikiIndex + 1) {
+        const nextSegment = pathSegments[wikiIndex + 1];
+        if (['ko', 'ja'].includes(nextSegment)) {
+            currentLang = nextSegment;
+        }
+    }
     
-    // 드롭다운의 현재 선택 값 설정
-    langSelect.value = currentSelectedLang;
+    langSelect.value = currentLang;
 
-    // 3. 드롭다운 변경 이벤트 리스너
-    langSelect.addEventListener('change', (e) => {
-        const newLang = e.target.value;
-        if (newLang === currentSelectedLang) return;
-
-        localStorage.setItem('wikiLang', newLang);
-        currentSelectedLang = newLang;
-
-        // 목차와 콘텐츠를 새 언어로 다시 로드
-        // currentDocId는 URL의 ?doc=... 에서 가져온 값이므로 정확합니다.
-        if (window.loadWikiNavigation) {
-            window.loadWikiNavigation(currentDocId); 
-        }
-        if (window.loadWikiContent) {
-            window.loadWikiContent(currentDocId); 
-        }
+    // 이벤트 기다렸다가 초기화
+    window.addEventListener('wikinavbox-loaded', () => {
+        window.initializeLanguageSwitcher();
     });
 
-    // 초기 로드를 위한 전역 함수
-    window.loadInitialWikiContent = function() {
-        // currentDocId는 DOMContentLoaded 시점에 이미 파싱되어 있습니다.
-        const initialLang = localStorage.getItem('wikiLang') || 'en';
+    // 드롭다운 변경 시 리디렉션하는 이벤트 리스너
+    langSelect.addEventListener('change', (e) => {
+        const newLang = e.target.value;
+        const urlParams = new URLSearchParams(window.location.search);
+        let docParam = urlParams.get('doc') || 'default'; // 현재 문서 ID
 
-        if (window.loadWikiNavigation) {
-            window.loadWikiNavigation(currentDocId); 
-        }
-        if (window.loadWikiContent) {
-            window.loadWikiContent(currentDocId); 
-        }
-        document.documentElement.lang = initialLang.split('-')[0];
-    };
+        let redirectUrl = `/global/wiki/`;
 
-    window.loadInitialWikiContent(); // DOMContentLoaded 후 초기 로드 함수 호출
-});
+        // 새로운 언어에 따라 기본 URL 경로를 설정
+        if (newLang === 'en') {
+            redirectUrl += 'index.html';
+        } else {
+            redirectUrl += `${newLang}/index.html`;
+        }
+
+        // 새로운 언어에 따라 doc 매개변수 값을 변경
+        let newDocParam;
+        if (newLang === 'en') {
+            // 영어 선택 시: doc 매개변수에서 언어 코드 제거
+            newDocParam = docParam.replace(/_(ko|ja)$/, '');
+        } else {
+            // 한국어/일본어 선택 시: doc 매개변수에 새로운 언어 코드 추가
+            // 기존에 언어 코드가 있으면 교체
+            newDocParam = docParam.replace(/_(ko|ja)$/, '') + `_${newLang}`;
+        }
+        
+        // 최종 URL 구성
+        redirectUrl += `?doc=${newDocParam}`;
+        
+        window.location.href = redirectUrl;
+    });
+};
+
+const url = new URL(window.location.href);
+const params = url.searchParams;
+if (!params.has('doc')) {
+    params.set('doc', 'default');
+    // 변경 이력을 덮어쓰듯 반영: pushState 하면 쌓이니 replaceState가 적절
+    window.history.replaceState({}, '', url);
+}

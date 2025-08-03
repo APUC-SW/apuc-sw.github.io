@@ -1,58 +1,48 @@
-// Load the Wiki Navigation Box HTML template
-fetch('/global/resources/templates/wikinavbox.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('wikinavbox-container').innerHTML = html;
-    })
-    .catch(error => console.error('위키 네비게이션 상자 로딩 오류:', error));
-
-// Table of Contents navigation function
-// 목차 로드 함수를 전역적으로 노출
-window.loadWikiNavigation = async function(docId) { // docId는 language_switcher.js에서 옴
+document.addEventListener('DOMContentLoaded', async () => {
     const wikinavboxContainer = document.getElementById('wikinavbox-container');
-    const manifestPath = `/global/wiki/doc/wiki_manifest.json`; // 매니페스트 파일 경로 (동일)
 
-    const currentLang = localStorage.getItem('wikiLang') || 'en';
+    // URL 경로에서 현재 언어 코드를 파악합니다.
+    const pathSegments = window.location.pathname.split('/').filter(s => s);
+    const wikiIndex = pathSegments.indexOf('wiki');
+    let currentLang = 'en';
+
+    if (wikiIndex !== -1 && pathSegments.length > wikiIndex + 1) {
+        const nextSegment = pathSegments[wikiIndex + 1];
+        if (['ko', 'ja'].includes(nextSegment)) {
+            currentLang = nextSegment;
+        }
+    }
+    
+    // 언어 코드에 따라 목차 HTML 파일 경로를 결정합니다.
+    const navboxFilePath = (currentLang === 'en') 
+        ? `/global/resources/templates/wikinavbox.html`
+        : `/global/resources/templates/wikinavbox_${currentLang}.html`;
 
     try {
-        const response = await fetch(manifestPath);
+        const response = await fetch(navboxFilePath);
         if (!response.ok) {
-            throw new Error(`Failed to load wiki manifest: ${manifestPath}`);
+            throw new Error(`Failed to load navbox file: ${navboxFilePath}`);
         }
-        const wikiPages = await response.json();
-        renderNavigation(wikiPages, docId, currentLang);
+        
+        const navboxHtml = await response.text();
+        wikinavboxContainer.innerHTML = navboxHtml;
+
+        // URL에서 현재 문서 ID를 파악하여 활성 링크를 하이라이트합니다.
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentDocId = urlParams.get('doc') || 'default';
+        const navLinks = wikinavboxContainer.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.href.includes(`?doc=${currentDocId}`));
+        });
+
+        // language switcher 초기화 및 커스텀 이벤트
+        if (window.initializeLanguageSwitcher) {
+            window.initializeLanguageSwitcher();
+        }
+        window.dispatchEvent(new Event('wikinavbox-loaded'));
+
     } catch (error) {
         console.error('Error loading wiki navigation:', error);
         wikinavboxContainer.innerHTML = '<h3>Wiki navigation could not be loaded.</h3><p>An error occurred.</p>';
     }
-};
-
-function renderNavigation(pages, currentDocId, displayLang) {
-    const wikinavboxContainer = document.getElementById('wikinavbox-container');
-    let navHtml = `<h3>Wiki Navigation (${displayLang.toUpperCase()})</h3><nav><ul>`;
-    pages.forEach(page => {
-        const title = page.title[displayLang] || page.title['en'];
-        // 목차 링크는 URL 매개변수를 사용하도록 변경
-        navHtml += `<li><a href="/global/wiki/index.html?doc=${page.id}" data-doc-id="${page.id}">${title}</a></li>`;
-    });
-    navHtml += '</ul></nav>';
-    wikinavboxContainer.innerHTML = navHtml;
-
-    highlightActiveNavLink(currentDocId);
-}
-
-function highlightActiveNavLink(currentDocId) {
-    const navLinks = document.querySelectorAll('#wikinavbox-container nav ul li a');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        const linkDocId = link.getAttribute('data-doc-id');
-        
-        // 현재 URL의 문서 ID를 다시 파싱 (language_switcher.js와 동일 로직)
-        const urlParams = new URLSearchParams(window.location.search);
-        const currentUrlDocId = urlParams.get('doc') || 'default';
-
-        if (linkDocId === currentUrlDocId) {
-            link.classList.add('active');
-        }
-    });
-}
+});

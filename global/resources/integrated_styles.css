@@ -11,6 +11,10 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
+    .markdown-body h1, h2, h3, h4, h5, h6 {
+        margin-top: 15px !important;
+    }
+
     .markdown-body li {
         margin-left: 20px !important;
     }
@@ -382,15 +386,19 @@ article {
     user-select: none;
 }
 
+.wikinav h3 {
+    font-size: 16px;
+    user-select: none;
+}
+
 .wikitoc-scrollview {
     position: absolute;
     overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-x: auto;
     margin-bottom: 0;
     top: 7%;
     width: 100%;
     height: 94%;
-
 }
 
 .wikitoc-scrollview::-webkit-scrollbar {
@@ -410,16 +418,27 @@ article {
     background: #E1E1E1 !important;
 }
 
+.wikitoc-contentview {
+    width: max-content;
+    padding: auto;
+}
+
 .wikitoc {
     margin-top: -10%;
     margin-left: 5%;
 }
 
-.wikitoc a, .wikitoc p, .wikitoc h4 {
+.wikitoc a, .wikitoc p,
+.wikitoc h1, .wikitoc h2,
+.wikitoc h3, .wikitoc h4 {
     width: 100%;
     display: block;
     user-select: none;
     white-space: nowrap;
+}
+
+.wikitoc li {
+    margin-right: 10px;
 }
 
 .wikitoc-sub1 li,
@@ -496,6 +515,7 @@ article {
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
+    user-select: none;
 }
 /* Wiki elements end */
 
