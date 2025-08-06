@@ -1,5 +1,5 @@
 /* PrismJS 1.30.0
-https://prismjs.com/download#themes=prism-tomorrow&languages=markup+css+clike+javascript+batch+c+csharp+cpp+css-extras+csv+diff+docker+editorconfig+excel-formula+git+gradle+http+hpkp+hsts+java+javadoc+javadoclike+js-extras+json+json5+jsonp+kotlin+log+lua+markdown+markup-templating+php+phpdoc+php-extras+powershell+python+qsharp+jsx+tsx+textile+toml+typescript+typoscript+unrealscript+uri+xml-doc+yaml&plugins=line-highlight+line-numbers+autolinker+show-language+inline-color+keep-markup+command-line+toolbar+copy-to-clipboard+download-button+diff-highlight+treeview */
+https://prismjs.com/download#themes=prism-tomorrow&languages=markup+css+clike+javascript+aspnet+bash+batch+c+csharp+cpp+css-extras+csv+diff+docker+editorconfig+excel-formula+git+glsl+gradle+http+hpkp+hsts+ini+java+javadoc+javadoclike+javastacktrace+js-extras+json+json5+jsonp+jsstacktrace+js-templates+kotlin+log+lua+markdown+markup-templating+mata+php+phpdoc+php-extras+powershell+properties+python+qsharp+jsx+tsx+rust+scala+solution-file+sql+swift+textile+toml+typescript+typoscript+unrealscript+uri+xml-doc+xquery+yaml&plugins=line-highlight+line-numbers+autolinker+show-language+inline-color+keep-markup+command-line+toolbar+copy-to-clipboard+download-button+diff-highlight+treeview */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
@@ -9,31 +9,32 @@ https://prismjs.com/download#themes=prism-tomorrow&languages=markup+css+clike+ja
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #ccc !important;
-	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
+	background: none !important;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+	font-size: 1em !important;
+	text-align: left !important;
+	white-space: pre !important;
+	word-spacing: normal !important;
+	word-break: normal !important;
+	word-wrap: normal !important;
+	line-height: 1.5 !important;
 
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
+	-moz-tab-size: 4 !important;
+	-o-tab-size: 4 !important;
+	tab-size: 4 !important;
 
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
+	-webkit-hyphens: none !important;
+	-moz-hyphens: none !important;
+	-ms-hyphens: none !important;
+	hyphens: none !important;
+
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
+	padding: 1em !important;
+	margin: .5em 0 !important;
+	overflow: auto !important;
 }
 
 :not(pre) > code[class*="language-"],
@@ -43,9 +44,9 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
+	padding: .1em !important;
+	border-radius: .3em !important;
+	white-space: normal !important;
 }
 
 .token.comment,
@@ -115,7 +116,7 @@ pre[class*="language-"] {
 }
 
 .token.entity {
-	cursor: help;
+	cursor: help !important;
 }
 
 .token.inserted {
@@ -123,24 +124,24 @@ pre[class*="language-"] {
 }
 
 pre[data-line] {
-	position: relative;
-	padding: 1em 0 1em 3em;
+	position: relative !important;
+	padding: 1em 0 1em 3em !important;
 }
 
 .line-highlight {
-	position: absolute;
-	left: 0;
-	right: 0;
-	padding: inherit 0;
-	margin-top: 1em; /* Same as .prism’s padding-top */
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	padding: inherit 0 !important;
+	margin-top: 1em !important; /* Same as .prism’s padding-top */
 
 	background: hsla(24, 20%, 50%,.08) !important;
 	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0)) !important;
 
-	pointer-events: none;
+	pointer-events: none !important;
 
-	line-height: inherit;
-	white-space: pre;
+	line-height: inherit !important;
+	white-space: pre !important;
 }
 
 @media print {
@@ -149,148 +150,148 @@ pre[data-line] {
 		 * This will prevent browsers from replacing the background color with white.
 		 * It's necessary because the element is layered on top of the displayed code.
 		 */
-		-webkit-print-color-adjust: exact;
-		color-adjust: exact;
+		-webkit-print-color-adjust: exact !important;
+		color-adjust: exact !important;
 	}
 }
 
 	.line-highlight:before,
 	.line-highlight[data-end]:after {
-		content: attr(data-start);
-		position: absolute;
-		top: .4em;
-		left: .6em;
-		min-width: 1em;
-		padding: 0 .5em;
+		content: attr(data-start) !important;
+		position: absolute !important;
+		top: .4em !important;
+		left: .6em !important;
+		min-width: 1em !important;
+		padding: 0 .5em !important;
 		background-color: hsla(24, 20%, 50%,.4) !important;
 		color: hsl(24, 20%, 95%) !important;
-		font: bold 65%/1.5 sans-serif;
-		text-align: center;
-		vertical-align: .3em;
-		border-radius: 999px;
-		text-shadow: none;
+		font: bold 65%/1.5 sans-serif !important;
+		text-align: center !important;
+		vertical-align: .3em !important;
+		border-radius: 999px !important;
+		text-shadow: none !important;
 		box-shadow: 0 1px white !important;
 	}
 
 	.line-highlight[data-end]:after {
-		content: attr(data-end);
-		top: auto;
-		bottom: .4em;
+		content: attr(data-end) !important;
+		top: auto !important;
+		bottom: .4em !important;
 	}
 
 .line-numbers .line-highlight:before,
 .line-numbers .line-highlight:after {
-	content: none;
+	content: none !important;
 }
 
 pre[id].linkable-line-numbers span.line-numbers-rows {
-	pointer-events: all;
+	pointer-events: all !important;
 }
 pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
-	cursor: pointer;
+	cursor: pointer !important;
 }
 pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
 	background-color: rgba(128, 128, 128, .2) !important;
 }
 
 pre[class*="language-"].line-numbers {
-	position: relative;
-	padding-left: 3.8em;
-	counter-reset: linenumber;
+	position: relative !important;
+	padding-left: 3.8em !important;
+	counter-reset: linenumber !important;
 }
 
 pre[class*="language-"].line-numbers > code {
-	position: relative;
-	white-space: inherit;
+	position: relative !important;
+	white-space: inherit !important;
 }
 
 .line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	font-size: 100%;
-	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
-	letter-spacing: -1px;
+	position: absolute !important;
+	pointer-events: none !important;
+	top: 0 !important;
+	font-size: 100% !important;
+	left: -3.8em !important;
+	width: 3em !important; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px !important;
 	border-right: 1px solid #999 !important;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
 
 }
 
 	.line-numbers-rows > span {
-		display: block;
-		counter-increment: linenumber;
+		display: block !important;
+		counter-increment: linenumber !important;
 	}
 
 		.line-numbers-rows > span:before {
-			content: counter(linenumber);
+			content: counter(linenumber) !important;
 			color: #999 !important;
-			display: block;
-			padding-right: 0.8em;
-			text-align: right;
+			display: block !important;
+			padding-right: 0.8em !important;
+			text-align: right !important;
 		}
 
 .token a {
-	color: inherit;
+	color: inherit !important;
 }
 div.code-toolbar {
-	position: relative;
+	position: relative !important;
 }
 
 div.code-toolbar > .toolbar {
-	position: absolute;
-	z-index: 10;
-	top: .3em;
-	right: .2em;
-	transition: opacity 0.3s ease-in-out;
-	opacity: 0;
+	position: absolute !important;
+	z-index: 10 !important;
+	top: .3em !important;
+	right: .2em !important;
+	transition: opacity 0.3s ease-in-out !important;
+	opacity: 0 !important;
 }
 
 div.code-toolbar:hover > .toolbar {
-	opacity: 1;
+	opacity: 1 !important;
 }
 
 /* Separate line b/c rules are thrown out if selector is invalid.
    IE11 and old Edge versions don't support :focus-within. */
 div.code-toolbar:focus-within > .toolbar {
-	opacity: 1;
+	opacity: 1 !important;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item {
-	display: inline-block;
+	display: inline-block !important;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a {
-	cursor: pointer;
+	cursor: pointer !important;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > button {
-	background: none;
-	border: 0;
-	color: inherit;
-	font: inherit;
-	line-height: normal;
-	overflow: visible;
-	padding: 0;
-	-webkit-user-select: none; /* for button */
-	-moz-user-select: none;
-	-ms-user-select: none;
+	background: none !important;
+	border: 0 !important;
+	color: inherit !important;
+	font: inherit !important;
+	line-height: normal !important;
+	overflow: visible !important;
+	padding: 0 !important;
+	-webkit-user-select: none !important; /* for button */
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a,
 div.code-toolbar > .toolbar > .toolbar-item > button,
 div.code-toolbar > .toolbar > .toolbar-item > span {
 	color: #bbb !important;
-	font-size: .8em;
-	padding: 0 .5em;
+	font-size: .8em !important;
+	padding: 0 .5em !important;
 	background: #f5f2f0 !important;
 	background: rgba(224, 224, 224, 0.2) !important;
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2) !important;
-	border-radius: .5em;
+	border-radius: .5em !important;
 }
 
 div.code-toolbar > .toolbar > .toolbar-item > a:hover,
@@ -299,8 +300,8 @@ div.code-toolbar > .toolbar > .toolbar-item > button:hover,
 div.code-toolbar > .toolbar > .toolbar-item > button:focus,
 div.code-toolbar > .toolbar > .toolbar-item > span:hover,
 div.code-toolbar > .toolbar > .toolbar-item > span:focus {
-	color: inherit;
-	text-decoration: none;
+	color: inherit !important;
+	text-decoration: none !important;
 }
 
 span.inline-color-wrapper {
@@ -317,125 +318,125 @@ span.inline-color-wrapper {
 	 */
 	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=");
 	/* This is to prevent visual glitches where one pixel from the repeating pattern could be seen. */
-	background-position: center;
-	background-size: 110%;
+	background-position: center !important;
+	background-size: 110% !important;
 
-	display: inline-block;
-	height: 1.333ch;
-	width: 1.333ch;
-	margin: 0 .333ch;
-	box-sizing: border-box;
+	display: inline-block !important;
+	height: 1.333ch !important;
+	width: 1.333ch !important;
+	margin: 0 .333ch !important;
+	box-sizing: border-box !important;
 	border: 1px solid white !important;
 	outline: 1px solid rgba(0,0,0,.5) !important;
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 span.inline-color {
-	display: block;
+	display: block !important;
 	/* To prevent visual glitches again */
-	height: 120%;
-	width: 120%;
+	height: 120% !important;
+	width: 120% !important;
 }
 
 .command-line-prompt {
 	border-right: 1px solid #999 !important;
-	display: block;
-	float: left;
-	font-size: 100%;
-	letter-spacing: -1px;
-	margin-right: 1em;
-	pointer-events: none;
-	text-align: right;
+	display: block !important;
+	float: left !important;
+	font-size: 100% !important;
+	letter-spacing: -1px !important;
+	margin-right: 1em !important;
+	pointer-events: none !important;
+	text-align: right !important;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
 }
 
 .command-line-prompt > span:before {
-	opacity: 0.7;
-	content: ' ';
-	display: block;
-	padding-right: 0.8em;
+	opacity: 0.7 !important;
+	content: ' ' !important;
+	display: block !important;
+	padding-right: 0.8em !important;
 }
 
 .command-line-prompt > span[data-user]:before {
-	content: "[" attr(data-user) "@" attr(data-host) "] $";
+	content: "[" attr(data-user) "@" attr(data-host) "] $" !important;
 }
 
 .command-line-prompt > span[data-user="root"]:before {
-	content: "[" attr(data-user) "@" attr(data-host) "] #";
+	content: "[" attr(data-user) "@" attr(data-host) "] #" !important;
 }
 
 .command-line-prompt > span[data-prompt]:before {
-	content: attr(data-prompt);
+	content: attr(data-prompt) !important;
 }
 
 .command-line-prompt > span[data-continuation-prompt]:before {
-	content: attr(data-continuation-prompt);
+	content: attr(data-continuation-prompt) !important;
 }
 
 .command-line span.token.output {
 	/* Make shell output lines a bit lighter to distinguish them from shell commands */
-	opacity: 0.7;
+	opacity: 0.7 !important;
 }
 
 pre.diff-highlight > code .token.deleted:not(.prefix),
 pre > code.diff-highlight .token.deleted:not(.prefix) {
 	background-color: rgba(255, 0, 0, .1) !important;
-	color: inherit;
-	display: block;
+	color: inherit !important;
+	display: block !important;
 }
 
 pre.diff-highlight > code .token.inserted:not(.prefix),
 pre > code.diff-highlight .token.inserted:not(.prefix) {
 	background-color: rgba(0, 255, 128, .1) !important;
-	color: inherit;
-	display: block;
+	color: inherit !important;
+	display: block !important;
 }
 
 .token.treeview-part .entry-line {
-	position: relative;
-	text-indent: -99em;
-	display: inline-block;
-	vertical-align: top;
-	width: 1.2em;
+	position: relative !important;
+	text-indent: -99em !important;
+	display: inline-block !important;
+	vertical-align: top !important;
+	width: 1.2em !important;
 }
 .token.treeview-part .entry-line:before,
 .token.treeview-part .line-h:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 50%;
-	height: 100%;
+	content: "" !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 50% !important;
+	width: 50% !important;
+	height: 100% !important;
 }
 .token.treeview-part .line-h:before,
 .token.treeview-part .line-v:before {
 	border-left: 1px solid #ccc !important;
 }
 .token.treeview-part .line-v-last:before {
-	height: 50%;
+	height: 50% !important;
 	border-left: 1px solid #ccc !important;
 	border-bottom: 1px solid #ccc !important;
 }
 .token.treeview-part .line-h:after {
-	height: 50%;
+	height: 50% !important;
 	border-bottom: 1px solid #ccc !important;
 }
 .token.treeview-part .entry-name {
-	position: relative;
-	display: inline-block;
-	vertical-align: top;
+	position: relative !important;
+	display: inline-block !important;
+	vertical-align: top !important;
 }
 .token.treeview-part .entry-name.dotfile {
-	opacity: 0.5;
+	opacity: 0.5 !important;
 }
 
 /* @GENERATED-FONT */
 @font-face {
-	font-family: "PrismTreeview";
+	font-family: "PrismTreeview" !important;
 	/**
 	 * This font is generated from the .svg files in the `icons` folder. See the `treeviewIconFont` function in
 	 * `gulpfile.js/index.js` for more information.
@@ -456,22 +457,22 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 	 * - \ea0c word
 	 */
 	src: url("data:application/font-woff;base64,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")
-		format("woff");
+		format("woff") !important;
 }
 
 .token.treeview-part .entry-name:before {
-	content: "\ea01";
-	font-family: "PrismTreeview";
-	font-size: inherit;
-	font-style: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	width: 2.5ex;
-	display: inline-block;
+	content: "\ea01" !important;
+	font-family: "PrismTreeview" !important;
+	font-size: inherit !important;
+	font-style: normal !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	width: 2.5ex !important;
+	display: inline-block !important;
 }
 
 .token.treeview-part .entry-name.dir:before {
-	content: "\ea02";
+	content: "\ea02" !important;
 }
 .token.treeview-part .entry-name.ext-bmp:before,
 .token.treeview-part .entry-name.ext-eps:before,
@@ -482,7 +483,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .token.treeview-part .entry-name.ext-png:before,
 .token.treeview-part .entry-name.ext-svg:before,
 .token.treeview-part .entry-name.ext-tiff:before {
-	content: "\ea03";
+	content: "\ea03" !important;
 }
 .token.treeview-part .entry-name.ext-cfg:before,
 .token.treeview-part .entry-name.ext-conf:before,
@@ -493,7 +494,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .token.treeview-part .entry-name.ext-md:before,
 .token.treeview-part .entry-name.ext-nfo:before,
 .token.treeview-part .entry-name.ext-txt:before {
-	content: "\ea06";
+	content: "\ea06" !important;
 }
 .token.treeview-part .entry-name.ext-asp:before,
 .token.treeview-part .entry-name.ext-aspx:before,
@@ -512,7 +513,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .token.treeview-part .entry-name.ext-php:before,
 .token.treeview-part .entry-name.ext-rb:before,
 .token.treeview-part .entry-name.ext-xml:before {
-	content: "\ea07";
+	content: "\ea07" !important;
 }
 .token.treeview-part .entry-name.ext-7z:before,
 .token.treeview-part .entry-name.ext-bz:before,
@@ -522,7 +523,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .token.treeview-part .entry-name.ext-tar:before,
 .token.treeview-part .entry-name.ext-tgz:before,
 .token.treeview-part .entry-name.ext-zip:before {
-	content: "\ea08";
+	content: "\ea08" !important;
 }
 .token.treeview-part .entry-name.ext-aac:before,
 .token.treeview-part .entry-name.ext-au:before,
@@ -533,7 +534,7 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .token.treeview-part .entry-name.ext-ogg:before,
 .token.treeview-part .entry-name.ext-wav:before,
 .token.treeview-part .entry-name.ext-wma:before {
-	content: "\ea04";
+	content: "\ea04" !important;
 }
 .token.treeview-part .entry-name.ext-avi:before,
 .token.treeview-part .entry-name.ext-flv:before,
@@ -544,22 +545,23 @@ pre > code.diff-highlight .token.inserted:not(.prefix) {
 .token.treeview-part .entry-name.ext-mpg:before,
 .token.treeview-part .entry-name.ext-ogv:before,
 .token.treeview-part .entry-name.ext-webm:before {
-	content: "\ea05";
+	content: "\ea05" !important;
 }
 .token.treeview-part .entry-name.ext-pdf:before {
-	content: "\ea09";
+	content: "\ea09" !important;
 }
 .token.treeview-part .entry-name.ext-xls:before,
 .token.treeview-part .entry-name.ext-xlsx:before {
-	content: "\ea0a";
+	content: "\ea0a" !important;
 }
 .token.treeview-part .entry-name.ext-doc:before,
 .token.treeview-part .entry-name.ext-docm:before,
 .token.treeview-part .entry-name.ext-docx:before {
-	content: "\ea0c";
+	content: "\ea0c" !important;
 }
 .token.treeview-part .entry-name.ext-pps:before,
 .token.treeview-part .entry-name.ext-ppt:before,
 .token.treeview-part .entry-name.ext-pptx:before {
-	content: "\ea0b";
+	content: "\ea0b" !important;
 }
+

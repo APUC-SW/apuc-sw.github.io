@@ -424,7 +424,7 @@ article {
 }
 
 .wikitoc {
-    margin-top: -10%;
+    margin-top: 5% !important;
     margin-left: 5%;
 }
 
