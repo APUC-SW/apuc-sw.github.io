@@ -4,6 +4,9 @@ It is fundamentally no different from other community-based role-playing univers
 Community extensions are welcome, but we are always cautious when adding these unofficial elements.<br>
 Unlike other RP universe projects, TSCUP isn't set in the distant future or past. It's set in the near future, primarily between the 19th and 25th centuries, in the alternative history genre.
 
+## When will it officially open?
+There is no release date set yet, and it will be announced later unless there is an unexpected catastrophic disaster in the real world, such as war, natural disaster, martial law declaration, terrorism/riot, etc.
+
 ## What works inspire you?
 This was inspired by the Half-Life series and Portal series, so most of the story elements may have somewhat similar feelings. However, since it did not directly transfer or inherit the Half-Life universe, the content may be fundamentally different.
 
