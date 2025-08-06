@@ -1,7 +1,7 @@
 # English
 
 ## Article 1 (Purpose)
-These terms and conditions are intended to regulate the rights, obligations, and responsibilities between APUC Software and users when using the services provided by APUC Software (hereinafter referred to as the "Operating Entity").
+These Terms and Conditions are intended to regulate the rights, obligations, and responsibilities between APUC Software (hereinafter referred to as the “Operator” or “Company”) and users in relation to the services provided by the Company.
 
 ※ These terms and conditions also apply to electronic commerce using PC communication, wireless, etc., unless they are in conflict with their nature.
 
@@ -47,24 +47,31 @@ Compensation or refund for service termination will be in accordance with a sepa
 
 ## Article 6 (Membership Registration and Account Linking)
 ### Membership Registration
-Membership registration for this site and community is only possible through a third-party platform account. Members can basically register for this service using third-party platform accounts such as Discord, Google, Steam, and Github.
-When registering by linking a third-party platform account, the terms of use and privacy policy of the relevant platform will apply. The relevant service may collect, store, and use user information provided by the third-party platform, which will be processed in accordance with the personal information processing policy of this operating entity.
-### Account Linking
-Members can log in to this site, community, and service by linking their accounts on third-party platforms (Google, Steam, Discord, Github, etc.) to this service.
-Account information (user name, email address, etc.) provided by third-party platforms will be linked to this service, and will be used to verify the member's identity and facilitate the use of the service. Members are responsible for maintaining the security of their accounts on third-party platforms, and the operating entity is not responsible for any damages resulting from the leakage of account information on such platforms.
-### Use of linked accounts
-When accessing this site, community, and service with an account on a linked third-party platform, members must comply with all terms of use and policies of this service.
-If a member cancels a third-party platform account or disconnects it from this service, member information may be deleted for the protection of personal information, and this cannot be restored due to the security characteristics of our server, so the operating entity is not responsible for it in any way. Therefore, users must take special care when managing their account information.
-### Provision and use of personal information
-This site, community, and service receive necessary personal information from third-party platforms with the consent of the member. This is used for the purpose of providing and improving services, supporting users, etc.
-Members may disconnect their accounts with third-party platforms at any time, in which case the member's information stored on this service will be processed in accordance with relevant laws. ### Member Obligations and Community Rules
+Membership registration for this site and community is only possible through a third-party platform account. Members can sign up for this service using third-party platform accounts such as Discord, Google, and Steam.
+When registering by linking a third-party platform account, the platform's terms of use and privacy policy apply. This service may collect, store, and use user information (username, email address, etc.) provided by the third-party platform, which will be securely processed in accordance with our privacy policy.
+
+### Account Linking and Responsibilities
+Members can log in to this site, community, and service by linking their third-party platform account to this service.
+Members are responsible for maintaining the security of their third-party platform account, and we are not responsible for any damages resulting from the member's intentional or negligent actions.
+However, if personal information is leaked due to our intentional or gross negligence during the process of linking and managing third-party platform account information, we will be held liable in accordance with relevant laws. We are not responsible for any personal information leaks resulting from technical defects or operational faults of the third-party platform itself.
+
+### Use of Linked Accounts
+When accessing this site and services using a linked third-party platform account, members must comply with all terms of use and policies of this service.
+If a member cancels their third-party platform account or disconnects it from this service, their personal information will be destroyed in accordance with our privacy policy. Data destruction may not be recoverable, so members must take necessary measures before disconnecting or closing their account. We will delete relevant information at the member's request, and we clarify that we do not unilaterally exempt liability for the fact that recovery is impossible. Therefore, members must exercise extreme caution when managing their account information.
+
+### Provision and Use of Personal Information
+This site, community, and services receive necessary personal information from third-party platforms with the member's consent. This information is used for purposes such as service provision and improvement. Members may disconnect their accounts from third-party platforms at any time, in which case their information stored on this service will be processed in accordance with applicable laws.
+
+### Member Obligations and Community Rules
 #### Member Responsibilities
 Members must respect the rights of other members and third parties within this community, and strive to maintain order in the community.
 Members must comply with the Terms of Use, Community Rules, and relevant local laws of this community, and violations thereof may result in restrictions on service use.
+
 #### Neutral Activity Obligations
 All members must maintain a neutral attitude when expressing opinions or engaging in activities within this community. This means not forcing specific ideologies, political positions, or religious beliefs, or engaging in activities that may offend others.
 In the event of conflicts or disputes between members, members must make efforts to resolve the issue from a neutral standpoint rather than responding emotionally.
-If the community discovers that a member is engaging in activities that do not maintain neutrality, it may take actions such as warnings, deleting posts, restricting service use, or revoking membership.
+If the community detects that a member is engaging in activities that violate neutrality, the community may take action, including warnings, deleting posts, restricting access to the service, or account ban.
+
 #### Prohibited Actions
 Members must not engage in the following actions on this site, community, and service:
 - Acts that defame others, or create discomfort through discriminatory or hateful remarks. - Forcing a specific position on political, religious, or other sensitive topics.
@@ -74,6 +81,7 @@ Members must not engage in the following actions on this site, community, and se
 - Unauthorized illegal acts such as hacking, distributing malicious code, using illegal bots, and reverse engineering.
 - Disregarding or violating the copyrights of others.
 This is absolute, and this community may take immediate action if such prohibited acts are discovered.
+
 #### Rules on Disputes Between Members
 Members are responsible for autonomously resolving all disputes that arise within this community. The community does not intervene in disputes between members in principle.
 However, in special cases, the community management may intervene in mediation, and members must respect and follow the results of such mediation.
@@ -81,39 +89,46 @@ The results of the community's mediation are final, and no additional objections
 This community will continuously review and improve its management policy so that all members can form a healthy community culture with a neutral attitude.
 If you have any inquiries or suggestions related to the neutral activity obligations of members, please contact the community management team.
 
-## Article 7 (Restrictions on Service Use)
-The operating entity may restrict or suspend a member's use of the service in the following cases:
-- When a member violates the terms and conditions
-- When an act that threatens the safety of the service is discovered
-- When there are other reasonable grounds
+## Article 7 (Restrictions and Suspension of Service Use)
+### 1. Reasons for Restrictions
+The operator may restrict or suspend a member's use of the service if the member engages in any of the following acts:
 
-## Article 8 (Limitations of Liability and Disclaimer)
-### Developer Disclaimer
-This operating entity does not bear direct responsibility for the content or activities provided by members, and does not bear legal responsibility for disputes, conflicts, or other issues that arise between members within this service.
-In principle, all disputes between members should be resolved autonomously through agreement between the parties, and this operating entity does not intervene in this in principle.
-However, the operating entity may intervene in arbitration only in the following special cases:
-- When a dispute between members has a serious impact on the entire community or is likely to cause damage to a large number of members.
-- When serious legal issues are expected or there is an act that seriously violates the regulations, terms, etc.
-- When the operating entity determines that direct intervention is necessary.
-### Resolution of Disputes Between Members
-Members are responsible for autonomously resolving all conflicts or disputes that arise within this service through mutual agreement.
-For disputes in which this operating entity does not intervene in arbitration, the operating entity does not bear any legal responsibility or compensation obligation. ### Service Provision and Warranty
-The service of this operating entity is provided "as is", and this operating entity does not make any warranty regarding the reliability, accuracy, completeness, or suitability for a particular purpose of the service.
-The operating entity is not responsible for any direct, indirect, incidental, special, or consequential damages resulting from interruption, delay, error, or incompleteness of the service.
-### Disclaimer of Damages
-The operating entity is not responsible for damages resulting from the following cases:
-- Personal information leakage, account theft, etc. due to user negligence
-- Technical problems, system errors, hacking, etc. that occur during access to and use of the service, including well-known cases
-- Damages resulting from lack of accuracy or reliability of information and materials provided by others to the service
-- Service interruption or damage due to force majeure such as natural disasters, war, or terrorism
-- When service provision is restricted due to legal restrictions and regulations
-### Third-party services and content
-The service of this operating entity may include content, advertisements, links, etc. provided by third parties, and this operating entity is not responsible for information or services provided by third parties. The user acknowledges and agrees that the operating entity is not responsible for any problems that may arise from the use of third-party services or content.
-### Scope and Limitation of Liability
-The operating entity limits or disclaims liability for any damages that may arise in connection with the use of the service, except in cases where liability cannot be legally exempted.
-The liability limitation provisions of these Terms and Conditions shall apply to the maximum extent permitted by law.
-The operating entity shall not be responsible for any data loss, service interruption, or other direct or indirect damages that may arise during the use of the service.
-The operating entity shall not be responsible for any platforms, linked services, or external links provided by third parties, and the user shall personally resolve any problems that may arise from the use of these.
+- I. Unauthorized disclosure or use of another member's personal information or defamation of another person.
+- II. Posting or distributing pornographic or illegal content.
+- III. Advertising for profit without the operator's permission.
+- IV. Acts that interfere with or threaten the stable operation of the service, such as through malicious code or viruses.
+- V. Serious violation of the obligations stipulated in these Terms and Conditions or violation of laws and regulations.
+
+### 2. Restriction Procedures
+If the operator intends to restrict or suspend a member's use of the service, the operator will provide advance notice to the member, specifying the reason, the period of restriction, and the method for filing an objection. However, if an emergency suspension is necessary or advance notice is difficult, post-notification may be used instead.
+
+### 3. Types of Restrictions
+The operator may sequentially apply the following measures depending on the severity of the violation.
+
+- I. Warning
+- II. Service Suspension for a Specified Period
+- III. Permanent Suspension (Membership Cancellation)
+
+## Article 8 (Limitation of Liability and Compensation for Damages)
+### 1. Responsibilities of the Operator
+To ensure the smooth operation of the Service and the protection of member information, we are obligated to take all technical and administrative measures in accordance with relevant laws and the Personal Information Protection Act.
+
+### 2. Service Provision and Warranty
+- I. We guarantee the reliability, accuracy, completeness, and suitability for a specific purpose of the Service only to the extent permitted by law.
+- II. We are not liable for damages arising from interruptions, delays, errors, or incompleteness of the Service, unless such damages are caused by our willful misconduct or gross negligence.
+
+### 3. Limitations of Liability
+- I. We are not directly responsible for content provided by members or disputes between members. However, if a dispute arises or expands due to our willful misconduct or gross negligence, we may be held liable in accordance with relevant laws and regulations.
+- II. We are not liable for service interruptions or damages caused by force majeure, such as natural disasters, war, or terrorism.
+- III. We are not responsible for personal information leaks, account theft, etc. caused by the user's negligence.
+- IV. We are not liable for damages arising from services, content, links, etc. provided by third parties, unless such damages are attributable to us.
+
+### 4. Compensation for Damages
+If damages are incurred to a member due to our intentional or gross negligence, we are responsible for compensating the member for the damages in accordance with applicable laws and regulations.
+
+### 5. Resolution of Disputes Between Members
+- I. Members are responsible for resolving any conflicts or disputes arising within this service through mutual agreement.
+- II. We may intervene in arbitration only in special cases where a dispute between members has a serious impact on the entire community or where legal issues are anticipated. However, we are not obligated to intervene in arbitration, and arbitration decisions are not legally binding.
 
 ## Article 9 (Notification to Members)
 ### Notification Methods
@@ -127,22 +142,26 @@ Notifications take effect when this operating entity sends them through third-pa
 Members are responsible for ensuring that their member information is accurate and up-to-date. The operating entity is not responsible for any omission or delay in notifications resulting from inaccurate or incomplete information provided by members.
 
 ## Article 10 (Copyright and Intellectual Property Rights)
-### Copyright Ownership
-All content, materials, designs, texts, graphics, logos, images, videos, audio files, 3D modeling, software, codes, and other elements (hereinafter referred to as "Contents") provided by this operating entity are the property of this operating entity or the copyright owner of the relevant work, depending on the form of copyright of the relevant content, and are protected by copyright law and related intellectual property laws.
-The copyright and other intellectual property rights for the Contents belong to this operating entity or the relevant rights holder, and are protected as "All rights reserved." unless otherwise specified.
-### Use of Contents by External Copyright Holders
-This operating entity is using some Contents with the permission of external copyright holders. Such Contents are owned by the relevant copyright holders, and their use is subject to the permission and conditions of the relevant copyright holders.
-The content of external copyright holders may include images, videos, audio files, texts, 3D modeling, codes, and other digital content that are utilized as project assets of this operating entity, and the copyright for such Contents belongs to the relevant copyright holders, not this operating entity. For details, please refer to the credit section of each project.
-Members may not copy, distribute, modify, display, publish, or use content provided by external copyright holders for commercial purposes without prior consent.
-### Copyright Notice
-When content from external copyright holders is used, this operating entity shall state the copyright information related to the content, and the copyright notice shall be provided in the manner requested by the external copyright holder.
-Members may not arbitrarily change or remove the copyright notice specified by this operating entity for content from external copyright holders.
-### Prevention of Copyright Infringement by Third Parties
-This operating entity shall strictly comply with the terms of use for content that has been granted permission by external copyright holders, and shall not use such content without permission.
-All legal liability arising when a member uses or redistributes content from external copyright holders on this operating entity shall lie with the member, and this operating entity shall not be held responsible for such liability.
-### Copyright Infringement Report
-If an external copyright holder believes that his/her content has been used without permission on this operating entity, he/she may file a copyright infringement report through the customer center. If copyright infringement is confirmed, the operating entity will take appropriate measures, such as deleting the relevant content or blocking access.
-### Other
+### 1. Copyright Ownership
+Unless otherwise specified, the copyright and other intellectual property rights for all digital content, materials, designs, text, graphics, logos, images, videos, audio files, 3D models, software, code, etc. (hereinafter referred to as "Content") provided by the Company belong to the Company. Such Content is protected by copyright law and related laws.
+
+### 2. Member Rights and Responsibilities Regarding Content
+- I. The copyright for all content (hereinafter referred to as "Posts") posted by Members on the Service, including posts, comments, and images, belongs to the author of the relevant Post.
+- II. Members must exercise sufficient care to ensure that their Posts do not infringe the copyrights of others.
+- III. Members are solely responsible for any legal liability (copyright infringement, defamation, etc.) arising from their Posts. In principle, the Company is not liable for any issues arising from Posts posted by Members.
+
+### 3. Use of Our Posts
+By posting content on the Service, Members grant us a non-exclusive, royalty-free license to reproduce, display, transmit, and distribute such content. This license is valid only to the extent necessary for us to operate, promote, and improve the Service.
+
+### 4. Use of Content and Responsibilities of External Copyright Holders
+- I. When using content from external copyright holders, we obtain permission from the relevant copyright holders and clearly display relevant information, including credits.
+- II. Members may not reproduce, distribute, modify, display, publish, or use content provided by external copyright holders for commercial purposes without prior consent.
+- III. Members are responsible for any legal liability arising from the unauthorized use of content from external copyright holders. However, we may be liable for any damages suffered by Members due to incorrect copyright information provided by us, whether due to our intentional or gross negligence.
+
+### 5. Copyright Infringement Reporting and Action
+Right holders who allege copyright infringement may report it through the Customer Center. If infringement is confirmed, we will take necessary measures, including deleting the content or blocking access, in accordance with relevant laws and operating policies.
+
+## Other
 Matters not specified in these Terms and Conditions shall be governed by relevant laws and customs.
 ### Inquiries
 For inquiries regarding the Terms and Conditions, please contact the customer center on this site.
