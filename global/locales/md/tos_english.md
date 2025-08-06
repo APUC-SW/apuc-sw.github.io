@@ -7,12 +7,12 @@ These Terms and Conditions are intended to regulate the rights, obligations, and
 
 ## Article 2 (Definition)
 
-- Service: Refers to the website, game, game modding software, AI service, and other utility services provided by this operating entity.
-- Community: Refers to the online community opened and operated by this operating entity through a third-party platform (e.g. Discord, Steam community, etc.).
-- Site: Refers to the official website provided by this operating entity, which is currently accessed by the user to read these Terms and Conditions.
-- User: Refers to members and non-members who access this site and receive services provided by this operating entity in accordance with these Terms and Conditions.
-- Member: Refers to a person who registers on this site or community and uses all services provided by this operating entity in accordance with these Terms and Conditions.
-- Non-member: Refers to a person who uses some services provided by this operating entity anonymously without registering as a member on this site or community.
+- Service: Refers to the website, game, game modding software, AI service, and other utility services provided by this operator.
+- Community: Refers to the online community opened and operated by this operator through a third-party platform (e.g. Discord, Steam community, etc.).
+- Site: Refers to the official website provided by this operator, which is currently accessed by the user to read these Terms and Conditions.
+- User: Refers to members and non-members who access this site and receive services provided by this operator in accordance with these Terms and Conditions.
+- Member: Refers to a person who registers on this site or community and uses all services provided by this operator in accordance with these Terms and Conditions.
+- Non-member: Refers to a person who uses some services provided by this operator anonymously without registering as a member on this site or community.
 - Account: Refers to the login ID and password that a member registers or logs in through a third-party platform (e.g. Google, Steam, Discord, etc.) to use the service.
 
 ## Article 3 (Validity and Change of Terms and Conditions)
