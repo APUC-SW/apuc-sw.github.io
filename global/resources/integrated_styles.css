@@ -1,6 +1,10 @@
 /* Github Markdown style start */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-dark.css") layer(markdown-style);
-  
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-dark.css") layer(markdown-style); */
+@import url("/global/resources/extensions/github/github-markdown-dark.css") layer(markdown-style);
+@import url("/global/resources/extensions/prismjs/prism.css") layer(prism-style);
+
+@layer markdown-style, prism-style;
+
 @layer markdown-style {
     .markdown-body {
         max-width: auto;
@@ -11,8 +15,14 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .markdown-body h1, h2, h3, h4, h5, h6 {
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
         margin-top: 15px !important;
+        font-family: Noto Sans KR, sans-serif;
     }
 
     .markdown-body li {
@@ -21,9 +31,15 @@
 
     .markdown-body p {
         white-space: pre-wrap !important;
+        font-family: Noto Sans KR, sans-serif;
     }
 
-    .markdown-body th, td {
+    .markdown-body a {
+        font-family: Noto Sans KR, sans-serif;
+    }
+
+    .markdown-body th,
+    .markdown-body td {
         padding: 5px !important;
     }
 
@@ -479,6 +495,14 @@ article {
     background: #E1E1E1 !important;
 }
 
+.wikidoc-container:lang(ko) {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wikidoc-container:lang(ja) {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 .wikidoc-localebar {
     z-index: 1;
     position: relative;
@@ -875,7 +899,7 @@ article {
     padding: 15px;
     margin: 20px 0;
     background-color: #242424 !important;
-    font-family: Arial, sans-serif;
+    font-family: Noto Sans KR, sans-serif;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
@@ -883,7 +907,7 @@ article {
     flex-shrink: 0; /* 아이콘이 줄어들지 않도록 고정 */
     margin-right: 15px;
     font-size: 36px; /* Material Symbol 크기 */
-    color: #FFFFFF !important; /* 구글 파란색 계열 */
+    color: #FFFFFF !important;
 }
 
 .embedded-link-content {
@@ -911,3 +935,107 @@ article {
     text-decoration: none;
 }
 /* Embed styles end */
+
+/* Wiki tag boxes start */
+.wikitag-titlewrapper {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: center;
+    width: 150px;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+.wikitag-titlewrapper-asian {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: center;
+    width: 90px;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+.wikitag-icon {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: center;
+    margin-right: 15px;
+    font-size: 36px;
+    color: #FFFFFF !important;
+    user-select: none;
+}
+
+.wikitag-title {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 110px;
+    align-self: center;
+    text-align: left;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF !important;
+    user-select: none;
+}
+
+.wikitag-content {
+    flex-grow: 4;
+    overflow: hidden;
+    text-align: left;
+}
+
+.wikitag-note {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #2196F3 !important;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #041530 !important;
+    font-family: Noto Sans KR, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wikitag-attention {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #FFEB3B !important;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #35310C !important;
+    font-family: Noto Sans KR, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wikitag-warning {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #F44336 !important;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #370808 !important;
+    font-family: Noto Sans KR, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wikitag-reference {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border: 1px solid #00E676 !important;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #003C19 !important;
+    font-family: Noto Sans KR, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+/* Wiki tag boxes end */
