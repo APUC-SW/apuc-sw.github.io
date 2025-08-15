@@ -495,6 +495,10 @@ article {
     background: #E1E1E1 !important;
 }
 
+.wikidoc-container:lang(en) {
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .wikidoc-container:lang(ko) {
     font-family: 'Noto Sans KR', sans-serif;
 }
