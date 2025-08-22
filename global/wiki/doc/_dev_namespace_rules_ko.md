@@ -60,4 +60,12 @@
 
 </code></pre></div>
 
-<b>정보</b>: <code>Editor</code> 모듈은 유니티 프로젝트에 사용합니다.
+<div class="wikitag-note">
+    <div class="wikitag-titlewrapper-asian">
+        <div class="wikitag-icon">
+            <span class="material-symbols-outlined">lightbulb</span>
+        </div>
+        <div class="wikitag-title">정보:</div>
+    </div>
+    <div class="wikitag-content"><code>Editor</code> 모듈은 유니티 프로젝트에 사용합니다.</div>
+</div>

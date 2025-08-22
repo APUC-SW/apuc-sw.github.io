@@ -60,4 +60,12 @@ The structure may vary slightly depending on when the project was created, but i
 
 </code></pre></div>
 
-<b>NOTE</b>: <code>Editor</code> module is used in Unity projects.
+<div class="wikitag-note">
+    <div class="wikitag-titlewrapper">
+        <div class="wikitag-icon">
+            <span class="material-symbols-outlined">lightbulb</span>
+        </div>
+        <div class="wikitag-title">NOTE:</div>
+    </div>
+    <div class="wikitag-content"><code>Editor</code> module is used in Unity projects.</div>
+</div>
