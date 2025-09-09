@@ -5,8 +5,7 @@
 Do not download, copy, share or redistribution any source code on this repository.   
 If caught, it may result in legal sanctions.
 
-This repository is by no means open source. The downloadable open source is provided separately on the [our official site](https://apuc-sw.github.io
-), so please do not use this repository without permission.
+This repository is by no means open source. We not share website sources to open. So do not use this repository without any permission.
 
 These rules apply internationally.
 
@@ -16,5 +15,8 @@ This is just website repository. Version information is unknown.
 
 ## Reporting a Vulnerability
 
-Have you ever found a security vulnerability? If so, please report it via our [Discord server](https://discord.gg/tUHk9x7QrF).   
-Submitted reports will be processed expeditiously within 3 business days.
+| Field | Value |
+|-------|-------|
+| **Contact** | mailto:apuc_sw@kakao.com |
+| **Expires** | 2030-12-31T15:00:00.000Z |
+| **Preferred-Languages** | en, ko |
