@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const docName = urlParams.get('doc') || 'default';
 
     // 영어(원문) 파일 경로
-    const markdownFilePath = `/global/wiki/doc/${docName}.md`; // 경로는 올바름
+    const markdownFilePath = `/global/wiki/doc/sub/${docName}.md`; // 경로는 올바름
 
     try {
         const response = await fetch(markdownFilePath);

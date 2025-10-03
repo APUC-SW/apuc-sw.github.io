@@ -390,9 +390,9 @@ article {
 
 .wikinav-header {
     position: absolute;
-    margin-bottom: 20px;
     height: 40px;
     width: 100%;
+    top: 7%;
     text-align: right;
     background: #242424 !important;
     background: -webkit-linear-gradient(90deg,rgba(36, 36, 36, 1) 5%, rgba(72, 72, 72, 1) 30%) !important;
@@ -438,7 +438,7 @@ article {
     overflow-y: scroll;
     overflow-x: auto;
     margin-bottom: 0;
-    top: 7%;
+    top: 14%;
     width: 100%;
     height: 94%;
 }
@@ -466,8 +466,7 @@ article {
 }
 
 .wikitoc {
-    margin-top: 5% !important;
-    margin-left: 5%;
+    margin-left: 30px !important;
 }
 
 .wikitoc a, .wikitoc p,
@@ -490,20 +489,6 @@ article {
     margin-left: 20px;
 }
 
-.wikidoc-container {
-    z-index: -2;
-    position: absolute;
-    top: 14%;
-    left: 20%;
-    width: 80%;
-    height: 82%;
-    margin: auto;
-    padding: 20px;
-    background: #121212 !important;
-    color: #FFFFFF !important;
-    overflow-y: scroll;
-}
-
 .wikitoc-container::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -519,6 +504,20 @@ article {
 }
 .wikitoc-container::-webkit-scrollbar-thumb:hover {
     background: #E1E1E1 !important;
+}
+
+.wikidoc-container {
+    z-index: -2;
+    position: absolute;
+    top: 14%;
+    left: 20%;
+    width: 80%;
+    height: 82%;
+    margin: auto;
+    padding: 20px;
+    background: #121212 !important;
+    color: #FFFFFF !important;
+    overflow-y: scroll;
 }
 
 .wikidoc-container:lang(en) {
@@ -570,6 +569,56 @@ article {
     font-size: 16px;
     cursor: pointer;
     user-select: none;
+}
+
+.wiki-tabctrl
+{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.wiki-tabctrl input[type="radio"] {
+    display: none;
+}
+
+.wiki-tabctrl-btn
+{
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer !important;
+    background-color: #242424 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.wiki-tabctrl-btn:hover
+{
+    background-color: #FFFFFF10 !important;
+    border: none !important;
+}
+
+.wiki-tabctrl-btn:active
+{
+    background-color: #FFFFFF !important;
+    color: #242424 !important;
+    border: none !important;
+}
+
+.wiki-tabctrl-btn.active
+{
+    background-color: #FFFFFF !important;
+    color: #242424 !important;
+    border: none !important;
+    user-select: none !important;
+}
+
+.wiki-tabctrl-btn:not(:first-child) {
+    border-left: 1px solid gray !important;
 }
 /* Wiki elements end */
 

@@ -2,17 +2,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     const wikiContentContainer = document.getElementById('wikicontent-container');
 
     const urlParams = new URLSearchParams(window.location.search);
-    const docName = urlParams.get('doc') || 'about_project';
+    const docName = urlParams.get('doc') || 'default';
 
     // 한국어 파일 경로
-    const markdownFilePath = `/global/wiki/doc/${docName}_ko.md`; // 경로는 올바름
+    const markdownFilePath = `/global/wiki/doc/sub/${docName}_ko.md`; // 경로는 올바름
 
     try {
         const response = await fetch(markdownFilePath);
 
         if (!response.ok) {
             console.warn(`Translation for ${docName} in 'ko' not found. Attempting to load original 'en' version.`);
-            const fallbackFilePath = `/global/wiki/doc/${docName}.md`;
+            const fallbackFilePath = `/global/wiki/doc/sub/${docName}.md`;
             const fallbackResponse = await fetch(fallbackFilePath);
             if (!fallbackResponse.ok) {
                 wikiContentContainer.innerHTML = '<h1>404 - Page Not Found</h1><p>The wiki document you requested could not be found.</p>';

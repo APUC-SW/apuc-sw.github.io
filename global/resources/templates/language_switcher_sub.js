@@ -34,9 +34,9 @@ window.initializeLanguageSwitcher = function() {
 
         // 새로운 언어에 따라 기본 URL 경로를 설정
         if (newLang === 'en') {
-            redirectUrl += 'index.html';
+            redirectUrl += 'index_sub.html';
         } else {
-            redirectUrl += `${newLang}/index.html`;
+            redirectUrl += `${newLang}/index_sub.html`;
         }
 
         // 새로운 언어에 따라 doc 매개변수 값을 변경
