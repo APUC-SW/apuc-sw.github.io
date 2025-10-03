@@ -132,6 +132,7 @@ a {
     background-image: url('/global/resources/logo_48px.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    vertical-align: middle;
 }
 
 .smalltext {
@@ -154,6 +155,7 @@ span .mainicon {
     display: block;
     height: 1px;
     border: none;
+    margin-top: 5px;
     background: rgb(0,0,0) !important;
     background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(0,0,0,0) 100%) !important;
     background: -webkit-linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(0,0,0,0) 100%) !important;
@@ -176,8 +178,8 @@ span .mainicon {
 
 header .wrapper {
     top: 0%;
-    padding-top: 10px;
-    padding-bottom: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 footer .wrapper {
@@ -1118,3 +1120,15 @@ article {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 /* Wiki tag boxes end */
+
+contact-form {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #242424 !important;
+    border: 1px solid #E0E0E0 !important;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
