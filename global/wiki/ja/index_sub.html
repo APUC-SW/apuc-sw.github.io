@@ -37,6 +37,20 @@
                 <script src="/global/resources/templates/wikinavbox_loader_sub.js"></script>
             </div>
         </aside>
+        <div id="recaptcha-overlay-wrapper">
+            <div id="recaptcha-overlay-content">
+                <h2>アクセスするにはパスワードを入力してください</h2>
+                <p>ここの文書は誰でも閲覧できません。<br>
+                    これらの資料を表示する資格を証明するには、<br>
+                    次の質問に対応する8桁のパスワードを入力してください。
+                </p>
+                <label for="date-input" id="recaptcha-question">質問を読み込んでいます...</label>
+                <input type="text" id="date-input" placeholder="YYYYMMDD" maxlength="8">
+                <button onclick="checkPassword()">証明</button>
+                <div id="result-message"></div>
+            </div>
+            <script src="/global/resources/templates/wikisec_form_ja.js"></script>
+        </div>
         <article class="wiki-content">
             <div class="wikidoc-container markdown-body" id="wikicontent-container">
                 <script src="/global/resources/templates/wikicontent_loader_sub_ja.js"></script>

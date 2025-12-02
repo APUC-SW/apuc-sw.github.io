@@ -37,6 +37,21 @@
                 <script src="/global/resources/templates/wikinavbox_loader_sub.js"></script>
             </div>
         </aside>
+        <div id="recaptcha-overlay-wrapper">
+            <div id="recaptcha-overlay-content">
+                <h2>INPUT PASSWORD TO ACCESS</h2>
+                <p>The documents here are not publicly accessible.<br>
+                    To verify your eligibility to view these materials,<br>
+                    please enter the 8-digit password corresponding<br>
+                    to the following questions.
+                </p>
+                <label for="date-input" id="recaptcha-question">LOADING QUESTION...</label>
+                <input type="text" id="date-input" placeholder="YYYYMMDD" maxlength="8">
+                <button onclick="checkPassword()">VERTFY</button>
+                <div id="result-message"></div>
+            </div>
+            <script src="/global/resources/templates/wikisec_form_en.js"></script>
+        </div>
         <article class="wiki-content">
             <div class="wikidoc-container markdown-body" id="wikicontent-container">
                 <script src="/global/resources/templates/wikicontent_loader_sub.js"></script>

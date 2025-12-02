@@ -37,6 +37,20 @@
                 <script src="/global/resources/templates/wikinavbox_loader_sub.js"></script>
             </div>
         </aside>
+        <div id="recaptcha-overlay-wrapper">
+            <div id="recaptcha-overlay-content">
+                <h2>비밀번호 입력 후 접근</h2>
+                <p>이곳의 문서는 아무나 열람할 수 없습니다.<br>
+                    해당 자료들을 볼 수 있는 자격을 증명하려면<br>
+                    다음 질문에 해당하는 8자리 비밀번호를 입력하세요.
+                </p>
+                <label for="date-input" id="recaptcha-question">질문 불러오는 중...</label>
+                <input type="text" id="date-input" placeholder="YYYYMMDD" maxlength="8">
+                <button onclick="checkPassword()">증명</button>
+                <div id="result-message"></div>
+            </div>
+            <script src="/global/resources/templates/wikisec_form_ko.js"></script>
+        </div>
         <article class="wiki-content">
             <div class="wikidoc-container markdown-body" id="wikicontent-container">
                 <script src="/global/resources/templates/wikicontent_loader_sub_ko.js"></script>

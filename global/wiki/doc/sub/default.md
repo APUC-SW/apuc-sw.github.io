@@ -12,3 +12,7 @@ We may provide redirect links to wiki articles to help users find help using the
 
 ## Can I see the revisions of each document?
 No, this is a small wiki intended solely for developer documentation. It's not intended to be an encyclopedia, so we have no plans to add a feature that allows you to easily retrieve the repository's Git commit revision history. It's like a product manual doesn't show all revisions.
+
+## Your site's security system is too weak!
+Yeah, that's correct. Because it's NOT A REAL security system. I just showed you the problem, which only people who know about it know. This is just for fun, as there is no content that needs to be hidden from hackers for security reasons, and no truly sensitive information is contained in the repository.<br>
+If you're reading this, you've probably come here through some roundabout way, like using developer tools. Or maybe you were really lucky and my authentication server was working properly. The latter is probably unlikely, as most server-side features don't work by default on my site due to my efforts to minimize external server dependencies.
