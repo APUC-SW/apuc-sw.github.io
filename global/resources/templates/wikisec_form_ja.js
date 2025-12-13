@@ -1,7 +1,7 @@
 const ENCRYPTED_ENDPOINT = "aHR0cHM6Ly9xNnlsNGkxdm9nLmV4ZWN1dGUtYXBpLmFwLW5vcnRoZWFzdC0yLmFtYXpvbmF3cy5jb20vdmFsaWRhdGU";
 const EXPIRATION_DURATION = 5 * 60 * 1000; // 5분
 
-// 클라이언트에 노출될 질문 목록 (정답은 Lambda에만 저장됨)
+// 질문 목록
 const SPACE_HISTORY_QUESTIONS = [
     { id: "Q01", question: "ソ連が人類初の人工衛星スプートニク1号を打ち上げたのはいつですか？" },
     { id: "Q02", question: "NASA（アメリカ航空宇宙局）が正式に設立されたのはいつですか？" },
@@ -37,7 +37,7 @@ const MESSAGES = {
     "verifying": "確認中...",
 };
 
-let currentQuestionId; // 현재 표시된 질문의 ID
+let currentQuestionId;
 let countdownInterval = null;
 
 // [2] 함수: 질문 랜덤 로드
@@ -74,13 +74,11 @@ function updateTimerDisplay() {
     const remainingMillis = expirationTime - Date.now();
     
     if (remainingMillis <= 0) {
-        // **세션 만료 시 처리**
         clearInterval(countdownInterval);
         localStorage.removeItem('recaptcha_auth_time');
         timerElement.style.color = '#FF1744'
         timerElement.innerHTML = `セッションが期限切れです<br><strong>00:00</strong>`;
         
-        // **핵심: 오버레이를 다시 표시하기 위해 initProtection() 호출**
         initProtection(); 
         
         return;
@@ -106,9 +104,8 @@ function startTimer() {
 
 // [6] 함수: 인증 확인
 function handleFormSubmit(event) {
-    // 폼 제출의 기본 동작(페이지 새로고침)을 막습니다.
     event.preventDefault(); 
-    checkPassword(); // 핵심 인증 로직만 호출
+    checkPassword();
 }
 
 async function checkPassword() {
@@ -117,7 +114,6 @@ async function checkPassword() {
     const overlayWrapper = document.getElementById('recaptcha-overlay-wrapper');
     const bodyElement = document.body;
     
-    // 유효성 검사
     if (userInput.length !== 8 || isNaN(userInput)) {
         resultMessage.style.color = '#FF1744';
         resultMessage.textContent = MESSAGES.format_error;
@@ -145,7 +141,6 @@ async function checkPassword() {
             resultMessage.style.color = '#00FF7F';
             resultMessage.textContent = MESSAGES.success;
             
-            // 5분 만료를 위해 타임스탬프를 localStorage에 저장
             localStorage.setItem('recaptcha_auth_time', Date.now()); 
 
             setTimeout(() => {
@@ -168,15 +163,14 @@ async function checkPassword() {
     }
 }
 
-// [7] 함수: 페이지 초기화 (2분 만료 체크)
+// [7] 함수: 페이지 초기화
 function initProtection() {
-    applyStaticTexts(); // 폼 텍스트 적용
+    applyStaticTexts();
 
     const overlayWrapper = document.getElementById('recaptcha-overlay-wrapper');
     const bodyElement = document.body;
     const timerElement = document.getElementById('session-timer');
     
-    // 1. 만료 시간 체크
     const storedTime = localStorage.getItem('recaptcha_auth_time');
     const currentTime = Date.now();
     let isRecentlyAuthenticated = false;
@@ -192,15 +186,12 @@ function initProtection() {
     }
 
     if (isRecentlyAuthenticated) {
-        // 인증 유효: 오버레이 숨기고 타이머 시작
         if(overlayWrapper) overlayWrapper.style.display = 'none';
         startTimer();
         
     } else {
-        // 인증 만료 또는 미인증: 오버레이 표시
         if(overlayWrapper) overlayWrapper.style.display = 'flex';
         
-        // 미인증 상태이므로 타이머 정보 초기화
         if(timerElement) {
             timerElement.style.color = '#FF1744';
             timerElement.innerHTML = `セッションは検証されていません<br><strong>00:00</strong>`;
@@ -211,5 +202,4 @@ function initProtection() {
     }
 }
 
-// 모든 함수가 정의된 후 페이지 로드 시 실행
 window.onload = initProtection;
