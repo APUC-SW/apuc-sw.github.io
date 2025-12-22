@@ -186,11 +186,13 @@ function initProtection() {
     }
 
     if (isRecentlyAuthenticated) {
-        if(overlayWrapper) overlayWrapper.style.display = 'none';
+        if (accessContainer) {
+            accessContainer.style.display = 'none';
+        }
         startTimer();
         
     } else {
-        if(overlayWrapper) overlayWrapper.style.display = 'flex';
+        accessContainer.style.display = 'flex';
         
         if(timerElement) {
             timerElement.style.color = '#FF1744';

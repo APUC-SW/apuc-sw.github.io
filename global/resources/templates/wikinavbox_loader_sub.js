@@ -27,12 +27,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         const navboxHtml = await response.text();
         wikinavboxContainer.innerHTML = navboxHtml;
 
+        // fetch로 가져온 HTML 내의 버튼들을 찾아 이벤트를 연결합니다.
+        initializeDropdowns(wikinavboxContainer);
+
         // URL에서 현재 문서 ID를 파악하여 활성 링크를 하이라이트합니다.
         const urlParams = new URLSearchParams(window.location.search);
         const currentDocId = urlParams.get('doc') || 'default';
         const navLinks = wikinavboxContainer.querySelectorAll('nav ul li a');
         navLinks.forEach(link => {
             link.classList.toggle('active', link.href.includes(`?doc=${currentDocId}`));
+
+            // 현재 활성화된 링크가 포함된 부모 메뉴를 자동으로 열어둡니다.
+            if (link.classList.contains('active')) {
+                openParentMenus(link);
+            }
         });
 
         // language switcher 초기화 및 커스텀 이벤트
@@ -46,3 +54,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         wikinavboxContainer.innerHTML = '<h3>Wiki navigation could not be loaded.</h3><p>An error occurred.</p>';
     }
 });
+
+function initializeDropdowns(container) {
+    container.querySelectorAll('.toggle-trigger').forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            const parentLi = this.closest('li');
+            const icon = this.querySelector('.material-symbols-outlined');
+            
+            // 상태 전환
+            const isCollapsed = parentLi.classList.toggle('collapsed');
+            
+            // 아이콘 텍스트 변경 (add <-> remove)
+            if (icon) {
+                icon.textContent = isCollapsed ? 'add' : 'remove';
+            }
+        });
+    });
+}
+
+function openParentMenus(element) {
+    let parent = element.parentElement;
+    while (parent && parent !== document.getElementById('wikinavbox-container')) {
+        if (parent.tagName === 'LI' && parent.classList.contains('collapsed')) {
+            parent.classList.remove('collapsed');
+            const btn = parent.querySelector('.toggle-btn');
+            if (btn) btn.textContent = '-';
+        }
+        parent = parent.parentElement;
+    }
+}

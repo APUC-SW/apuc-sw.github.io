@@ -2,6 +2,7 @@
 /* @import url("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-dark.css") layer(markdown-style); */
 @import url("/global/resources/extensions/github/github-markdown-dark.css") layer(markdown-style);
 @import url("/global/resources/extensions/prismjs/prism.css") layer(prism-style);
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0') layer(material-symbols);
 
 @layer markdown-style, prism-style;
 
@@ -55,8 +56,6 @@
 /* Github Markdown style end */
 
 /* Google Material Symbols start */
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0') layer(material-symbols);
-
 @layer material-symbols {
     .material-symbols-outlined {
         font-variation-settings:
@@ -484,11 +483,24 @@ article {
     margin-right: 10px;
 }
 
+.wikitoc li.collapsed .submenu {
+    display: none !important;
+}
+
 .wikitoc-sub1 li,
 .wikitoc-sub2 li,
 .wikitoc-sub3 li,
 .wikitoc-sub4 li {
     margin-left: 20px;
+}
+
+.wikitoc-sub1 a,
+.wikitoc-sub2 a,
+.wikitoc-sub3 a,
+.wikitoc-sub4 a {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 24px;
 }
 
 .wikitoc-container::-webkit-scrollbar {
@@ -621,6 +633,41 @@ article {
 
 .wiki-tabctrl-btn:not(:first-child) {
     border-left: 1px solid gray !important;
+}
+
+.toggle-trigger {
+    display: flex !important;
+    align-items: center !important; /* 세로 중앙 정렬 */
+    cursor: pointer;
+    gap: 8px; /* 아이콘과 텍스트 간격 */
+}
+
+.toggle-trigger h2, 
+.toggle-trigger h3, 
+.toggle-trigger p {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-block !important;
+}
+
+.toggle-btn {
+    width: 18px; /* 아이콘 크기에 맞춰 약간 조절 */
+    height: 18px;
+    background-color: #00e5ba;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    flex-shrink: 0;
+    border-radius: 2px; /* 살짝 둥근 직사각형 */
+}
+
+.toggle-btn .material-symbols-outlined {
+    font-size: 16px; 
+    display: block;
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 20; 
+    user-select: none;
 }
 /* Wiki elements end */
 
@@ -1218,4 +1265,52 @@ contact-form {
     text-align: right !important; 
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 12px;
+    z-index: 10000;
+}
+
+.wikisec-container {
+    display: flex;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 9000;
+    background-color: transparent !important;
+}
+
+#bypass-btn{
+    position: fixed;
+    bottom: 35px;
+    right: 5px;
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 11px;
+    padding: 5px 10px;
+    cursor: default;
+    opacity: 0;
+    z-index: 10000;
+    transition: opacity 0.3s;
+}
+
+#bypass-btn:hover {
+    opacity: 1;
+}
+
+.btn-active {
+    opacity: 1 !important;
+    color: #00FF7F !important;
+    border: 1px solid #00FF7F !important;
+}
+
+.alert-note {
+    color: #FF1744 !important;
+}
+
+/* EXTERNAL CSS ELEMENTS CONTROL */
+.glitch-form-wrapper {
+  display: none;
+  position: fixed;
+  z-index: 10000;
 }

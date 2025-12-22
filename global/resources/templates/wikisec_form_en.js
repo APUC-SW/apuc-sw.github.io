@@ -144,8 +144,8 @@ async function checkPassword() {
             localStorage.setItem('recaptcha_auth_time', Date.now()); 
 
             setTimeout(() => {
-                overlayWrapper.style.display = 'none';
-                bodyElement.classList.remove('blurred');
+                // overlayWrapper.style.display = 'none';
+                // bodyElement.classList.remove('blurred');
                 startTimer();
             }, 1500); 
             
@@ -168,7 +168,7 @@ function initProtection() {
     applyStaticTexts();
 
     const overlayWrapper = document.getElementById('recaptcha-overlay-wrapper');
-    const bodyElement = document.body;
+    const accessContainer = document.getElementById('wikisec-container');
     const timerElement = document.getElementById('session-timer');
     
     const storedTime = localStorage.getItem('recaptcha_auth_time');
@@ -186,11 +186,13 @@ function initProtection() {
     }
 
     if (isRecentlyAuthenticated) {
-        if(overlayWrapper) overlayWrapper.style.display = 'none';
+        if (accessContainer) {
+            accessContainer.style.display = 'none';
+        }
         startTimer();
         
     } else {
-        if(overlayWrapper) overlayWrapper.style.display = 'flex';
+        accessContainer.style.display = 'flex';
         
         if(timerElement) {
             timerElement.style.color = '#FF1744';

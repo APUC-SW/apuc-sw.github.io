@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
+        // fetch로 가져온 HTML 내의 버튼들을 찾아 이벤트를 연결합니다.
+        initializeDropdowns(wikinavboxContainer);
+
         const markdownText = await response.text();
         const htmlContent = marked.parse(markdownText);
         wikiContentContainer.innerHTML = htmlContent;
@@ -32,3 +35,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         wikiContentContainer.innerHTML = '<h1>Error occurred</h1><p>An unknown error occurred while loading the wiki document.</p>';
     }
 });
+
+function initializeDropdowns(container) {
+    container.querySelectorAll('.toggle-trigger').forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            const parentLi = this.closest('li');
+            const icon = this.querySelector('.material-symbols-outlined');
+            
+            // 상태 전환
+            const isCollapsed = parentLi.classList.toggle('collapsed');
+            
+            // 아이콘 텍스트 변경 (add <-> remove)
+            if (icon) {
+                icon.textContent = isCollapsed ? 'add' : 'remove';
+            }
+        });
+    });
+}
+
+function openParentMenus(element) {
+    let parent = element.parentElement;
+    while (parent && parent !== document.getElementById('wikinavbox-container')) {
+        if (parent.tagName === 'LI' && parent.classList.contains('collapsed')) {
+            parent.classList.remove('collapsed');
+            const btn = parent.querySelector('.toggle-btn');
+            if (btn) btn.textContent = '-';
+        }
+        parent = parent.parentElement;
+    }
+}
