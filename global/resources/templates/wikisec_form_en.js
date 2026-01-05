@@ -1,5 +1,5 @@
 const ENCRYPTED_ENDPOINT = "aHR0cHM6Ly9xNnlsNGkxdm9nLmV4ZWN1dGUtYXBpLmFwLW5vcnRoZWFzdC0yLmFtYXpvbmF3cy5jb20vdmFsaWRhdGU";
-const EXPIRATION_DURATION = 5 * 60 * 1000; // 5분
+const EXPIRATION_DURATION = 15 * 60 * 1000; // 15분
 
 // 질문 목록
 const SPACE_HISTORY_QUESTIONS = [
@@ -141,13 +141,13 @@ async function checkPassword() {
             resultMessage.style.color = '#00FF7F';
             resultMessage.textContent = MESSAGES.success;
             
-            localStorage.setItem('recaptcha_auth_time', Date.now()); 
+            localStorage.setItem('recaptcha_auth_time', Date.now());
 
             setTimeout(() => {
                 // overlayWrapper.style.display = 'none';
                 // bodyElement.classList.remove('blurred');
                 startTimer();
-            }, 1500); 
+            }, 1500);
             
         } else {
             resultMessage.style.color = '#FF1744';

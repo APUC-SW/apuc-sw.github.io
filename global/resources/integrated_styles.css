@@ -635,39 +635,44 @@ article {
     border-left: 1px solid gray !important;
 }
 
-.toggle-trigger {
-    display: flex !important;
-    align-items: center !important; /* 세로 중앙 정렬 */
-    cursor: pointer;
-    gap: 8px; /* 아이콘과 텍스트 간격 */
-}
-
-.toggle-trigger h2, 
-.toggle-trigger h3, 
-.toggle-trigger p {
-    margin: 0 !important;
-    padding: 0 !important;
-    display: inline-block !important;
-}
-
-.toggle-btn {
-    width: 18px; /* 아이콘 크기에 맞춰 약간 조절 */
+.toggle-trigger,
+.submenu .material-symbols-outlined {
+    width: 18px;
     height: 18px;
-    background-color: #00e5ba;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
-    flex-shrink: 0;
-    border-radius: 2px; /* 살짝 둥근 직사각형 */
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer;
+    gap: 8px;
+    margin-right: 10px;
 }
 
-.toggle-btn .material-symbols-outlined {
-    font-size: 16px; 
+.toggle-trigger .material-symbols-outlined,
+.submenu .material-symbols-outlined {
+    font-size: 18px; 
     display: block;
     font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 20; 
     user-select: none;
+}
+
+.menu-row {
+    display: flex !important;
+    align-items: center !important;
+    line-height: 1 !important;
+}
+
+.menu-row .menu-title1 {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.menu-row .menu-title2 {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.wiki-hyperlink {
+    color: #2196F3 !important;
+    text-decoration: underline !important;
 }
 /* Wiki elements end */
 
@@ -1122,8 +1127,9 @@ article {
     border: 1px solid #2196F3 !important;
     border-radius: 8px;
     padding: 15px;
-    margin: 20px 0;
-    background-color: #041530 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #2196F320 !important;
     font-family: Noto Sans KR, sans-serif;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -1135,8 +1141,9 @@ article {
     border: 1px solid #FFEB3B !important;
     border-radius: 8px;
     padding: 15px;
-    margin: 20px 0;
-    background-color: #35310C !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #FFEB3B20 !important;
     font-family: Noto Sans KR, sans-serif;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -1148,8 +1155,9 @@ article {
     border: 1px solid #F44336 !important;
     border-radius: 8px;
     padding: 15px;
-    margin: 20px 0;
-    background-color: #370808 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F4433620 !important;
     font-family: Noto Sans KR, sans-serif;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -1161,8 +1169,9 @@ article {
     border: 1px solid #00E676 !important;
     border-radius: 8px;
     padding: 15px;
-    margin: 20px 0;
-    background-color: #003C19 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #00E67620 !important;
     font-family: Noto Sans KR, sans-serif;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }

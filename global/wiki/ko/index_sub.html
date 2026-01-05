@@ -48,12 +48,11 @@
                         다음 질문에 해당하는 8자리 비밀번호를 입력하세요.
                     </p>
                     <label for="date-input" id="recaptcha-question">질문 불러오는 중...</label>
-                    <input type="text" id="date-input" placeholder="YYYYMMDD" maxlength="8">
+                    <input type="text" id="date-input" placeholder="YYYYMMDD" maxlength="8" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                     <button onclick="checkPassword()">증명</button>
                     <div id="result-message"></div>
                 </div>
                 <script src="/global/resources/templates/wikisec_form_ko.js"></script>
-                <script src="/global/resources/templates/wikisec_form_en.js"></script>
                 <!-- START EXTERNAL ASSET PART -->
                 <!-- From Uiverse.io by pharmacist-sabot -->
                 <div id="bypass-form" class="glitch-form-wrapper">
@@ -96,7 +95,7 @@
                             <div class="form-group">
                                 <div class="glitch-input-wrapper">
                                     <div class="input-container">
-                                        <input type="text" id="holo-input" class="holo-input" placeholder="" required="" maxlength="8" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');"/>
+                                        <input type="text" id="holo-input" class="holo-input" placeholder="" required="" maxlength="8" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" oninput="this.value = this.value.replace(/[^0-9]/g, '');"/>
                                         <label for="holo-input" class="input-label" data-text="ACCESS_CODE">ACCESS_CODE</label>
                                         <div class="input-border"></div>
                                         <div class="input-scanline"></div>

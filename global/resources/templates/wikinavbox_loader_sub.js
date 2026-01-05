@@ -61,10 +61,8 @@ function initializeDropdowns(container) {
             const parentLi = this.closest('li');
             const icon = this.querySelector('.material-symbols-outlined');
             
-            // 상태 전환
             const isCollapsed = parentLi.classList.toggle('collapsed');
             
-            // 아이콘 텍스트 변경 (add <-> remove)
             if (icon) {
                 icon.textContent = isCollapsed ? 'add' : 'remove';
             }
@@ -74,11 +72,17 @@ function initializeDropdowns(container) {
 
 function openParentMenus(element) {
     let parent = element.parentElement;
-    while (parent && parent !== document.getElementById('wikinavbox-container')) {
+    const container = document.getElementById('wikinavbox-container');
+
+    while (parent && parent !== container) {
         if (parent.tagName === 'LI' && parent.classList.contains('collapsed')) {
             parent.classList.remove('collapsed');
-            const btn = parent.querySelector('.toggle-btn');
-            if (btn) btn.textContent = '-';
+            
+            const icon = parent.querySelector('.toggle-trigger .material-symbols-outlined');
+            
+            if (icon) {
+                icon.textContent = 'remove';
+            }
         }
         parent = parent.parentElement;
     }

@@ -1,5 +1,5 @@
 const ENCRYPTED_ENDPOINT = "aHR0cHM6Ly9xNnlsNGkxdm9nLmV4ZWN1dGUtYXBpLmFwLW5vcnRoZWFzdC0yLmFtYXpvbmF3cy5jb20vdmFsaWRhdGU";
-const EXPIRATION_DURATION = 5 * 60 * 1000; // 5분
+const EXPIRATION_DURATION = 15 * 60 * 1000; // 15분
 
 // 질문 목록
 const SPACE_HISTORY_QUESTIONS = [
@@ -77,7 +77,7 @@ function updateTimerDisplay() {
         clearInterval(countdownInterval);
         localStorage.removeItem('recaptcha_auth_time');
         timerElement.style.color = '#FF1744'
-        timerElement.innerHTML = `세션 만료됨<br><strong>00:00</strong>`;
+        timerElement.innerHTML = `SESSION EXPIRED<br><strong>00:00</strong>`;
         
         initProtection(); 
         
@@ -91,7 +91,7 @@ function updateTimerDisplay() {
     const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     
     timerElement.style.color = '#00FF7F';
-    timerElement.innerHTML = `세션 만료까지<br><strong>${timeString}</strong>`;
+    timerElement.innerHTML = `REMAINING SESSION<br><strong>${timeString}</strong>`;
 }
 
 // [5] 함수: 타이머 시작
@@ -141,18 +141,18 @@ async function checkPassword() {
             resultMessage.style.color = '#00FF7F';
             resultMessage.textContent = MESSAGES.success;
             
-            localStorage.setItem('recaptcha_auth_time', Date.now()); 
+            localStorage.setItem('recaptcha_auth_time', Date.now());
 
             setTimeout(() => {
-                overlayWrapper.style.display = 'none';
-                bodyElement.classList.remove('blurred');
+                // overlayWrapper.style.display = 'none';
+                // bodyElement.classList.remove('blurred');
                 startTimer();
-            }, 1500); 
+            }, 1500);
             
         } else {
             resultMessage.style.color = '#FF1744';
             resultMessage.textContent = MESSAGES.failure;
-            setTimeout(loadRandomQuestion, 2000); 
+            setTimeout(loadRandomQuestion, 2000);
         }
 
     } catch (error) {
@@ -168,7 +168,7 @@ function initProtection() {
     applyStaticTexts();
 
     const overlayWrapper = document.getElementById('recaptcha-overlay-wrapper');
-    const bodyElement = document.body;
+    const accessContainer = document.getElementById('wikisec-container');
     const timerElement = document.getElementById('session-timer');
     
     const storedTime = localStorage.getItem('recaptcha_auth_time');
@@ -196,7 +196,7 @@ function initProtection() {
         
         if(timerElement) {
             timerElement.style.color = '#FF1744';
-            timerElement.innerHTML = `세션 검증되지 않음<br><strong>00:00</strong>`;
+            timerElement.innerHTML = `SESSION NOT VERIFIED<br><strong>00:00</strong>`;
         }
         if (countdownInterval) clearInterval(countdownInterval);
         
