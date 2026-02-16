@@ -1,4 +1,4 @@
-const ENCRYPTED_ENDPOINT = "aHR0cHM6Ly9xNnlsNGkxdm9nLmV4ZWN1dGUtYXBpLmFwLW5vcnRoZWFzdC0yLmFtYXpvbmF3cy5jb20vdmFsaWRhdGU";
+// 세션 만료 시간
 const EXPIRATION_DURATION = 15 * 60 * 1000; // 15분
 
 // 질문 목록
@@ -32,7 +32,7 @@ const MESSAGES = {
     "success": "ACCESS GRANTED",
     "failure": "ACCESS DENIED",
     "format_error": "INVALID FORMAT: Please enter 8 digits in YYYYMMDD format.",
-    "server_error": "SERVER CONNECTION FAILED: Please try again later.",
+    "server_error": "VERIFICATION ERROR: Please try again.",
     "expired": "SESSION EXPIRED: Please verify again.",
     "verifying": "VERIFYING...",
 };
@@ -40,7 +40,21 @@ const MESSAGES = {
 let currentQuestionId;
 let countdownInterval = null;
 
-// [2] 함수: 질문 랜덤 로드
+/* =========================
+   SHA-256 해시 함수 (추가)
+========================= */
+async function sha256(text) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(text);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+    return [...new Uint8Array(hashBuffer)]
+        .map(b => b.toString(16).padStart(2, "0"))
+        .join("");
+}
+
+/* =========================
+   질문 랜덤 로드
+========================= */
 function loadRandomQuestion() {
     const randomIndex = Math.floor(Math.random() * SPACE_HISTORY_QUESTIONS.length);
     currentQuestionId = SPACE_HISTORY_QUESTIONS[randomIndex].id; 
@@ -55,12 +69,16 @@ function loadRandomQuestion() {
     if(resultMessage) resultMessage.textContent = "";
 }
 
-// [3] 함수: 정적 텍스트 적용
+/* =========================
+   초기 텍스트 적용
+========================= */
 function applyStaticTexts() {
     document.getElementById('recaptcha-question').textContent = MESSAGES.loading;
 }
 
-// [4] 함수: 타이머 표시 업데이트 및 만료 처리
+/* =========================
+   타이머 표시 업데이트
+========================= */
 function updateTimerDisplay() {
     const timerElement = document.getElementById('session-timer');
     const storedTime = localStorage.getItem('recaptcha_auth_time');
@@ -76,11 +94,9 @@ function updateTimerDisplay() {
     if (remainingMillis <= 0) {
         clearInterval(countdownInterval);
         localStorage.removeItem('recaptcha_auth_time');
-        timerElement.style.color = '#FF1744'
+        timerElement.style.color = '#FF1744';
         timerElement.innerHTML = `SESSION EXPIRED<br><strong>00:00</strong>`;
-        
         initProtection(); 
-        
         return;
     }
 
@@ -94,25 +110,29 @@ function updateTimerDisplay() {
     timerElement.innerHTML = `REMAINING SESSION<br><strong>${timeString}</strong>`;
 }
 
-// [5] 함수: 타이머 시작
+/* =========================
+   타이머 시작
+========================= */
 function startTimer() {
     if (countdownInterval) clearInterval(countdownInterval);
-    
     updateTimerDisplay(); 
     countdownInterval = setInterval(updateTimerDisplay, 1000);
 }
 
-// [6] 함수: 인증 확인
+/* =========================
+   폼 제출 처리
+========================= */
 function handleFormSubmit(event) {
     event.preventDefault(); 
     checkPassword();
 }
 
+/* =========================
+   인증 검사 (핵심 변경 부분)
+========================= */
 async function checkPassword() {
     const userInput = document.getElementById('date-input').value.trim();
     const resultMessage = document.getElementById('result-message');
-    const overlayWrapper = document.getElementById('recaptcha-overlay-wrapper');
-    const bodyElement = document.body;
     
     if (userInput.length !== 8 || isNaN(userInput)) {
         resultMessage.style.color = '#FF1744';
@@ -123,51 +143,44 @@ async function checkPassword() {
     resultMessage.style.color = 'gray';
     resultMessage.textContent = MESSAGES.verifying;
 
-    const LAMBDA_ENDPOINT = atob(ENCRYPTED_ENDPOINT);
-    
     try {
-        const response = await fetch(LAMBDA_ENDPOINT, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                questionId: currentQuestionId, 
-                userInputDate: userInput         
-            })
-        });
+        // 사용자 입력 해시 계산
+        const userHash = await sha256(userInput);
 
-        const data = await response.json();
-        
-        if (data.success) {
+        // 별도 파일에서 제공하는 해시 테이블 사용
+        const correctHash = window.SPACE_HISTORY_HASHES[currentQuestionId];
+
+        if (userHash === correctHash) {
             resultMessage.style.color = '#00FF7F';
             resultMessage.textContent = MESSAGES.success;
-            
+
             localStorage.setItem('recaptcha_auth_time', Date.now());
 
             setTimeout(() => {
-                // overlayWrapper.style.display = 'none';
-                // bodyElement.classList.remove('blurred');
+                document.getElementById('wikisec-container').style.display = 'none';
                 startTimer();
             }, 1500);
-            
+
         } else {
             resultMessage.style.color = '#FF1744';
             resultMessage.textContent = MESSAGES.failure;
-            setTimeout(loadRandomQuestion, 2000); 
+            setTimeout(loadRandomQuestion, 2000);
         }
 
     } catch (error) {
-        console.error("Authentication server communication error:", error);
+        console.error("Hash verification error:", error);
         resultMessage.style.color = '#FF1744';
         resultMessage.textContent = MESSAGES.server_error;
         setTimeout(loadRandomQuestion, 3000);
     }
 }
 
-// [7] 함수: 페이지 초기화
+/* =========================
+   초기화
+========================= */
 function initProtection() {
     applyStaticTexts();
 
-    const overlayWrapper = document.getElementById('recaptcha-overlay-wrapper');
     const accessContainer = document.getElementById('wikisec-container');
     const timerElement = document.getElementById('session-timer');
     
