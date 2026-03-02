@@ -16,6 +16,11 @@ TERMS.md
 tos.html
 global/static_database*
 deprecated*
+/global/wiki/doc/sub/tscup_fact_mipa.md
+/global/wiki/doc/sub/tscup_fact_mipa_ko.md
+/global/wiki/doc/sub/tscup_loc_base_lunar_base.md
+/global/wiki/doc/sub/tscup_loc_base_martian_base.md
+/global/resources/templates/_backup*
 
 # Backup files
 *.bak

@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const htmlContent = marked.parse(markdownText);
         wikiContentContainer.innerHTML = htmlContent;
 
+        const event = new CustomEvent('wikiContentLoaded');
+        document.dispatchEvent(event);
     } catch (error) {
         console.error('Failed to load or parse Markdown:', error);
         wikiContentContainer.innerHTML = '<h1>Error occurred</h1><p>An unknown error occurred while loading the wiki document.</p>';
