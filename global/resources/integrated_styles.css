@@ -1,11 +1,12 @@
-/* Github Markdown style start */
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-dark.css") layer(markdown-style); */
-@import url("/global/resources/extensions/github/github-markdown-dark.css") layer(markdown-style);
-@import url("/global/resources/extensions/prismjs/prism.css") layer(prism-style);
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0') layer(material-symbols);
-
 @layer markdown-style, prism-style;
 
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown-dark.css") layer(markdown-style); */
+/* @import url("/global/resources/extensions/github/github-markdown-dark.css") layer(markdown-style); */
+@import url("/global/resources/extensions/github/github-markdown-dark-enhanced.css") layer(markdown-style);
+/* @import url("/global/resources/extensions/prismjs/prism.css") layer(prism-style); */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0') layer(material-symbols);
+
+/* Github Markdown style start */
 @layer markdown-style {
     .markdown-body {
         max-width: auto;

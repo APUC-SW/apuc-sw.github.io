@@ -27,7 +27,7 @@
 이것은 네임스페이스 트리 구조 템플릿입니다.
 프로젝트의 생성 시기에 따라 구조가 약간씩 다를 수 있으나 보통은 아래와 같습니다.
 
-<div class="prism-style"><pre class="line-numbers"><code class="language-textfile">
+<div class="highlight"><pre class="line-numbers"><code class="language-none">
     ProjectAssets
     ├─ Client
     │  ├─ Game
@@ -57,7 +57,6 @@
     │  ├─ Util
     │  ├─ ...
     └─ Editor
-
 </code></pre></div>
 
 <div class="wikitag-note">

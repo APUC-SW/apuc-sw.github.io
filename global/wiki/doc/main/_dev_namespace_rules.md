@@ -27,7 +27,7 @@ And this is a template of each programming languages.
 This is a template of namespace tree structure.
 The structure may vary slightly depending on when the project was created, but it is usually as follows:
 
-<div class="prism-style"><pre class="line-numbers"><code class="language-textfile">
+<div class="highlight"><pre class="line-numbers"><code class="language-none">
     ProjectAssets
     ├─ Client
     │  ├─ Game
@@ -57,7 +57,6 @@ The structure may vary slightly depending on when the project was created, but i
     │  ├─ Util
     │  ├─ ...
     └─ Editor
-
 </code></pre></div>
 
 <div class="wikitag-note">
