@@ -1,7 +1,7 @@
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">label_important</span>
+            <span class="material-symbols-outlined notranslate" translate="no">label_important</span>
         </div>
         <div class="wikitag-title">면책조항:</div>
     </div>
@@ -16,7 +16,7 @@ TSCUP는 OAUP와 세계관을 전혀 공유하지 않으며, 따라서 서로 �
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">label_important</span>
+            <span class="material-symbols-outlined notranslate" translate="no">label_important</span>
         </div>
         <div class="wikitag-title">면책 조항:</div>
     </div>

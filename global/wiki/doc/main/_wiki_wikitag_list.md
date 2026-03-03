@@ -3,7 +3,7 @@
 <div class="wikitag-note">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">lightbulb</span>
+            <span class="material-symbols-outlined notranslate" translate="no">lightbulb</span>
         </div>
         <div class="wikitag-title">NOTE:</div>
     </div>
@@ -13,7 +13,7 @@
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">label_important</span>
+            <span class="material-symbols-outlined notranslate" translate="no">label_important</span>
         </div>
         <div class="wikitag-title">ATTENTION:</div>
     </div>
@@ -23,7 +23,7 @@
 <div class="wikitag-warning">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">warning</span>
+            <span class="material-symbols-outlined notranslate" translate="no">warning</span>
         </div>
         <div class="wikitag-title">WARNING:</div>
     </div>
@@ -33,7 +33,7 @@
 <div class="wikitag-reference">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">quick_reference</span>
+            <span class="material-symbols-outlined notranslate" translate="no">quick_reference</span>
         </div>
         <div class="wikitag-title">REFERENCE:</div>
     </div>

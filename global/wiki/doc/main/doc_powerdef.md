@@ -4,7 +4,7 @@
 <div class="embedded-link-box">
     <a class="embedded-hyperlink" href="https://github.com/korAPUcard/powered_defences" target="_blank" rel="noopener noreferrer">
         <div class="embedded-link-icon">
-            <span class="material-symbols-outlined">link</span>
+            <span class="material-symbols-outlined notranslate" translate="no">link</span>
         </div>
         <div class="embedded-link-content">
             <div class="embedded-link-title">korAPUcard/mcrssmod: Minecraft Custom MOD Project #7</div>

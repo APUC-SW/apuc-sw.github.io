@@ -2,7 +2,8 @@ function normalizeLang(lang) {
     if (!lang) return "text";
     lang = lang.toLowerCase();
     const map = {
-        none: "Text",
+        none: "Plain Text",
+        text: "Plain Text",
         csharp: "C#",
         cs: "C#",
         "c#": "C#",
@@ -44,7 +45,8 @@ function toHljsLangKey(langKey) {
     if (!langKey) return "";
     const k = langKey.toLowerCase();
     const map = {
-        none: "Text",
+        none: "Plain Text",
+        text: "Plain Text",
         csharp: "cs",
         "c#": "cs",
         cs: "cs",
@@ -128,24 +130,31 @@ function buildToolbarForMarkdown(root = document) {
 
         const langSpan = document.createElement("span");
         langSpan.className = "code-lang";
-        langSpan.textContent = langLabel === "text" ? "Text" : langLabel;
+        langSpan.innerHTML = `
+        <span class="material-symbols-outlined lang-icon notranslate" translate="no">code</span>
+        <span class="lang-text">${langLabel === "text" ? "Text" : langLabel}</span>
+        `;
 
         const btn = document.createElement("button");
         btn.className = "copy-button";
         btn.type = "button";
-        btn.textContent = "Copy";
+        btn.innerHTML = '<span class="material-symbols-outlined notranslate" translate="no">content_copy</span>';
         btn.addEventListener("click", async () => {
             try {
                 await navigator.clipboard.writeText(raw);
                 btn.setAttribute("data-copied", "true");
-                btn.textContent = "Copied";
+                btn.innerHTML = '<span class="material-symbols-outlined notranslate" translate="no">check</span>';
                 setTimeout(() => {
                 btn.removeAttribute("data-copied");
-                btn.textContent = "Copy";
+                btn.innerHTML = '<span class="material-symbols-outlined notranslate" translate="no">content_copy</span>';
                 }, 1200);
             } catch (e) {
-                btn.textContent = "Failed";
-                setTimeout(() => (btn.textContent = "Copy"), 1200);
+                btn.setAttribute("data-error", "true");
+                btn.innerHTML = '<span class="material-symbols-outlined notranslate" translate="no">error</span>';
+                setTimeout(() => {
+                    btn.removeAttribute("data-error");
+                    btn.innerHTML = '<span class="material-symbols-outlined notranslate" translate="no">content_copy</span>';
+                }, 1200);
             }
         });
 

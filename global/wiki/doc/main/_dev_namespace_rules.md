@@ -62,7 +62,7 @@ The structure may vary slightly depending on when the project was created, but i
 <div class="wikitag-note">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">lightbulb</span>
+            <span class="material-symbols-outlined notranslate" translate="no">lightbulb</span>
         </div>
         <div class="wikitag-title">NOTE:</div>
     </div>

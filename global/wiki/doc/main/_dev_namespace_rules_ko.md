@@ -62,7 +62,7 @@
 <div class="wikitag-note">
     <div class="wikitag-titlewrapper-asian">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">lightbulb</span>
+            <span class="material-symbols-outlined notranslate" translate="no">lightbulb</span>
         </div>
         <div class="wikitag-title">정보:</div>
     </div>

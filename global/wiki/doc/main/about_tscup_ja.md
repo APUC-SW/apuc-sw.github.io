@@ -6,7 +6,7 @@ TSCユニバースプロジェクト（以下「TSCUP」）は、当社のゲー
 <div class="embedded-link-box">
     <a class="embedded-hyperlink" href="/global/wiki/index.html?doc=tscup_faq" target="_blank" rel="noopener noreferrer">
         <div class="embedded-link-icon">
-            <span class="material-symbols-outlined">link</span>
+            <span class="material-symbols-outlined notranslate" translate="no">link</span>
         </div>
         <div class="embedded-link-content">
             <div class="embedded-link-title">TSCUP よくある質問</div>

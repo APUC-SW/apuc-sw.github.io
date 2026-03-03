@@ -1,7 +1,7 @@
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">label_important</span>
+            <span class="material-symbols-outlined notranslate" translate="no">label_important</span>
         </div>
         <div class="wikitag-title">免責事項:</div>
     </div>
@@ -11,7 +11,7 @@
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">label_important</span>
+            <span class="material-symbols-outlined notranslate" translate="no">label_important</span>
         </div>
         <div class="wikitag-title">注目:</div>
     </div>
@@ -26,7 +26,7 @@ The project's primary genre lies somewhere between hard and soft science fiction
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
-            <span class="material-symbols-outlined">label_important</span>
+            <span class="material-symbols-outlined notranslate" translate="no">label_important</span>
         </div>
         <div class="wikitag-title">DISCLAIMER:</div>
     </div>
