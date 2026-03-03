@@ -73,6 +73,20 @@ function toHljsLangKey(langKey) {
     return map[k] ?? k;
 }
 
+function splitLinesPreserveEmpty(raw) {
+    const lines = [];
+    let start = 0;
+
+    for (let i = 0; i <= raw.length; i++) {
+        if (i === raw.length || raw[i] === "\n") {
+        lines.push(raw.slice(start, i)); // 빈 줄이면 ""가 그대로 들어감
+        start = i + 1;
+        }
+    }
+
+    return lines;
+}
+
 function buildToolbarForMarkdown(root = document) {
     const codeBlocks = root.querySelectorAll(".markdown-body pre > code");
 
@@ -84,13 +98,20 @@ function buildToolbarForMarkdown(root = document) {
         if (preEl.closest(".code-toolbar")) return;
 
         // 원문 텍스트 확보 (복사/라인 쪼개기 기준)
-        let raw = codeEl.textContent;
+        // let raw = codeEl.textContent;
+        let raw = preEl.textContent;
 
         // <code> 시작 직후 들어간 개행 1개 제거(HTML 태그로 코드 넣을 때 흔한 문제)
         if (raw.startsWith("\n")) raw = raw.slice(1);
 
         // 마지막 개행 1개 제거(원하시면 이 줄은 빼셔도 됩니다)
-        raw = raw.replace(/\n$/, "");
+        // raw = raw.replace(/\n$/, "");
+
+        // pre 안을 완전히 정리해서 code 하나만 남기기
+        const keepCode = codeEl; // 기존 code 재사용
+        preEl.textContent = "";  // pre의 모든 자식 노드 제거(잔재 제거)
+        preEl.appendChild(keepCode);
+        codeEl = keepCode; // 이후 로직에서 사용
 
         const langKey = detectLangFromCodeEl(codeEl);
         const langLabel = normalizeLang(langKey);
@@ -138,7 +159,7 @@ function buildToolbarForMarkdown(root = document) {
         const useHljs = typeof window.hljs !== "undefined";
         const canUseSpecifiedLang = useHljs && hljsLang && typeof hljs.getLanguage === "function" && hljs.getLanguage(hljsLang);
 
-        const lines = raw.split("\n");
+        const lines = splitLinesPreserveEmpty(raw);
 
         for (const line of lines) {
         const li = document.createElement("li");
