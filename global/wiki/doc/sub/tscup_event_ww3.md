@@ -15,6 +15,8 @@ You know what it is, even without me explaining it. It's happening right before 
 To be honest, I wish no one would fight. Ironically, I sincerely hope that a world war never breaks out in reality,
 but my work depicts a dystopian world devastated by the devastation of war. It's truly ironic.
 
+But to be honest, this comment box is actually a window for testing the code viewer.
+
     ─ TSCUP Main Developer's Comment
 </code></pre></div>
 

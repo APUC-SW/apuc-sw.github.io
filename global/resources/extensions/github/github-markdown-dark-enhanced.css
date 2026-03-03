@@ -1183,9 +1183,9 @@
 
 /* Optional: success state (JS toggles data-copied="true") */
 .markdown-body .code-toolbar .copy-button[data-copied="true"] {
-  border-color: #2962FF;
+  border-color: #FFFFFF;
   background: #1A237E;
-  color: #2962FF;
+  color: #FFFFFF;
 }
 
 /* Ensure pre corners match header */
