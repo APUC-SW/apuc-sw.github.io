@@ -13,6 +13,7 @@ These rules apply internationally.
 
 ---
 
-Copyright 2018-2026. APUC Software All Rights Reserved.   
+Copyright 2023-2026. APUC Software All Rights Reserved.   
 REDISTRIBUTION PROHIBITED
+
 
