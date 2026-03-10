@@ -1,20 +1,17 @@
 // Year Update Function
 (function() {
-    // 1. 연도를 업데이트하는 함수
     function updateYear() {
         const yearElement = document.getElementById('year');
         if (yearElement && !yearElement.dataset.updated) {
             yearElement.textContent = new Date().getFullYear();
-            yearElement.dataset.updated = "true"; // 중복 실행 방지
+            yearElement.dataset.updated = "true";
         }
     }
 
-    // 2. DOM 변화를 감시하여 푸터가 로드되는 시점을 캐치
     const observer = new MutationObserver((mutations) => {
         updateYear();
     });
 
-    // 3. 페이지 전체(document.body)를 감시 시작
     if (document.body) {
         observer.observe(document.body, { childList: true, subtree: true });
     } else {
@@ -23,7 +20,6 @@
         });
     }
 
-    // 초기 실행 시도 (이미 로드되었을 경우 대비)
     updateYear();
 })();
 
@@ -33,3 +29,45 @@ document.addEventListener("wikiContentLoaded", () => {
     hljs.highlightElement(el);
     });
 });
+
+// Censored Block Highlighting Function
+(function() {
+    const CENSOR_CHAR = '█';
+    const GROUP_CLASS = 'wiki-censor-block';
+
+    function processCensorBlocks(node) {
+        if (node.parentNode && node.parentNode.classList.contains(GROUP_CLASS)) return;
+
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.includes(CENSOR_CHAR)) {
+            const parent = node.parentNode;
+            const span = document.createElement('span');
+            
+            span.innerHTML = node.textContent.replace(new RegExp(`${CENSOR_CHAR}+`, 'g'), 
+                `<span class="${GROUP_CLASS}">$&</span>`);
+            
+            while (span.firstChild) {
+                parent.insertBefore(span.firstChild, node);
+            }
+            parent.removeChild(node);
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+            node.childNodes.forEach(processCensorBlocks);
+        }
+    }
+
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach(mutation => {
+            mutation.addedNodes.forEach(node => processCensorBlocks(node));
+        });
+    });
+
+    const init = () => {
+        processCensorBlocks(document.body);
+        observer.observe(document.body, { childList: true, subtree: true });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();

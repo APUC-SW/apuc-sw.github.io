@@ -26,6 +26,16 @@
     .markdown-body h6 {
         margin-top: 15px !important;
         font-family: Noto Sans KR, sans-serif;
+        border-bottom: 1px solid #3D444DB3;
+    }
+
+    .markdown-body h1:hover,
+    .markdown-body h2:hover,
+    .markdown-body h3:hover,
+    .markdown-body h4:hover,
+    .markdown-body h5:hover,
+    .markdown-body h6:hover {
+        border-bottom: 1px solid #2196F3 !important;
     }
 
     .markdown-body li {
@@ -1413,6 +1423,29 @@ article {
 .wiki-italic-gray {
     color: #9E9E9E !important;
     font-style: italic;
+}
+
+.wiki-censor-block {
+    font-family: 'Courier New', Courier, monospace !important;
+    color: #607D8B !important;
+    background-color: #607D8B !important;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    letter-spacing: -0.05em;
+    transition: background-color 0.1s ease-in-out;
+    cursor: default;
+}
+
+.wiki-censor-block:hover {
+    background-color: #90A4AE !important;
+    color: #90A4AE !important;
+}
+
+.wiki-censor-block::selection {
+    background-color: #CFD8DC !important;
+    color: #CFD8DC !important;
 }
 
 /* EXTERNAL CSS ELEMENTS CONTROL */
