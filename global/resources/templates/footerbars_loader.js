@@ -5,9 +5,3 @@ fetch('/global/resources/templates/footerbars.html')
     })
     .catch(error => console.error('푸터 바 로딩 오류:', error));
 
-window.onload = function() {
-    const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-};
