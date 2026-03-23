@@ -7,7 +7,7 @@
         </div>
         <div class="wikitag-title">注目:</div>
     </div>
-    <div class="wikitag-content">これは現実の世界で非常に敏感なトピックです。したがって、このプロジェクトではこのトピックについて詳しく説明しません。<br>このサイトはあくまでゲーム開発を念頭に置いて製作されたことに留意してください。</div>
+    <div class="wikitag-content">これは現実の世界で非常に敏感なトピックです。したがって、このプロジェクトではこのトピックについて詳しく説明しません。<br>このサイトはあくまでゲーム開発のために作成されたことに注意してください。</div>
 </div>
 
 <pre class="line-numbers"><code class="language-none">

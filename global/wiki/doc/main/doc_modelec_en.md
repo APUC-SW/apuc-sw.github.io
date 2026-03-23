@@ -1,3 +1,10 @@
+<div class="wikidoc-meta"
+     data-title="Modular Electronics"
+     data-translation-rate="100"
+     data-translation-type="human"
+     data-lang="en">
+</div>
+
 # Metadata
 
 ## URL

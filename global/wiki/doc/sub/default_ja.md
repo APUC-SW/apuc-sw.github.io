@@ -1,3 +1,17 @@
+<div class="wikidoc-meta"
+     data-title="About this Wiki"
+     data-translation-rate="100"
+     data-translation-type="machine"
+     data-lang="ja">
+</div>
+
+<div class="wikidoc-meta"
+     data-title="About this Wiki"
+     data-translation-rate="100"
+     data-translation-type="machine"
+     data-lang="ja">
+</div>
+
 # 公式プロジェクトWikiへようこそ
 このページは現在作成中です。現在、新しい実験的機能をテスト中です。<br>
 現在、ゲーム/RP ドキュメント Wiki が表示されています。

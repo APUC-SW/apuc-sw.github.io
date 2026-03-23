@@ -2,39 +2,41 @@
 <html>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv='refresh' content='0; URL=https://apuc-sw.github.io/global/index.html'>
+        <meta http-equiv='refresh' content='0; url=/global/index.html'>
         <link rel="icon" type="image/x-icon" href="/resources/icons/favicon.ico">
         <link rel="stylesheet" type="text/css" href="/global/resources/integrated_styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-        <script src="/global/resources/integrated_scripts.js"></script>
+        <!-- <script src="/global/resources/integrated_scripts.js"></script> -->
         <title>Loading... | If not automatically loading, press F5 to refresh.</title>
-        <style>
-            .loading {
-                padding-top: 22%;
-                text-align: center;
-            }
-        </style>
         <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WZM6HXSR');</script>
+            })(window,document,'script','dataLayer','GTM-WZM6HXSR');</script> -->
         <!-- End Google Tag Manager -->
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVMS5V2XWN"></script>
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVMS5V2XWN"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-JVMS5V2XWN');
-        </script>
+        </script> -->
         <!-- End Google tag (gtag.js) -->
+        <script>
+            (function () {
+                const target = new URL(window.location.origin);
+                target.pathname = `/global/index.html`;
+
+                window.location.replace(target.toString());
+            })();
+        </script>
     </head>
     <body>
         <header>
             <div id="navbarbase-container">
-                <script src="/global/resources/templates/navbars_loader.js"></script>
+                <!-- <script src="/global/resources/templates/navbars_loader.js"></script> -->
             </div>
         </header>
         <div class="loading">
@@ -45,7 +47,7 @@
     </body>
     <footer>
         <div id="footerbase-container">
-            <script src="/global/resources/templates/footerbars_loader.js"></script>
+            <!-- <script src="/global/resources/templates/footerbars_loader.js"></script> -->
         </div>
     </footer>
 </html>

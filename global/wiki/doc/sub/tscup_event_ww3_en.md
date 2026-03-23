@@ -7,7 +7,7 @@
         </div>
         <div class="wikitag-title">ATTENTION:</div>
     </div>
-    <div class="wikitag-content">This is a very sensitive topic in the real world, so this project will not delve into it in detail.<br>Please keep in mind that this site was created with game development in mind.</div>
+    <div class="wikitag-content">This is a very sensitive topic in the real world, so this project will not delve into it in detail.<br>Please keep in mind that this site was created for game development.</div>
 </div>
 
 <pre class="line-numbers"><code class="language-none">

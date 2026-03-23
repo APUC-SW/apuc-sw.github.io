@@ -1,3 +1,10 @@
+<div class="wikidoc-meta"
+     data-title="About TSCUP"
+     data-translation-rate="100"
+     data-translation-type="human"
+     data-lang="en">
+</div>
+
 # About TSCUP
 TSC Universe Project(Hereinafter "TSCUP") is a science fiction universe for our game projects. It's a balance between hard and soft SF. It's usually written as hard SF, but this is simply to match the reality of physics, economics, sociology, politics, etc., and the actual content itself can be closer to soft SF overall.
 

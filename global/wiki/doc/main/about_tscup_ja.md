@@ -1,3 +1,10 @@
+<div class="wikidoc-meta"
+     data-title="About TSCUP"
+     data-translation-rate="100"
+     data-translation-type="machine"
+     data-lang="ja">
+</div>
+
 # TSCUPの概要
 TSCユニバースプロジェクト（以下「TSCUP」）は、当社のゲームプロジェクトのためのSF世界観です。これは通常ハードSFとソフトSFのバランスをとります。一般的にはハードSFに近いように描かれていますが、これは単に物理学、経済学、社会学、政治学などの現実考証を合わせるためのものであり、実際の内容自体は全体的にソフトSFに近づくことができます。
 

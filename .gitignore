@@ -7,6 +7,7 @@ dev*
 .vs
 devsec
 apuc-sw.github.io.code-workspace
+node_modules
 
 # Dummy data files
 dummydata*
@@ -16,10 +17,7 @@ TERMS.md
 tos.html
 global/static_database*
 deprecated*
-/global/wiki/doc/sub/tscup_fact_mipa.md
-/global/wiki/doc/sub/tscup_fact_mipa_ko.md
-/global/wiki/doc/sub/tscup_loc_base_lunar_base.md
-/global/wiki/doc/sub/tscup_loc_base_martian_base.md
+/global/wiki/doc/sub/tscup_char_iris_en.md
 /global/resources/templates/_backup*
 
 # Backup files

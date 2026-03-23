@@ -1204,17 +1204,14 @@
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
-/* Ensure pre corners match header */
+/* Keep GitHub-like pre styling consistent */
 .markdown-body .code-toolbar pre {
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: 1px solid #30363d;
   margin: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-}
-
-/* Keep GitHub-like pre styling consistent */
-.markdown-body .code-toolbar pre {
-  border: 1px solid #30363d;
-  border-top: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
@@ -1230,6 +1227,11 @@
 .markdown-body .code-toolbar pre > code > ol.code-lines {
   counter-reset: line;
   list-style: none;
+  margin: 0;
+  padding: 12px 0 12px 3.5em;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 
   margin: 0;
   padding: 12px 0 12px 3.5em; /* room for numbers */
@@ -1239,9 +1241,10 @@
 .markdown-body .code-toolbar pre > code > ol.code-lines > li {
   position: relative;
   counter-increment: line;
-
   padding: 0 16px;
-  white-space: pre;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Line number */
@@ -1257,9 +1260,9 @@
 }
 
 /* Subtle separator for number gutter */
-.markdown-body .code-toolbar pre {
+/* .markdown-body .code-toolbar pre {
   position: relative;
-}
+} */
 .markdown-body .code-toolbar pre::before {
   content: "";
   position: absolute;
@@ -1280,9 +1283,9 @@
 .markdown-body .code-toolbar pre {
   overflow: auto;
 }
-.markdown-body .code-toolbar pre > code > ol.code-lines {
+/* .markdown-body .code-toolbar pre > code > ol.code-lines {
   min-width: max-content;
-}
+} */
 
 /* ---------------------------------------------------------
    Token color support (Prism + highlight.js). Existing .pl-* stay as-is.

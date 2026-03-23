@@ -1,3 +1,10 @@
+<div class="wikidoc-meta"
+     data-title="About this Wiki"
+     data-translation-rate="100"
+     data-translation-type="human"
+     data-lang="en">
+</div>
+
 # Welcome to our official project wiki
 This page is under construction. Currently testing the new experimental features.<br>
 You are now seeing Game/RP Documentation Wiki.

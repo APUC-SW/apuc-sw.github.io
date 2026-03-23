@@ -2,43 +2,64 @@
 <html>
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="refresh" content="0; url=/global/wiki/index_main.html">
         <link rel="icon" type="image/x-icon" href="/resources/icons/favicon.ico">
         <link rel="stylesheet" type="text/css" href="/global/resources/integrated_styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
         <script src="/global/resources/integrated_scripts.js"></script>
         <title>APUC Software - A one man the indie software developer's personal business website</title>
         <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-WZM6HXSR');</script>
+            })(window,document,'script','dataLayer','GTM-WZM6HXSR');</script> -->
         <!-- End Google Tag Manager -->
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVMS5V2XWN"></script>
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVMS5V2XWN"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-JVMS5V2XWN');
-        </script>
+        </script> -->
         <!-- End Google tag (gtag.js) -->
+        <script>
+            (function () {
+                const currentUrl = new URL(window.location.href);
+                const params = currentUrl.searchParams;
+
+                const doc = (params.get('doc') || 'default').replace(/_(en|ko|ja)$/i, '');
+                const lang = ['en', 'ko', 'ja'].includes(params.get('lang'))
+                    ? params.get('lang')
+                    : 'en';
+
+                const target = new URL(window.location.origin);
+                target.pathname = `/global/wiki/${lang}/index_sub.html`;
+                target.searchParams.set('doc', doc);
+                target.searchParams.set('lang', lang);
+
+                window.location.replace(target.toString());
+            })();
+        </script>
     </head>
     <body>
         <header>
             <div id="navbarbase-container">
-                <script src="/global/resources/templates/navbars_loader.js"></script>
+                <!-- <script src="/global/resources/templates/navbars_loader.js"></script> -->
             </div>
         </header>
         <article>
-            <a href="https://apuc-sw.github.io/global/projects/games/ppos.html">
-                <div class="soontm-picture"></div>
-            </a>
+            <div class="loading">
+                <hr class="shortgradline">
+                <h1>Loading...</h1>
+                <hr class="shortgradline">
+            </div>
         </article>
     </body>
     <footer>
         <div id="footerbase-container">
-            <script src="/global/resources/templates/footerbars_loader.js"></script>
+            <!-- <script src="/global/resources/templates/footerbars_loader.js"></script> -->
         </div>
     </footer>
 </html>

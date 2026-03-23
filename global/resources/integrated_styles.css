@@ -405,6 +405,11 @@ article {
     margin: auto;
 }
 
+.loading {
+    padding-top: 22%;
+    text-align: center;
+}
+
 /* Wiki elements start */
 .sidewrapper {
     z-index: 1;
@@ -612,6 +617,11 @@ article {
     font-size: 0.8rem;
 }
 
+.toc-loading {
+    text-align: left;
+    color: #FFFFFF !important;
+}
+
 .wikidoc-container {
     z-index: -2;
     position: absolute;
@@ -667,6 +677,10 @@ article {
     align-items: center;
     height: 100%;
     margin-right: 2em;
+}
+
+.wikidoc-meta {
+  display: none !important;
 }
 
 .language-switcher select {

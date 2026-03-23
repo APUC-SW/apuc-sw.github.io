@@ -1,72 +1,134 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const wikinavboxContainer = document.getElementById('wikinavbox-container');
 
-    // URL 경로에서 현재 언어 코드를 파악합니다.
-    const pathSegments = window.location.pathname.split('/').filter(s => s);
-    const wikiIndex = pathSegments.indexOf('wiki');
-    let currentLang = 'en';
-
-    if (wikiIndex !== -1 && pathSegments.length > wikiIndex + 1) {
-        const nextSegment = pathSegments[wikiIndex + 1];
-        if (['ko', 'ja'].includes(nextSegment)) {
-            currentLang = nextSegment;
-        }
+    if (!wikinavboxContainer) {
+        console.error('wikinavbox-container element not found.');
+        return;
     }
-    
-    // 언어 코드에 따라 목차 HTML 파일 경로를 결정합니다.
-    const navboxFilePath = (currentLang === 'en') 
-        ? `/global/resources/templates/wikinavbox_sub.html`
-        : `/global/resources/templates/wikinavbox_sub_${currentLang}.html`;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentLang = getCurrentLang(urlParams);
+    const currentDocId = normalizeDocId(urlParams.get('doc') || 'default');
 
     try {
-        const response = await fetch(navboxFilePath);
-        if (!response.ok) {
-            throw new Error(`Failed to load navbox file: ${navboxFilePath}`);
-        }
-        
-        const navboxHtml = await response.text();
+        const navboxHtml = await loadNavboxWithFallback(currentLang);
         wikinavboxContainer.innerHTML = navboxHtml;
 
-        // fetch로 가져온 HTML 내의 버튼들을 찾아 이벤트를 연결합니다.
         initializeDropdowns(wikinavboxContainer);
+        highlightActiveLinks(wikinavboxContainer, currentDocId);
 
-        // URL에서 현재 문서 ID를 파악하여 활성 링크를 하이라이트합니다.
-        const urlParams = new URLSearchParams(window.location.search);
-        const currentDocId = urlParams.get('doc') || 'default';
-        const navLinks = wikinavboxContainer.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
-            link.classList.toggle('active', link.href.includes(`?doc=${currentDocId}`));
-
-            // 현재 활성화된 링크가 포함된 부모 메뉴를 자동으로 열어둡니다.
-            if (link.classList.contains('active')) {
-                openParentMenus(link);
-            }
-        });
-
-        // language switcher 초기화 및 커스텀 이벤트
         if (window.initializeLanguageSwitcher) {
             window.initializeLanguageSwitcher();
         }
-        window.dispatchEvent(new Event('wikinavbox-loaded'));
 
+        window.dispatchEvent(new Event('wikinavbox-loaded'));
     } catch (error) {
         console.error('Error loading wiki navigation:', error);
         wikinavboxContainer.innerHTML = '<h3>Wiki navigation could not be loaded.</h3><p>An error occurred.</p>';
     }
 });
 
+function getCurrentLang(urlParams) {
+    const langFromQuery = urlParams.get('lang');
+    if (['en', 'ko', 'ja'].includes(langFromQuery)) {
+        return langFromQuery;
+    }
+
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const wikiIndex = pathSegments.indexOf('wiki');
+
+    if (wikiIndex !== -1 && pathSegments.length > wikiIndex + 1) {
+        const nextSegment = pathSegments[wikiIndex + 1];
+        if (['en', 'ko', 'ja'].includes(nextSegment)) {
+            return nextSegment;
+        }
+    }
+
+    return 'en';
+}
+
+function normalizeDocId(rawDocId) {
+    return (rawDocId || 'default').replace(/_(en|ko|ja)$/i, '');
+}
+
+async function fetchTextOrNull(path) {
+    try {
+        const response = await fetch(path);
+        if (!response.ok) {
+            return null;
+        }
+        return await response.text();
+    } catch (error) {
+        console.warn(`Fetch failed: ${path}`, error);
+        return null;
+    }
+}
+
+async function loadNavboxWithFallback(currentLang) {
+    const primaryPath = `/global/resources/templates/wikinavbox_sub_${currentLang}.html`;
+    let html = await fetchTextOrNull(primaryPath);
+    if (html !== null) {
+        return html;
+    }
+
+    console.warn(`Primary navbox load failed: ${primaryPath}`);
+
+    const legacyPath = `/global/resources/templates/wikinavbox_sub.html`;
+    html = await fetchTextOrNull(legacyPath);
+    if (html !== null) {
+        console.warn(`Loaded navbox via legacy fallback: ${legacyPath}`);
+        return html;
+    }
+
+    throw new Error(`Navbox not found. Tried: ${primaryPath}, ${legacyPath}`);
+}
+
 function initializeDropdowns(container) {
-    container.querySelectorAll('.toggle-trigger').forEach(trigger => {
-        trigger.addEventListener('click', function() {
-            const parentLi = this.closest('li');
-            const icon = this.querySelector('.material-symbols-outlined');
-            
-            const isCollapsed = parentLi.classList.toggle('collapsed');
-            
-            if (icon) {
-                icon.textContent = isCollapsed ? 'add' : 'remove';
-            }
-        });
+    if (container.dataset.dropdownInitialized === 'true') {
+        return;
+    }
+
+    container.dataset.dropdownInitialized = 'true';
+
+    container.addEventListener('click', (event) => {
+        const trigger = event.target.closest('.toggle-trigger');
+        if (!trigger || !container.contains(trigger)) {
+            return;
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const parentLi = trigger.closest('li');
+        if (!parentLi) {
+            return;
+        }
+
+        const icon = trigger.querySelector('.material-symbols-outlined');
+        const isCollapsed = parentLi.classList.toggle('collapsed');
+
+        if (icon) {
+            icon.textContent = isCollapsed ? 'add' : 'remove';
+        }
+    });
+}
+
+function highlightActiveLinks(container, currentDocId) {
+    const navLinks = container.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        const linkUrl = new URL(href, window.location.origin);
+        const linkDocId = normalizeDocId(linkUrl.searchParams.get('doc') || 'default');
+
+        const isActive = linkDocId === currentDocId;
+        link.classList.toggle('active', isActive);
+
+        if (isActive) {
+            openParentMenus(link);
+        }
     });
 }
 
@@ -77,13 +139,13 @@ function openParentMenus(element) {
     while (parent && parent !== container) {
         if (parent.tagName === 'LI' && parent.classList.contains('collapsed')) {
             parent.classList.remove('collapsed');
-            
+
             const icon = parent.querySelector('.toggle-trigger .material-symbols-outlined');
-            
             if (icon) {
                 icon.textContent = 'remove';
             }
         }
+
         parent = parent.parentElement;
     }
 }

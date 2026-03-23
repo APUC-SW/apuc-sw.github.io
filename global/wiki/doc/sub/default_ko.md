@@ -1,3 +1,10 @@
+<div class="wikidoc-meta"
+     data-title="About this Wiki"
+     data-translation-rate="100"
+     data-translation-type="human"
+     data-lang="ko">
+</div>
+
 # 공식 프로젝트 위키에 오신 걸 환영합니다
 이 페이지는 아직 작업 중입니다. 현재는 새로운 기능 테스트 실험이 진행 중입니다.<br>
 귀하께서는 현재 게임/RP 문서 위키를 보고 계십니다.

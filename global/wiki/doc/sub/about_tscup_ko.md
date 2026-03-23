@@ -1,3 +1,9 @@
+<div class="wikidoc-meta"
+     data-title="About TSCUP"
+     data-translation-rate="100"
+     data-translation-type="human"
+     data-lang="ko">
+</div>
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">

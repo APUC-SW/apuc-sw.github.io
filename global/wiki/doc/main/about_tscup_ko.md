@@ -1,3 +1,10 @@
+<div class="wikidoc-meta"
+     data-title="About TSCUP"
+     data-translation-rate="100"
+     data-translation-type="human"
+     data-lang="ko">
+</div>
+
 # TSCUP 개요
 TSC 유니버스 프로젝트(이하 "TSCUP")는 당사의 게임 프로젝트를 위한 SF 세계관입니다. 이것은 보통 하드 SF와 소프트 SF사이의 균형을 맞춥니다. 일반적으로 하드 SF에 가깝게 묘사되지만, 이는 단순히 물리학, 경제학, 사회학, 정치학 등의 현실 고증을 맞추기 위한 것이며, 실제 내용 자체는 전반적으로 소프트 SF에 더 가까울 수 있습니다.
 
