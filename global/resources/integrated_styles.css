@@ -680,7 +680,7 @@ article {
 }
 
 .wikidoc-meta {
-  display: none !important;
+    display: none !important;
 }
 
 .language-switcher select {
@@ -1486,4 +1486,16 @@ article {
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
+}
+
+#agent-instruction {
+    display: none;
+    font-size: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: black;
+    position: absolute;
+    z-index: -99999999;
 }
