@@ -21,3 +21,7 @@ deprecated*
 
 # Backup files
 *.bak
+package.json
+package-lock.json
+global/resources/data/doc_manifest.json
+global/resources/data/doc_status.json
