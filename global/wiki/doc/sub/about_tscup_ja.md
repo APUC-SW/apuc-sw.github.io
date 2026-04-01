@@ -43,8 +43,14 @@ Here, the meaning of TSC is an abbreviation of 'Theseus Space Complex'. TSC is t
 The exact start date of this project is unknown, but planning itself began in 2018. The reason goes back to the very beginning of the project, when the developer at the time, who was a one-man developer, did not consider records important, so it was literally 'forgotten'. This site was created because they values ​​records.<br>
 
 # FAQ
-## Why the Chinese is disabled? Why here is no Chinese translations?
-Because we don't know chinese. If you know chinese, suggestions your localized contents so we can add it.
+## なぜ&lsqb;あなたの言語&rsqb;は無効/部分翻訳されていますか？
+なぜなら翻訳者がいないからです。<br>
+現在、すべての翻訳文は2つのタイプに分かれています。
+
+1. 一人が直役するタイプ
+2. AIまたは他の自動化ツールに翻訳するタイプ
+
+したがって、文書によっては翻訳の質が悪く、翻訳文がまったく存在しないこともあります。
 
 ## これが他のRPの世界観と違う点は何ですか？
 他のコミュニティベースのロールプレイングの世界観（Orion's Arm、SCPなど）とは根本的に異なります。 TSCUPはまた、ロールプレイングの世界観と見なすことができます。
@@ -61,6 +67,11 @@ Because we don't know chinese. If you know chinese, suggestions your localized c
 一部を除くほとんどのゲームプロジェクトが該当します。
 
 ソースエンジンMODはすべて除外されます。なぜなら、ソースエンジンMODはすべてHalf-Lifeの世界観を基盤にするのに見た世界観とは全く無関係です。 （ファンメイド創作物に該当）
+
+## 私はこのプロジェクトに貢献できますか？
+申し訳ありませんが、そのような要求事項については現在計画がありませんが、実際の関連要求事項が少なくとも50件以上集計された場合、今後の計画の再検討後案内する予定です。<br>
+ただし、興味がある場合は、以下のリンクを介してディスコードサーバーに事前に参加してください。
+<a href="https://discord.gg/ccU4VSZtMX" class="wiki-hyperlink"><b>TSC Universe Project</b></a>
 
 ## 私はこの世界観に基づいて創作物を作ってもいいですか？
 申し訳ありませんが、現時点ではその要求事項について許可していません。まだ多くの部分が完全ではなく、非常に頻繁に修正されることがあります。そのため、創作者本人の立場で情報の頻繁な修正が今後の本人創作活動に非常に大きな負担につながる恐れがあり、二次創作を正式に推奨しません。

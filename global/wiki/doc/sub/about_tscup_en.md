@@ -33,8 +33,14 @@ Here, the meaning of TSC is an abbreviation of 'Theseus Space Complex'. TSC is t
 The exact start date of this project is unknown, but planning itself began in 2018. The reason goes back to the very beginning of the project, when the developer at the time, who was a one-man developer, did not consider records important, so it was literally 'forgotten'. This site was created because they values ​​records.<br>
 
 # FAQ
-## Why the Chinese is disabled? Why here is no Chinese translations?
-Because we don't know chinese. If you know chinese, suggestions your localized contents so we can add it.
+## Why &lsqb;your language&rsqb; is disabled/partially translated?
+Because here is no translator.<br>
+Currently, all translations are divided into the following two categories:
+
+1. Type where a person translates literally
+2. Type where a machine translates using AI or other automation tools
+
+Therefore, depending on the document, the quality of the translation may be poor, or there may be no translation at all.
 
 ## How is this different from other RP universes?
 It is fundamentally no different from other community-based role-playing universes (e.g. Orion's Arm, SCP, etc.). TSCUP can also be considered a role-playing universe, and if I had to name one thing, it would be that the main purpose is to focus on game development, not community expansion.
@@ -52,7 +58,9 @@ Most projects, with a few exceptions.
 Source-based mods are excluded. Because these only based on Half-Life Universe.
 
 ## Can I contribute to this project?
-Unfortunately, we currently have no plans to address this request. However, we will review the plan and provide further information once we receive at least 50 requests.
+Unfortunately, we currently have no plans to address this request. However, we will review the plan and provide further information once we receive at least 50 requests.<br>
+However, if you are interested, please join the Discord server in advance via the link below:
+<a href="https://discord.gg/ccU4VSZtMX" class="wiki-hyperlink"><b>TSC Universe Project</b></a>
 
 ## Can I create something based on this universe?
 Unfortunately, we are not currently accepting this request. Many aspects of this work are still incomplete and subject to frequent revision. Therefore, from the creator's perspective, frequent revisions to this work could significantly burden their future creative endeavors, and we therefore officially discourage derivative works.

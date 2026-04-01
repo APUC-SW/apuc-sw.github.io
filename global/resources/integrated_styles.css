@@ -432,6 +432,7 @@ article {
     background: transparent !important;
     position: fixed;
     width: 100%;
+    z-index: 99999;
 }
 
 .sidebox {
@@ -697,9 +698,8 @@ article {
 .wiki-tabctrl
 {
     display: flex;
-    flex-grow: 1;
-    justify-content: center;
     align-items: center;
+    margin-right: auto;
 }
 
 .wiki-tabctrl input[type="radio"] {
