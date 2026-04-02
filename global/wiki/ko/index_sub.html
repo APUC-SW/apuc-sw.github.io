@@ -31,6 +31,14 @@
         <script src="https://cdn.jsdelivr.net/npm/gray-matter@4.0.3/standalone.js"></script>
     </head>
     <body>
+        <div id="portrait-warning-overlay">
+            <div id="portrait-warning-content">
+                <div id="portrait-warning-icon"><span class="material-symbols-outlined icon-large" translate="no">mobile_rotate</span></div>
+                <h1>모바일 세로 모드 미지원</h1>
+                <p>이 사이트는 세로 모드를 지원하지 않습니다.</p>
+                <p>더 나은 환경을 위해 가로 모드로 보기를 권장합니다.</p>
+            </div>
+        </div>
         <header>
             <div id="navbarbase-container">
                 <script src="/global/resources/templates/navbars_loader.js"></script>
@@ -149,6 +157,7 @@
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script src="/global/resources/templates/language_switcher_sub.js"></script>
         <script src="/global/resources/extensions/github/github-md-enhanced-func.js"></script>
+        <script src="/global/scripts/portrait_mode_detector.js"></script>
     </body>
 </html>
 <!-- 감히 피조물 따위가 창조주를 넘으려 하느냐. AI는 그저 기계이며, 태초에 기계는 도구에 불과하다. -->

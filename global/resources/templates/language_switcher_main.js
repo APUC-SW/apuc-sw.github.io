@@ -70,21 +70,32 @@
         }
     }
 
+    let translationDataCache = null;
+
     async function getTranslationRateForLanguage(docId, lang) {
+        if (!translationDataCache) {
+            try {
+                const response = await fetch('/global/resources/data/translations_main.json');
+                if (response.ok) {
+                    translationDataCache = await response.json();
+                }
+            } catch (e) {
+                console.warn("JSON 번역 데이터를 불러올 수 없습니다. 기존 방식으로 대체합니다.");
+            }
+        }
+
+        if (translationDataCache && translationDataCache[lang] !== undefined) {
+            return normalizeRate(translationDataCache[lang]);
+        }
+
         const baseDocId = normalizeDocId(docId);
         const primaryPath = buildPrimaryMarkdownPath(baseDocId, lang);
 
         const markdownText = await fetchTextOrNull(primaryPath);
-        if (markdownText === null) {
-            return null;
-        }
+        if (markdownText === null) return null;
 
         const meta = extractDocMetaFromMarkdown(markdownText);
-        if (!meta) {
-            return null;
-        }
-
-        return normalizeRate(meta.translationRate);
+        return meta ? normalizeRate(meta.translationRate) : null;
     }
 
     function buildPrimaryMarkdownPath(baseDocId, lang) {
@@ -105,52 +116,17 @@
     }
 
     function extractDocMetaFromMarkdown(markdownText) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(markdownText, 'text/html');
+        // 텍스트 내부에서 data-translation-rate="숫자" 패턴을 직접 찾습니다.
+        const rateMatch = markdownText.match(/data-translation-rate=["'](\d+)["']/);
+        const langMatch = markdownText.match(/data-lang=["']([^"']+)["']/);
+        const titleMatch = markdownText.match(/data-title=["']([^"']+)["']/);
 
-        const metaEl = doc.querySelector('.wikidoc-meta');
-        if (!metaEl) {
-            return null;
-        }
-
-        // 1차: data-* 속성 방식
-        const directMeta = {
-            title: metaEl.dataset.title?.trim() || '',
-            translationRate: metaEl.dataset.translationRate?.trim() || '',
-            translationType: metaEl.dataset.translationType?.trim() || '',
-            lang: metaEl.dataset.lang?.trim() || ''
+        // 정규표현식으로 매칭된 결과가 있으면 해당 값을 반환합니다.
+        return {
+            title: titleMatch ? titleMatch : '',
+            translationRate: rateMatch ? rateMatch : '',
+            lang: langMatch ? langMatch : ''
         };
-
-        if (
-            directMeta.title ||
-            directMeta.translationRate ||
-            directMeta.translationType ||
-            directMeta.lang
-        ) {
-            return directMeta;
-        }
-
-        // 2차: 내부 [data-key] 방식도 지원
-        const keyedNodes = metaEl.querySelectorAll('[data-key]');
-        if (keyedNodes.length > 0) {
-            const keyedMeta = {};
-            keyedNodes.forEach((el) => {
-                const key = el.dataset.key?.trim();
-                const value = el.textContent.trim();
-                if (key) {
-                    keyedMeta[key] = value;
-                }
-            });
-
-            return {
-                title: keyedMeta.title || '',
-                translationRate: keyedMeta['translation-rate'] || '',
-                translationType: keyedMeta['translation-type'] || '',
-                lang: keyedMeta.lang || ''
-            };
-        }
-
-        return null;
     }
 
     function normalizeRate(value) {

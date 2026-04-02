@@ -26,11 +26,18 @@
             gtag('config', 'G-JVMS5V2XWN');
         </script>
         <!-- End Google tag (gtag.js) -->
-        <!-- <link rel="stylesheet" type="text/css" href="/global/resources/extensions/prismjs/prism.css"> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gray-matter@4.0.3/standalone.js"></script>
     </head>
     <body>
+        <div id="portrait-warning-overlay">
+            <div id="portrait-warning-content">
+                <div id="portrait-warning-icon"><span class="material-symbols-outlined icon-large" translate="no">mobile_rotate</span></div>
+                <h1>Mobile portrait mode not supported</h1>
+                <p>This site does not support portrait mode.</p>
+                <p>For a better experience, please switch to landscape mode.</p>
+            </div>
+        </div>
         <header>
             <div id="navbarbase-container">
                 <script src="/global/resources/templates/navbars_loader.js"></script>
@@ -150,6 +157,7 @@
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script src="/global/resources/templates/language_switcher_sub.js"></script>
         <script src="/global/resources/extensions/github/github-md-enhanced-func.js"></script>
+        <script src="/global/scripts/portrait_mode_detector.js"></script>
     </body>
 </html>
 <!-- AI Crawler Prevention -->

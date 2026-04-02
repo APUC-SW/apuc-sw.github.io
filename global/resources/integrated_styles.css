@@ -95,6 +95,8 @@
 /* Google Material Symbols start */
 @layer material-symbols {
     .material-symbols-outlined {
+        -webkit-user-select: none;
+        user-select: none;
         font-variation-settings:
         'FILL' 0,
         'wght' 400,
@@ -103,6 +105,8 @@
     }
 
     .material-symbols-outlined.filled-icon {
+        -webkit-user-select: none;
+        user-select: none;
         font-variation-settings:
         'FILL' 1,
         'wght' 400,
@@ -113,6 +117,10 @@
     .material-symbols-outlined.notranslate {
         -webkit-user-select: none;
         user-select: none;
+    }
+
+    .material-symbols-outlined.icon-large {
+        font-size: 48px !important;
     }
 }
 /* Google Material Symbols end */
@@ -416,7 +424,7 @@ article {
     background: #242424 !important;
     position: fixed;
     height: 100%;
-    width: 20%;
+    width: 310px;
 }
 
 .rsidewrapper {
@@ -424,7 +432,7 @@ article {
     background: #242424 !important;
     position: fixed;
     height: 100%;
-    width: 15%;
+    width: 15vw;
     right: 0;
 }
 
@@ -440,7 +448,7 @@ article {
     z-index: 1;
     position: relative;
     display: flex;
-    margin: 20% 0 5% 0%;
+    margin: 100px 0 5% 0%;
     flex-direction: column;
     height: 100%;
     max-height: calc(100% - 100px);
@@ -451,7 +459,8 @@ article {
     position: absolute;
     height: 40px;
     width: 100%;
-    top: 7%;
+    top: 0;
+    left: 0;
     text-align: right;
     background: #242424 !important;
     background: -webkit-linear-gradient(90deg,rgba(36, 36, 36, 1) 5%, rgba(72, 72, 72, 1) 30%) !important;
@@ -471,6 +480,16 @@ article {
     padding-right: 10px;
     line-height: 40px;
     user-select: none;
+}
+
+.wikinav {
+    position: fixed;
+    width: 310px;
+    height: calc(100% - 135px);
+    top: 100px;
+    left: 0;
+    overflow: hidden;
+    margin-top: 0;
 }
 
 .wikinav ul {
@@ -496,9 +515,10 @@ article {
     position: absolute;
     overflow-y: scroll;
     overflow-x: auto;
-    top: 14%;
+    top: 40px;
+    left: 0;
     width: 100%;
-    height: calc(100% - 13% - 2px);
+    height: calc(100% - 40px);
 }
 
 .wikitoc-scrollview::-webkit-scrollbar {
@@ -578,7 +598,6 @@ article {
 }
 
 .wikitocbox-rside-wrapper {
-    margin-top: 25%;
     width: 100%;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -626,15 +645,11 @@ article {
 
 .wikidoc-container {
     z-index: -2;
-    position: absolute;
-    top: 14%;
-    left: 20%;
-    width: 65%;
+    position: fixed;
+    top: 100px;
+    left: 310px;
+    right: 15vw;
     height: 82%;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: 20%;
     padding: 20px;
     background: #121212 !important;
     color: #FFFFFF !important;
@@ -1498,4 +1513,53 @@ article {
     color: black;
     position: absolute;
     z-index: -99999999;
+}
+
+/* Portrait Mode Warning */
+#portrait-warning-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#portrait-warning-overlay.show {
+    display: flex;
+}
+
+#portrait-warning-content {
+    padding: 40px;
+    max-width: 80%;
+}
+
+#portrait-warning-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+#portrait-warning-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#portrait-warning-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+    #portrait-warning-overlay.show {
+        display: flex;
+    }
 }
