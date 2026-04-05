@@ -599,17 +599,17 @@ article {
 
 .wikitocbox-rside-wrapper {
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #DDDDDD !important;
     border-radius: 4px;
-    background-color: #323232;
+    background-color: #323232 !important;
 }
 
 .toc-title {
     font-size: 0.9rem;
     padding: 10px 15px;
     margin: 0;
-    background: #242424;
-    border-bottom: 1px solid #ddd;
+    background: #242424 !important;
+    border-bottom: 1px solid #DDDDDD !important;
 }
 
 #toc-list {

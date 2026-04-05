@@ -18,6 +18,7 @@ tos.html
 global/static_database*
 deprecated*
 /global/resources/templates/_backup*
+./resources/
 
 # Backup files
 *.bak
