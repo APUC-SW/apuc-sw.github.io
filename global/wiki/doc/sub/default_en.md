@@ -1,8 +1,10 @@
 <div class="wikidoc-meta"
-     data-title="About this Wiki"
-     data-translation-rate="100"
-     data-translation-type="human"
-     data-lang="en">
+    data-title="About this Wiki"
+    data-translation-rate="100"
+    data-translation-type="human"
+    data-lang="en"
+    data-age-restricted="false"
+    data-warning-tag="">
 </div>
 
 # Welcome to our official project wiki

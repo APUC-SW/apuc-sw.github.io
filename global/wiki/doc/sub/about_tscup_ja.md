@@ -2,7 +2,9 @@
      data-title="About TSCUP"
      data-translation-rate="0"
      data-translation-type="machine"
-     data-lang="ja">
+     data-lang="ja"
+     data-age-restricted="false"
+     data-warning-tag="">
 </div>
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
@@ -13,7 +15,6 @@
     </div>
     <div class="wikitag-content">本作はフィクションです。登場する人物、場所、事件はすべて虚構で創作されたものであり、存在する人物、団体、企業、地名などとは無関係です。</div>
 </div>
-
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
         <div class="wikitag-icon">
@@ -71,7 +72,7 @@ The exact start date of this project is unknown, but planning itself began in 20
 ## 私はこのプロジェクトに貢献できますか？
 申し訳ありませんが、そのような要求事項については現在計画がありませんが、実際の関連要求事項が少なくとも50件以上集計された場合、今後の計画の再検討後案内する予定です。<br>
 ただし、興味がある場合は、以下のリンクを介してディスコードサーバーに事前に参加してください。
-<a href="https://discord.gg/ccU4VSZtMX" class="wiki-hyperlink"><b>TSC Universe Project</b></a>
+<a href="https://discord.gg/ccU4VSZtMX" class="wiki-hyperlink"><b>&lsqb;Click here to visit TSCUP Discord Server&rsqb;</b></a>
 
 ## 私はこの世界観に基づいて創作物を作ってもいいですか？
 申し訳ありませんが、現時点ではその要求事項について許可していません。まだ多くの部分が完全ではなく、非常に頻繁に修正されることがあります。そのため、創作者本人の立場で情報の頻繁な修正が今後の本人創作活動に非常に大きな負担につながる恐れがあり、二次創作を正式に推奨しません。

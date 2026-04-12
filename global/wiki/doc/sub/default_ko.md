@@ -2,7 +2,9 @@
      data-title="About this Wiki"
      data-translation-rate="100"
      data-translation-type="human"
-     data-lang="ko">
+     data-lang="ko"
+     data-age-restricted="false"
+     data-warning-tag="">
 </div>
 
 # 공식 프로젝트 위키에 오신 걸 환영합니다

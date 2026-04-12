@@ -1,3 +1,9 @@
+import {
+    parseWarningTags,
+    buildWarningMessages,
+    renderAgeGate
+} from './warning_system.js';
+
 document.addEventListener('DOMContentLoaded', async () => {
     const wikiContentContainer = document.getElementById('wikicontent-container');
 
@@ -12,6 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         const markdownText = await loadDocumentWithFallback(rawDocId, currentLang);
+
         const htmlContent = marked.parse(markdownText);
         wikiContentContainer.innerHTML = htmlContent;
 
@@ -40,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             detail: { meta }
         });
 
-        document.dispatchEvent(event);
+    document.dispatchEvent(event);
     } catch (error) {
         console.error('Failed to load or parse Markdown:', error);
         wikiContentContainer.innerHTML = '<h1>404 - Page Not Found</h1><p>The wiki document you requested could not be found.</p>';

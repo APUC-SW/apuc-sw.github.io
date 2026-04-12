@@ -2,7 +2,9 @@
      data-title="About TSCUP"
      data-translation-rate="100"
      data-translation-type="human"
-     data-lang="en">
+     data-lang="en"
+     data-age-restricted="false"
+     data-warning-tag="">
 </div>
 <div class="wikitag-attention">
     <div class="wikitag-titlewrapper">
@@ -60,7 +62,7 @@ Source-based mods are excluded. Because these only based on Half-Life Universe.
 ## Can I contribute to this project?
 Unfortunately, we currently have no plans to address this request. However, we will review the plan and provide further information once we receive at least 50 requests.<br>
 However, if you are interested, please join the Discord server in advance via the link below:
-<a href="https://discord.gg/ccU4VSZtMX" class="wiki-hyperlink"><b>TSC Universe Project</b></a>
+<a href="https://discord.gg/ccU4VSZtMX" class="wiki-hyperlink"><b>&lsqb;Click here to visit TSCUP Discord Server&rsqb;</b></a>
 
 ## Can I create something based on this universe?
 Unfortunately, we are not currently accepting this request. Many aspects of this work are still incomplete and subject to frequent revision. Therefore, from the creator's perspective, frequent revisions to this work could significantly burden their future creative endeavors, and we therefore officially discourage derivative works.

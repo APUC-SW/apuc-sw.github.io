@@ -116,12 +116,10 @@
     }
 
     function extractDocMetaFromMarkdown(markdownText) {
-        // 텍스트 내부에서 data-translation-rate="숫자" 패턴을 직접 찾습니다.
         const rateMatch = markdownText.match(/data-translation-rate=["'](\d+)["']/);
         const langMatch = markdownText.match(/data-lang=["']([^"']+)["']/);
         const titleMatch = markdownText.match(/data-title=["']([^"']+)["']/);
 
-        // 정규표현식으로 매칭된 결과가 있으면 해당 값을 반환합니다.
         return {
             title: titleMatch ? titleMatch : '',
             translationRate: rateMatch ? rateMatch : '',

@@ -1,15 +1,10 @@
 <div class="wikidoc-meta"
-     data-title="About this Wiki"
-     data-translation-rate="100"
-     data-translation-type="machine"
-     data-lang="ja">
-</div>
-
-<div class="wikidoc-meta"
-     data-title="About this Wiki"
-     data-translation-rate="100"
-     data-translation-type="machine"
-     data-lang="ja">
+    data-title="About this Wiki"
+    data-translation-rate="100"
+    data-translation-type="machine"
+    data-lang="ja"
+    data-age-restricted="false"
+    data-warning-tag="">
 </div>
 
 # 公式プロジェクトWikiへようこそ
