@@ -1499,6 +1499,7 @@ article {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
     z-index: 10000;
     max-width: 500px;
+    margin-top: 55px;
 }
 
 #recaptcha-overlay-content h2 {
@@ -1582,7 +1583,7 @@ article {
 
 #bypass-btn{
     position: fixed;
-    bottom: 35px;
+    bottom: 52px;
     right: 5px;
     background: transparent !important;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1692,6 +1693,7 @@ article {
   display: none;
   position: fixed;
   z-index: 10000;
+  margin-top: 55px;
 }
 
 /* OTHER ELEMENT CONTROL */
