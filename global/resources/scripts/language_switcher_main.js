@@ -37,7 +37,7 @@
             currentUrl.searchParams.set('lang', newLang);
 
             // 경로도 언어에 맞게 정리
-            currentUrl.pathname = buildLocalizedSubPath(newLang);
+            currentUrl.pathname = buildLocalizedMainPath(newLang);
 
             window.location.href = currentUrl.toString();
         });
@@ -167,7 +167,7 @@
         return (rawDocId || 'default').replace(/_(en|ko|ja)$/i, '');
     }
 
-    function buildLocalizedSubPath(lang) {
+    function buildLocalizedMainPath(lang) {
         return `/global/wiki/${lang}/index_main.html`;
     }
 
