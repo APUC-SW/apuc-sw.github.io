@@ -12,13 +12,13 @@ This page is under construction. Currently testing the new experimental features
 You are now seeing Game/RP Documentation Wiki.
 
 ## Overview
-This page is wiki index page.<br>
-This document is will be completed to write soon as fast if possible.
+This wiki is a site that describes the worldviews and lore of all projects currently under development in document format. The content of all documents on this wiki is purely fictional, and even if it is based on real history, it has absolutely no connection to it.
 
 ## Contribution
-This section only covers contributors to wiki articles and the wiki contribution guide. It does not cover those who contributed to the development of our own wiki platform. This is because credits for code contributors are included as comments in the corresponding source code blocks.<br>
-Anyway, currently all documents written here have not yet been contributed by anyone.<br>
-While we cannot prevent you from viewing repository contents or viewing the source code through developer tools, viewing the source code of this site in such a manner is considered reverse engineering. While some code blocks in this source code may be MIT licensed, not all of it is, and therefore viewing or copying the source code is strictly prohibited. We are not responsible for any licensing issues arising from your direct reuse of this site's source code. If there is a code snippet in the source code that includes someone's name and a link to the source, the license for that code block belongs to the respective author, and we do not claim ownership.
+This section only covers contributors to wiki articles and the wiki contribution guide. It does not cover those who contributed to the development of our own wiki platform. This is because credits for code contributors are included as comments in the corresponding source code blocks.
+
+## Source Codes
+All source code on this site has been written based on open source as much as possible; nevertheless, unauthorized copying of the source code is not recommended. To operate this site efficiently and with minimal cost burden, we have excluded commercial-oriented features as much as possible, and thus utilized open source code from various creators. However, because some or much of the source code utilized commercial AI tools to optimize development efficiency, we cannot guarantee that all of the source code on this site is open source. To be precise, instead of using open source for training, we wrote and applied new source code using generative AI. Therefore, we ask that you refrain from taking copies of the source code whenever possible.
 
 ## Can I contribute to this wiki?
 No. Not yet. If you have any questions about information inconsistencies in the document, please contact us via email.
@@ -33,13 +33,13 @@ No, this is a small wiki intended solely for developer documentation. It's not i
 
 ## Your site's security system is too weak!
 Yes, you are absolutely right. That is because it is not a real security system. I have merely provided you with a simple puzzle that anyone who enjoys science can solve, instead of a password lock. This was created simply for fun; if it were content that should never have been made public in the first place, it would be normal for it never to be committed. Therefore, there is currently no content that justifies the effort of creating a working login system.<br>
-If you are reading this, you have likely solved the puzzle normally, found and solved a hidden puzzle, or simply bypassed it using developer tools. While the site has several mechanisms in place to prevent bot crawling, these are intended solely to prevent indiscriminate automated data collection.
+If you are reading this, you have likely solved the puzzle normally, found and solved a hidden puzzle, or simply bypassed it using developer tools. Although this site has several safeguards to prevent bot crawling, these are merely intended to prevent indiscriminate automation of data collection and cannot yet block collection by LLMs such as Gemini and ChatGPT.
 
 ## Why &lsqb;your language&rsqb; is disabled/partially translated?
-Because here is no translator.<br>
-Currently, all translations are divided into the following two categories:
+This is because there are no human translators to contribute to the site.<br>
+Currently, all original language documents are written by a single person, and translations are divided into the following two types:
 
-1. Type where a person translates literally
-2. Type where a machine translates using AI or other automation tools
+1. Type where the original author translates directly
+2. Type where a machine translates using AI or other automation tools (Semi-automatic)
 
 Therefore, depending on the document, the quality of the translation may be poor, or there may be no translation at all.
