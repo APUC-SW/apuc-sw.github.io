@@ -1727,6 +1727,21 @@ article {
     z-index: -99999999;
 }
 
+.imgol-bottomfixed {
+    position: fixed;
+    bottom: 50px;
+    right: 260px;
+    width: 720px;
+    height: auto;
+    display: block;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.25;
+    z-index: -10;
+}
+
 /* Portrait Mode Warning */
 #portrait-warning-overlay {
     display: none;

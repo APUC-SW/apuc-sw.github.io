@@ -50,7 +50,72 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.dispatchEvent(event);
     } catch (error) {
         console.error('Failed to load or parse Markdown:', error);
-        wikiContentContainer.innerHTML = '<h1>404 - Page Not Found</h1><p>The wiki document you requested could not be found.</p>';
+
+        const baseDocId = normalizeDocId(rawDocId);
+        
+        // 1. 404 전용 MD 파일 로드 시도
+        const errorDocId = `_404_${currentLang}`;
+        const errorPath = buildPrimaryPath(normalizeDocId(errorDocId), currentLang);
+        let errorMarkdown = await fetchTextOrNull(errorPath);
+
+        if (!errorMarkdown) {
+            errorMarkdown = "# 404 - Page Not Found\n\nThe requested document could not be found.";
+        }
+
+        // 2. 다른 언어 버전이 존재하는지 모두 확인
+        // 지원하는 전체 언어 목록 (현재 언어와 영어 fallback은 이미 실패했으므로 제외하고 체크 가능)
+        const supportedLangs = ['ko', 'ja', 'en']; 
+        const availableLangs = [];
+
+        // 병렬로 파일 존재 여부 확인
+        await Promise.all(supportedLangs.map(async (lang) => {
+            // 현재 시도했던 언어와 같으면 스킵 (이미 실패했으므로)
+            if (lang === currentLang) return;
+
+            const checkPath = buildPrimaryPath(baseDocId, lang);
+            const content = await fetchTextOrNull(checkPath);
+            
+            if (content !== null) {
+                availableLangs.push({
+                    code: lang,
+                    name: lang === 'ko' ? '한국어' : lang === 'ja' ? '日本語' : 'English'
+                });
+            }
+        }));
+
+        // 3. 안내 문구 및 링크 목록 생성
+        let altLinkContent = '';
+        if (availableLangs.length > 0) {
+            // 마크다운 문법으로 리스트 작성
+            const langLinks = availableLangs
+                .map(l => `* [${l.name} (${l.code})](?doc=${rawDocId}&lang=${l.code})`)
+                .join('\n');
+
+            altLinkContent = `
+# Why?
+Because this document is not an completely reviewed yet. But you're an lucky.
+See below, you can check this document to see other languages. Have it if you really want.
+Or, would you like to forget the language barrier for a moment and take a look at these three cute friends?
+
+<image class="imgol-bottomfixed" src="/global/resources/images/err/404_image.png" oncontextmenu="return false;">
+<br>
+Related documents in other languages:
+
+${langLinks}
+            `;
+        }
+
+        // 4. 최종 결합 및 렌더링
+        // 원본 404 MD에 {{SOURCE_LINK}}가 있으면 마크다운 상태에서 치환
+        let combinedMarkdown = errorMarkdown;
+        if (combinedMarkdown.includes('{{SOURCE_LINK}}')) {
+            combinedMarkdown = combinedMarkdown.replace('{{SOURCE_LINK}}', altLinkContent);
+        } else {
+            combinedMarkdown += altLinkContent;
+        }
+
+        wikiContentContainer.innerHTML = marked.parse(combinedMarkdown);
+        document.title = `404 Not Found | APUC Software - Official Wiki`;
     }
 });
 
