@@ -89,6 +89,19 @@
     .markdown-body del:hover {
         text-decoration: none !important;
     }
+
+    .markdown-body blockquote {
+        color: #2196F3 !important;
+        border-left: .25em solid #2196F3 !important;
+    }
+
+    .markdown-body blockquote p {
+        margin-left: 20px !important;
+    }
+
+    .markdown-body blockquote a {
+        color: #E3F2FD !important;
+    }
 }
 /* Github Markdown style end */
 
