@@ -56,20 +56,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         // 1. 404 전용 MD 파일 로드 시도
         const errorDocId = `_404_${currentLang}`;
         const errorPath = buildPrimaryPath(normalizeDocId(errorDocId), currentLang);
-        let errorMarkdown = await fetchTextOrNull(errorPath);
+        let errorMarkdown = `
+# 404 - Not Found
+The requested document could not be found.
+I think this document what you are looking for is... it's wet. I presume?
 
-        if (!errorMarkdown) {
-            errorMarkdown = "# 404 - Page Not Found\n\nThe requested document could not be found.";
-        }
+<image class="imgol-bottomfixed-2" src="/global/resources/images/err/404_image02.png" oncontextmenu="return false;">
+`;
 
         // 2. 다른 언어 버전이 존재하는지 모두 확인
-        // 지원하는 전체 언어 목록 (현재 언어와 영어 fallback은 이미 실패했으므로 제외하고 체크 가능)
+        // 지원하는 전체 언어 목록
         const supportedLangs = ['ko', 'ja', 'en']; 
         const availableLangs = [];
 
         // 병렬로 파일 존재 여부 확인
         await Promise.all(supportedLangs.map(async (lang) => {
-            // 현재 시도했던 언어와 같으면 스킵 (이미 실패했으므로)
+            // 현재 시도했던 언어와 같으면 스킵
             if (lang === currentLang) return;
 
             const checkPath = buildPrimaryPath(baseDocId, lang);
@@ -90,14 +92,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             const langLinks = availableLangs
                 .map(l => `* [${l.name} (${l.code})](?doc=${rawDocId}&lang=${l.code})`)
                 .join('\n');
-
+            errorMarkdown = "# 404 - Not Found\nThe requested document could not be found.";
             altLinkContent = `
-# Why?
+## Why?
 Because this document is not an completely reviewed yet. But you're an lucky.
 See below, you can check this document to see other languages. Have it if you really want.
 Or, would you like to forget the language barrier for a moment and take a look at these three cute friends?
+Don't worry, these girls are androids. Our technicans will be fix her soon.
 
-<image class="imgol-bottomfixed" src="/global/resources/images/err/404_image.png" oncontextmenu="return false;">
+<image class="imgol-bottomfixed-1" src="/global/resources/images/err/404_image01.png" oncontextmenu="return false;">
 <br>
 Related documents in other languages:
 

@@ -1659,6 +1659,15 @@ article {
     color: #CFD8DC !important;
 }
 
+.wiki-highlightbox-yellow {
+    z-index: -20;
+    position: relative;
+    width: 100%;
+    background-color: #FFEB3B20 !important;
+    border-top: 1px solid #FFEB3B !important;
+    border-bottom: 1px solid #FFEB3B !important;
+}
+
 /* SERVICE CSS STYLES */
 #ch-github ul {
     list-style: none;
@@ -1740,11 +1749,26 @@ article {
     z-index: -99999999;
 }
 
-.imgol-bottomfixed {
+.imgol-bottomfixed-1 {
     position: fixed;
     bottom: 50px;
-    right: 260px;
+    right: 250px;
     width: 720px;
+    height: auto;
+    display: block;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.25;
+    z-index: -10;
+}
+
+.imgol-bottomfixed-2 {
+    position: fixed;
+    bottom: 50px;
+    right: 250px;
+    width: 400px;
     height: auto;
     display: block;
     -webkit-user-drag: none;
