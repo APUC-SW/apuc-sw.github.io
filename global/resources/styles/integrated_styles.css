@@ -455,6 +455,61 @@ article {
     text-align: center;
 }
 
+.error-404-main {
+    background-color: #424242 !important;
+    color: #ECEFF1 !important;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Science Gothic', sans-serif;
+}
+
+.error-404-main section {
+    padding: 20px 60px 0px 60px;
+}
+
+.error-404-main h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0px 60px 0px 60px;
+    padding-bottom: 5px;
+}
+
+.error-404-main .diagnosis-list {
+    all: revert;
+    list-style-type: decimal !important;
+    list-style-position: inside !important;
+    margin: 10px 40px 10px 10px !important;
+}
+
+.error-404-main .diagnosis-list li {
+    display: list-item !important;
+    vertical-align: middle !important;
+    line-height: 1.5 !important;
+}
+
+.error-404-main .diagnosis-list li::marker {
+    color: #82B1FF !important;
+    font-size: 18px;
+}
+
+.error-404-header {
+    background: #21212180 !important;
+    width: 100%;
+    padding: 40px 0px 0px 0px;
+}
+
+.error-404-gradline {
+    display: block;
+    height: 3px;
+    border: none;
+    margin-top: 5px;
+    background: rgb(0,0,0) !important;
+    background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,23,68,1) 4%, rgba(255,23,68,1) 96%, rgba(0,0,0,0) 100%) !important;
+    background: -webkit-linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,23,68,1) 4%, rgba(255,23,68,1) 96%, rgba(0,0,0,0) 100%) !important;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,23,68,1) 4%, rgba(255,23,68,1) 96%, rgba(0,0,0,0) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
+
 /* Wiki elements start */
 .sidewrapper {
     z-index: 1;
