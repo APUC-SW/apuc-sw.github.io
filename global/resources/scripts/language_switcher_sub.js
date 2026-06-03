@@ -80,7 +80,7 @@
                     translationDataCache = await response.json();
                 }
             } catch (e) {
-                console.warn("JSON 번역 데이터를 불러올 수 없습니다. 기존 방식으로 대체합니다.");
+                console.warn("Unable to load JSON translation data. Replace with the existing method.");
             }
         }
 

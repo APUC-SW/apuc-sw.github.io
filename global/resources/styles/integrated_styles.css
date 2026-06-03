@@ -91,7 +91,9 @@
     }
 
     .markdown-body blockquote {
-        color: #2196F3 !important;
+        margin: 10px !important;
+        background-color: #2195f310 !important;
+        color: #BBDEFB !important;
         border-left: .25em solid #2196F3 !important;
     }
 
@@ -101,6 +103,11 @@
 
     .markdown-body blockquote a {
         color: #E3F2FD !important;
+    }
+
+    .markdown-body ol {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
     }
 }
 /* Github Markdown style end */
@@ -141,6 +148,15 @@
     }
 }
 /* Google Material Symbols end */
+
+.code-toolbar {
+    margin: 10px !important;
+}
+
+.copy-button .material-symbols-outlined {
+    font-size: 18px !important;
+    padding: 2px !important;
+}
 
 * {
     margin: 0;
