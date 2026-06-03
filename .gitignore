@@ -18,8 +18,8 @@ tos.html
 global/static_database*
 deprecated*
 /global/resources/templates/_backup*
-./resources/
 /global/wiki/doc/sub/tscup_haz_dopamine_leech_ko.md
+/global/wiki/doc/sub/tscup_env_artificial_gravity_en.md
 
 # Backup files
 *.bak

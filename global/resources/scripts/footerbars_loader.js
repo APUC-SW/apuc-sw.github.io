@@ -3,5 +3,5 @@ fetch('/global/resources/templates/footerbars.html')
     .then(html => {
         document.getElementById('footerbase-container').innerHTML = html;
     })
-    .catch(error => console.error('푸터 바 로딩 오류:', error));
+    .catch(error => console.error('Footer bars loading error:', error));
 

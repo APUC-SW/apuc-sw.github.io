@@ -7,21 +7,21 @@
 
 ### 네임스페이스 경로
 이것은 네임스페이스 구조 템플릿입니다.
-<code>APUCSW.[ProjectName].[ModuleName]</code>
+<code class="mdcode-inline">APUCSW.[ProjectName].[ModuleName]</code>
 
 그리고 이것은 각 프로그래밍 언어에 따른 템플릿입니다.
 
 #### C#
-<code class="language-csharp">APUCSW.[ProjectName].[ModuleName]</code>
+<code class="mdcode-inline">APUCSW.[ProjectName].[ModuleName]</code>
 
 <b>예시</b>:
-<code class="language-csharp">namespace APUCSW.ProjectAssets.Client</code>
+<code class="mdcode-inline">namespace APUCSW.ProjectAssets.Client</code>
 
 #### Java
-<code class="language-java">apucsw.[ProjectName].[ModuleName]</code>
+<code class="mdcode-inline">apucsw.[ProjectName].[ModuleName]</code>
 
 <b>예시</b>:
-<code class="language-java">apucsw.examplemod.client</code>
+<code class="mdcode-inline">apucsw.examplemod.client</code>
 
 ### 네임스페이스 트리
 이것은 네임스페이스 트리 구조 템플릿입니다.
@@ -66,5 +66,5 @@
         </div>
         <div class="wikitag-title">정보:</div>
     </div>
-    <div class="wikitag-content"><code>Editor</code> 모듈은 유니티 프로젝트에 사용합니다.</div>
+    <div class="wikitag-content"><code class="mdcode-inline">Editor</code> 모듈은 유니티 프로젝트에 사용합니다.</div>
 </div>

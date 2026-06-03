@@ -1293,6 +1293,17 @@ article {
     user-select: none;
 }
 
+.mdcode-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 2px 4px 2px 4px;
+    border-radius: 0;
+    background-color: #263238 !important;
+    color: #82B1FF !important;
+}
+
 /* Markdown Image Styles */
 .md-cell-image {
     width: 256px;

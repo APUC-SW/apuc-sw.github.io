@@ -7,21 +7,21 @@ Below are the namespace rules that our development team applies to all projects.
 
 ### Namespace Path
 This is a template of namespace structure.
-<code>APUCSW.[ProjectName].[ModuleName]</code>
+<code class="mdcode-inline">APUCSW.[ProjectName].[ModuleName]</code>
 
 And this is a template of each programming languages.
 
 #### C#
-<code class="language-csharp">APUCSW.[ProjectName].[ModuleName]</code>
+<code class="mdcode-inline">APUCSW.[ProjectName].[ModuleName]</code>
 
 <b>Example</b>:
-<code class="language-csharp">namespace APUCSW.ProjectAssets.Client</code>
+<code class="mdcode-inline">namespace APUCSW.ProjectAssets.Client</code>
 
 #### Java
-<code class="language-java">apucsw.[ProjectName].[ModuleName]</code>
+<code class="mdcode-inline">apucsw.[ProjectName].[ModuleName]</code>
 
 <b>Example</b>:
-<code class="language-java">apucsw.examplemod.client</code>
+<code class="mdcode-inline">apucsw.examplemod.client</code>
 
 ### Namespace Tree
 This is a template of namespace tree structure.
@@ -66,5 +66,5 @@ The structure may vary slightly depending on when the project was created, but i
         </div>
         <div class="wikitag-title">NOTE:</div>
     </div>
-    <div class="wikitag-content"><code>Editor</code> module is used in Unity projects.</div>
+    <div class="wikitag-content"><code class="mdcode-inline">Editor</code> module is used in Unity projects.</div>
 </div>
