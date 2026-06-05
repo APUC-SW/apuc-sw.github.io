@@ -13,7 +13,7 @@ This site utilizes the following external platforms to provide smooth services, 
 |---|---|---|
 | Hosting | GitHub, Inc. | Site operation infrastructure and visit log management |
 | Donation Integration | Buy Me a Coffee | Donation payment processing and donor information management |
-| Chat/Comment System | Discord Inc. | Chat and comment storage and widget display |
+| Community | Discord Inc. | Community/Forum Provided |
 | Visitor Analytics | Google LLC | Visitor statistics and behavior pattern analysis |
 
 **Important**: All sponsorship payment information (card numbers, account details, etc.) is processed directly by the respective sponsorship platform. The operator of this site never collects or accesses users' sensitive financial information.

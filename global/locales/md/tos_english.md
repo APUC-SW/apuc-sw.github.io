@@ -30,7 +30,7 @@ The purpose of these Terms of Use (hereinafter referred to as the "Terms") is to
   * Hosting: GitHub Inc.
   * Analytics: Google Analytics
   * Donations: Buy Me a Coffee
-  * Chat/Comments: Discord Inc.
+  * Community: Discord Inc.
 - The processing of personal information for each service follows the policies of the respective provider.
 
 ## Article 7 (Operation of Cookies)

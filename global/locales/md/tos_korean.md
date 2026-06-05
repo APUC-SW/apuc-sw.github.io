@@ -31,7 +31,7 @@
   * 호스팅: GitHub Inc.
   * 분석: Google Analytics
   * 후원: Buy Me a Coffee
-  * 채팅/댓글: Discord Inc.
+  * 커뮤니티: Discord Inc.
 - 각 서비스의 개인정보 처리는 해당 업체의 정책을 따릅니다.
 
 ## 제7조(쿠키(Cookie)의 운용)
