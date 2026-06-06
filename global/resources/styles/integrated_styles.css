@@ -1103,7 +1103,8 @@ article {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 135px;
+    object-fit: contain;
 }
 .card h3 {
     font-size: clamp(14px, 2vw, 18px);
@@ -1247,7 +1248,7 @@ article {
     color: #ECEFF1 !important;
 }
 
-/* Markdown Text Color Attributes */
+/* Markdown Simple Text Attributes */
 .md-red {
     color: #FF0000 !important;
 }
@@ -1262,6 +1263,23 @@ article {
 
 .md-gray {
     color: #9E9E9E !important;
+}
+
+.md-yellow {
+    color: #FFFF00 !important;
+}
+
+.md-cyan {
+    color: #00FFFF !important;
+}
+
+.md-magenta {
+    color: #FF00FF !important;
+}
+
+.md-gray-small {
+    color: #9E9E9E !important;
+    font-size: 10px;
 }
 
 /* Common Style Attributes */
