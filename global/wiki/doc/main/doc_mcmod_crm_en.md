@@ -52,7 +52,7 @@
 |-------------------|-------------|------------|-------------|------------|
 | 1.21.1            | 1.0.0       | Test Only  | Deleted     | -          |
 | 1.21.1            | 1.0.1       | Release    | Released    | 1.0.0-rev2 |
-| 1.21.1            | 1.1.0       | Release    | In Progress | -          |
+| 1.21.1            | 1.1.0       | Release    | Released    | -          |
 
 **NOTE FOR 1.0.1**: Version 1.0.1 is displayed as 1.0.0 in-game. This is a minor issue that occurred because the version update did not proceed properly during the rebuild of the JAR file following the bug fix found during the 1.0.0 testing process.
 
