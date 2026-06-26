@@ -43,6 +43,7 @@
     }
 
     .markdown-body p {
+        margin: 10px 0px 10px 0px !important;
         white-space: pre-wrap !important;
         font-family: Noto Sans KR, sans-serif;
     }
@@ -52,6 +53,7 @@
     }
 
     .markdown-body table {
+        margin: 10px 0px 10px 0px !important;
         border: 1px solid #121212 !important;
     }
 
@@ -105,9 +107,9 @@
         color: #E3F2FD !important;
     }
 
-    .markdown-body ol {
-        margin-top: 10px !important;
-        margin-bottom: 10px !important;
+    .markdown-body ol,
+    .markdown-body ul {
+        margin: 10px 0px 10px 0px !important;
     }
 }
 /* Github Markdown style end */
