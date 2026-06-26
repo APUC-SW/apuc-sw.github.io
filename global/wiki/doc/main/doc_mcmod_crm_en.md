@@ -43,6 +43,7 @@
 | CC:Tweaked                  | Optional              | Any             |
 | Croptopia                   | Optional              | Latest          |
 | Immersive Engineering       | Optional              | Latest          |
+| Create: Numismatics         | Optional              | Latest          |
 | Just Enough Items           | Recommended           | Any             |
 
 ## Releases
@@ -54,24 +55,27 @@
 | 1.21.1            | 1.1.0       | Release    | In Progress | -          |
 
 **NOTE FOR 1.0.1**: Version 1.0.1 is displayed as 1.0.0 in-game. This is a minor issue that occurred because the version update did not proceed properly during the rebuild of the JAR file following the bug fix found during the 1.0.0 testing process.
+
 **REASON**: Since I still proceed entirely manually without relying on automated processes during development, I have to manually change the version with every patch.
 
 ### Release Date
 April 15, 2026
 (It's already released.)
 
+### Next plan
+1. Mechanical Laser Cutter
+    1. **REASON**: For makes more realistic alternative recipes. It will be uses kinetic power(Will requires 'Create' mod) and FE energy(Will requires any tech mods). Maybe not a same with the <code class="mdcode-inline">Create: Vintage Improvements</code> mod's <code class="mdcode-inline">Laser</code>.
+2. Mechanical Coining Press
+    1. **REASON**: For more simplify the any currency items coining recipes. It will be diffrences <code class="mdcode-inline">Mechanical Press</code>.
+
 # What is this?
 This is a mod that integrates most of the fragmented alternative recipe data packs found on the internet into a single mod. It's inspired by the hard drive/MEM alternative recipe features from the Satisfactory.
-
-<br>
 
 It's will be provides new features:
 - Alternative recipes for existing Minecraft vanilla recipes.
 - Add custom recipes for existing Minecraft vanilla items.
 - Add custom alternative recipes for many compatible mods.
 - Add custom middle-process items for custom alternative items.
-
-<br>
 
 And will **NOT** be provides feature is:
 - Satisfactory style any models like this mod's icon. (It's just a icon.)
