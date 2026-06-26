@@ -5,8 +5,17 @@
      data-lang="en">
 </div>
 
-# Metadata
+<div class="wikitag-warning">
+    <div class="wikitag-titlewrapper">
+        <div class="wikitag-icon">
+            <span class="material-symbols-outlined notranslate" translate="no">warning</span>
+        </div>
+        <div class="wikitag-title">WARNING:</div>
+    </div>
+    <div class="wikitag-content">Development of this mod has been suspended indefinitely due to technical issues.<br>The information described in this document <b>may not be up-to-date.</b></div>
+</div>
 
+# Metadata
 ## URL
 <div class="embedded-link-box">
     <a class="embedded-hyperlink" href="https://github.com/korAPUcard/powered_defences" target="_blank" rel="noopener noreferrer">
@@ -24,13 +33,12 @@
 
 | Client version | Is support? | Support Modloader | Development Status     |
 |----------------|-------------|-------------------|------------------------|
-| 1.21.5         | TBD         | NeoForge          | In Planning            |
-| 1.21.1         | TBD         | NeoForge          | Work in Progress       |
+| 1.21.1         | Yes         | NeoForge          | Work in Progress       |
 | 1.20.1         | No          | Forge             | Canceled               |
 | 1.19.x         | No          | Forge             | Canceled               |
 | 1.18.x         | No          | Forge             | Canceled               |
-| 1.17.x         | No          | Forge             | Skipped                |
-| 1.16.x         | No          | Forge             | Skipped                |
+| 1.17.x         | No          | Forge             | No Plan                |
+| 1.16.x         | No          | Forge             | No Plan                |
 
 <br>
 
@@ -45,9 +53,9 @@
 | Mekanism: Generators  | Yes          | 10+             |
 | Mekanism: Tool        | No(Optional) | 10+             |
 | CC:Tweaked            | No           | TBD             |
-| Just Enough Items     | Recommanded  | Any             |
+| Just Enough Items     | Recommended  | Any             |
 | Curios API            | Yes          | Latest          |
-| Vic's Point Blank     | No(Optional) | Any             |
+| Vic's Point Blank     | TBD          | TBD             |
 
 <br>
 

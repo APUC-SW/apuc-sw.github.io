@@ -5,8 +5,17 @@
      data-lang="en">
 </div>
 
-# Metadata
+<div class="wikitag-warning">
+    <div class="wikitag-titlewrapper">
+        <div class="wikitag-icon">
+            <span class="material-symbols-outlined notranslate" translate="no">warning</span>
+        </div>
+        <div class="wikitag-title">WARNING:</div>
+    </div>
+    <div class="wikitag-content">Development of this mod has been suspended indefinitely due to technical issues.<br>The information described in this document <b>may not be up-to-date.</b></div>
+</div>
 
+# Metadata
 ## URL
 <div class="embedded-link-box">
     <a class="embedded-hyperlink" href="https://github.com/korAPUcard/mcrssmod" target="_blank" rel="noopener noreferrer">
@@ -24,7 +33,6 @@
 
 | Client version | Is support? | Support Modloader | Development Status |
 |----------------|-------------|-------------------|--------------------|
-| 1.21.5         | TBD         | NeoForge          | In Planning        |
 | 1.21.1         | TBD         | NeoForge          | Work in Progress   |
 | 1.20.1         | TBD         | Forge             | Paused             |
 | 1.19.x         | No          | Forge             | Canceled           |

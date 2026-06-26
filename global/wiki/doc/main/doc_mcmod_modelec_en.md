@@ -5,8 +5,17 @@
      data-lang="en">
 </div>
 
-# Metadata
+<div class="wikitag-warning">
+    <div class="wikitag-titlewrapper">
+        <div class="wikitag-icon">
+            <span class="material-symbols-outlined notranslate" translate="no">warning</span>
+        </div>
+        <div class="wikitag-title">WARNING:</div>
+    </div>
+    <div class="wikitag-content">Development of this mod has been suspended indefinitely due to technical issues.<br>The information described in this document <b>may not be up-to-date.</b></div>
+</div>
 
+# Metadata
 ## URL
 <div class="embedded-link-box">
     <a class="embedded-hyperlink" href="https://github.com/korAPUcard/modular_electronics" target="_blank" rel="noopener noreferrer">
@@ -24,13 +33,12 @@
 
 | Client version | Is support? | Support Modloader | Development Status     |
 |----------------|-------------|-------------------|------------------------|
-| 1.21.5         | TBD         | NeoForge          | In Planning            |
-| 1.21.1         | TBD         | NeoForge          | Work in Progress       |
-| 1.20.1         | TBD         | Forge             | Indefinitely Suspended |
+| 1.21.1         | Yes         | NeoForge          | Work in Progress       |
+| 1.20.1         | No          | Forge             | Canceled               |
 | 1.19.x         | No          | Forge             | Canceled               |
 | 1.18.x         | No          | Forge             | Canceled               |
-| 1.17.x         | No          | Forge             | Skipped                |
-| 1.16.x         | No          | Forge             | Skipped                |
+| 1.17.x         | No          | Forge             | No Plan                |
+| 1.16.x         | No          | Forge             | No Plan                |
 
 <br>
 
@@ -38,14 +46,16 @@
 
 | Mod Name                    | Is required?        | Mininum Version |
 |-----------------------------|---------------------|-----------------|
-| *Realistic Survival System* | No(Support Planned) | 1.0.0           |
+| *Realistic Survival System* | TBD                 | TBD             |
 | Mekanism                    | Yes                 | 10+             |
 | Mekanism: Additional        | Yes                 | 10+             |
 | Mekanism: Generators        | Yes                 | 10+             |
 | Mekanism: Tool              | No                  | 10+             |
-| CC:Tweaked                  | No                  | False           |
-| Just Enough Items           | Recommanded         | Any             |
+| CC:Tweaked                  | No(Not Recommended) | False           |
+| Just Enough Items           | Recommended         | Any             |
 | Curios API                  | Yes                 | Latest          |
+
+**NOTE**: Maybe other computing mods will not conflict technically, I presume. But not recommended because performance issues.
 
 <br>
 
