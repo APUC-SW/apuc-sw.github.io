@@ -195,7 +195,7 @@ header {
 
 footer {
     position : fixed;
-    z-index: 10001;
+    z-index: 800000;
     transform : translateY(0%);
     bottom: 0;
     width: 100%;
@@ -492,6 +492,28 @@ article {
 .error-404-main .diagnosis-list li::marker {
     color: #82B1FF !important;
     font-size: 18px;
+}
+
+.error-404-main .technical-details-list {
+    all: revert;
+    list-style-type: square !important;
+    list-style-position: inside !important;
+    margin: 10px 40px 10px 10px !important;
+}
+
+.error-404-main .technical-details-list li {
+    display: list-item !important;
+    vertical-align: middle !important;
+    line-height: 1.5 !important;
+}
+
+.error-404-main .technical-details-list li::marker {
+    color: #82B1FF !important;
+    font-size: 18px;
+}
+
+.error-404-main .reason-box {
+    margin: 10px 40px 10px 40px; 
 }
 
 .error-404-header {
@@ -1933,6 +1955,15 @@ article {
     user-select: none;
     opacity: 0.25;
     z-index: -10;
+}
+
+#servicedown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
 }
 
 /* Portrait Mode Warning */
